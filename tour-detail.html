@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Tour — Cusco Pathways Adventures</title>
+  <meta name="description" content="Detalle de itinerario, inclusiones y reservas del tour." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ══════════════ TOUR DETAIL — EXTENDED STYLES ══════════════ */
+
+    /* Hero: 75vh */
+    .tour-hero {
+      height: 75vh;
+      min-height: 550px;
+    }
+    .tour-hero-content {
+      padding-top: 80px;
+    }
+    .tour-hero-meta {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .tour-hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+    }
+    .tour-hero-meta-item span:first-child {
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    /* Breadcrumb */
+    .tour-breadcrumb {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tour-breadcrumb a {
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+    .tour-breadcrumb a:hover { color: var(--gold); }
+    .tour-breadcrumb .sep { opacity: 0.5; }
+
+    /* ── Section Tab Nav ── */
+    .tour-tab-nav {
+      background: #1A1A1A;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 72px;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .tour-tab-nav-inner {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      scrollbar-width: none;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+    .tour-tab-nav-inner::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 18px 28px 14px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+    .tab-btn .tab-icon {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+    svg.tab-icon {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+    .tab-btn:hover { color: var(--gold); }
+    .tab-btn.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── Description Section ── */
+    .tour-desc-section {
+      padding: 70px 0 60px;
+      background: var(--bg-main);
+    }
+    .tour-desc-inner {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .tour-desc-inner { grid-template-columns: 1fr; }
+    }
+    .tour-desc-left .back-link {
+      margin-bottom: 24px;
+    }
+    .tour-desc-subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .tour-desc-route {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+    .tour-desc-route svg { flex-shrink: 0; }
+    .tour-desc-body {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.85;
+    }
+
+    /* Highlights two-col grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 32px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      .highlights-grid { grid-template-columns: 1fr; }
+    }
+    .highlight-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .highlight-star {
+      color: var(--gold);
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .highlight-text {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* ── Tab Content Sections ── */
+    .tab-section {
+      padding: 70px 0;
+      display: none;
+    }
+    .tab-section.active {
+      display: block;
+    }
+    .tab-section:nth-child(even) {
+      background: #1A1A1A;
+    }
+
+    /* Itinerary day blocks */
+    .itinerary-day-block {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 0;
+      margin-bottom: 16px;
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .idb-label {
+      background: var(--primary-green);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .idb-label.gold { background: var(--gold); }
+    .idb-content {
+      background: #222222;
+      padding: 16px 20px;
+    }
+    .idb-title {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--ivory);
+      margin-bottom: 4px;
+    }
+    .idb-accommodation {
+      font-size: 0.8rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+    .idb-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Inclusions / Packing */
+    .two-col-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 40px;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      .two-col-list { grid-template-columns: 1fr; }
+    }
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+    .check-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary-green);
+      color: #fff;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .cross-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #e74c3c;
+      color: #fff;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+
+    /* Accommodation cards */
+    .accommodation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+    @media (max-width: 768px) {
+      .accommodation-grid { grid-template-columns: 1fr; }
+    }
+    .accom-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .accom-card-header {
+      background: var(--primary-green);
+      color: #fff;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accom-day-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    .accom-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .accom-type {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .accom-body {
+      padding: 18px 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .accom-card-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+    .accom-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .accom-card:hover .accom-card-img img {
+      transform: scale(1.04);
+    }
+
+    /* Packing List Categories */
+    .packing-category {
+      background: #1A1A1A;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--r-md);
+      padding: 24px 28px;
+      break-inside: avoid;
+    }
+    .packing-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(29,184,122,0.2);
+    }
+    .packing-cat-icon {
+      font-size: 20px;
+    }
+    .packing-cat-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary-green);
+    }
+    #packing-list-container {
+      columns: 2;
+      column-gap: 24px;
+    }
+    @media (max-width: 768px) {
+      #packing-list-container { columns: 1; }
+    }
+
+    /* Section divider title */
+    .section-sub-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary-green);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-sub-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.4;
+    }
+
+    /* Important Alert Box */
+    .important-alert {
+      background: rgba(212, 166, 58, 0.1);
+      border: 1px solid var(--gold);
+      border-radius: var(--r-md);
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    .important-alert h4 {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .important-alert p {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+    .important-alert strong { color: var(--gold); }
+
+    /* Related Tours */
+    .related-tours-section {
+      padding: 70px 0;
+      background: var(--bg-main);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 900px) {
+      .related-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Booking Sidebar */
+    .booking-card {
+      position: sticky;
+      top: 140px;
+    }
+
+    /* ── Tour Intro Description ── */
+    .tour-intro-desc {
+      padding: 60px 0 50px;
+      background: var(--bg-main);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .tour-intro-desc-inner {
+      max-width: 780px;
+    }
+    .tour-intro-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .tour-intro-rule {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 18px;
+    }
+    .tour-intro-route {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      font-style: italic;
+      font-size: 0.92rem;
+      margin-bottom: 28px;
+    }
+    .tour-intro-body p {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+    .tour-intro-body p:last-child { margin-bottom: 0; }
+    .tour-intro-body strong { color: var(--gold); }
+
+    /* ── Pricing Comparison Table ── */
+    .pricing-rule {
+      width: 100%;
+      height: 2px;
+      background: var(--primary-green);
+      margin-bottom: 40px;
+    }
+    .pricing-block {
+      margin-bottom: 40px;
+    }
+    .pricing-block-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pricing-block-price {
+      color: var(--gold);
+      font-size: 1.15rem;
+    }
+    .pricing-block-note {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+    }
+    .pricing-block-desc {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .pricing-detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0 20px;
+    }
+    .pricing-detail-list li {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .pricing-detail-list li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+    .pricing-detail-list li strong { color: var(--text-main); }
+    .pricing-separator {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 32px 0;
+    }
+    .pricing-table-wrapper {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      max-width: 600px;
+    }
+    .pricing-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pricing-compare-table thead tr {
+      background: var(--primary-green);
+    }
+    .pricing-compare-table thead th {
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      text-align: left;
+    }
+    .pricing-compare-table tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .pricing-compare-table tbody tr:last-child {
+      border-bottom: none;
+    }
+    .pricing-compare-table tbody tr:nth-child(odd) {
+      background: rgba(29,184,122,0.04);
+    }
+    .pricing-compare-table td {
+      padding: 14px 24px;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+    .pricing-compare-table td.price-col {
+      color: var(--gold);
+      font-weight: 700;
+      font-family: var(--font-display);
+    }
+    .pricing-cta {
+      display: flex;
+      gap: 16px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+</style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="logo-text" id="logo-link" style="color: var(--primary-green);">
+          Cusco <span>Pathways</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html#destinations" class="nav-link" style="color:var(--text-main);">Destinos</a></li>
+          <li><a href="index.html#manifesto" class="nav-link" style="color:var(--text-main);">Manifiesto</a></li>
+          <li><a href="index.html#footer" class="nav-link" style="color:var(--text-main);">Contacto</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="index.html#destinations" class="nav-link">Destinos</a></li>
+        <li><a href="index.html#manifesto" class="nav-link">Manifiesto</a></li>
+        <li><a href="index.html#footer" class="nav-link">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO (75vh) ═══ -->
+  <header class="tour-hero" id="tour-hero">
+    <div class="tour-hero-bg">
+      <img src="dest_salkantay.png" alt="Tour Banner" id="tour-banner-img" />
+    </div>
+    <div class="container">
+      <div class="tour-hero-content">
+        <nav class="tour-breadcrumb" id="tour-breadcrumb">
+          <a href="index.html">Inicio</a>
+          <span class="sep">›</span>
+          <a href="index.html#destinations">Destinos</a>
+          <span class="sep">›</span>
+          <a href="#" id="breadcrumb-dest-link">Salkantay</a>
+          <span class="sep">›</span>
+          <span id="breadcrumb-tour-name">Tour</span>
+        </nav>
+        <span class="tour-category" id="tour-category-tag">Glamping &amp; Luxury</span>
+        <h1 class="tour-main-title" id="tour-title-display">Salkantay Trek Premium</h1>
+        <div class="tour-hero-meta" id="tour-hero-meta">
+          <div class="tour-hero-meta-item">
+            <span>🕒</span>
+            <span id="meta-duration">5 Días / 4 Noches</span>
+          </div>
+          <div class="tour-hero-meta-item">
+            <span>⛰️</span>
+            <span id="meta-altitude">4,630 m</span>
+          </div>
+          <div class="tour-hero-meta-item">
+            <span>👥</span>
+            <span id="meta-group">Hasta 16 personas</span>
+          </div>
+          <div class="tour-hero-meta-item">
+            <span>⚡</span>
+            <span id="meta-difficulty">Moderado a Exigente</span>
+          </div>
+          <div class="tour-hero-meta-item">
+            <span>⭐</span>
+            <span id="meta-rating">4.9 (1,243 reseñas)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ TOUR INTRO DESCRIPTION (before tabs) ═══ -->
+  <section class="tour-intro-desc">
+    <div class="container">
+      <div class="tour-intro-desc-inner">
+        <div class="tour-intro-text">
+          <h2 class="tour-intro-title" id="intro-title">Una Aventura de Múltiples Experiencias</h2>
+          <div class="tour-intro-rule"></div>
+          <div class="tour-intro-route">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <em id="intro-route">Soraypampa – Paso Salkantay – Chaullay – La Playa – Hidroeléctrica – Machu Picchu</em>
+          </div>
+          <div class="tour-intro-body" id="intro-body">
+            <p>Después de aclimatarte en la histórica ciudad del Cusco, capital del majestuoso Imperio Inca, únete a nosotros en la versión más completa y lujosa de la gran ruta andina: el <strong>Salkantay Trek Premium de 5 Días</strong>. Esta extraordinaria expedición te conducirá a la impresionante Laguna Humantay de aguas turquesas, te elevará al salvaje Paso Salkantay —reconocido por <em>National Geographic</em> como uno de los 25 Mejores Treks del Mundo—, te guiará por misteriosos bosques nubosos y te llevará hasta las puertas de la Selva Peruana.</p>
+            <p>Cada noche descansarás en exclusivos alojamientos de glamping, disfrutando de una gastronomía andina exquisita preparada por nuestro propio cocinero de montaña. Nuestro guía experto y certificado te acompañará en cada paso, compartiendo su profundo conocimiento de la región, la historia Inca y la biodiversidad de los Andes. ¡Una aventura donde el lujo y la naturaleza se fusionan en perfecta armonía!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TAB NAVBAR ═══ -->
+  <nav class="tour-tab-nav" id="tour-tab-nav">
+    <div class="tour-tab-nav-inner">
+      <button class="tab-btn active" data-tab="overview" id="tab-overview">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        Overview
+      </button>
+      <button class="tab-btn" data-tab="itinerary" id="tab-itinerary">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/></svg>
+        Itinerario
+      </button>
+      <button class="tab-btn" data-tab="inclusions" id="tab-inclusions">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        Inclusiones
+      </button>
+      <button class="tab-btn" data-tab="before" id="tab-before">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Antes de Ir
+      </button>
+      <button class="tab-btn" data-tab="packing" id="tab-packing">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Qué Llevar
+      </button>
+      <button class="tab-btn" data-tab="accommodation" id="tab-accommodation">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Alojamiento
+      </button>
+      <button class="tab-btn" data-tab="pricing" id="tab-pricing">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Precios
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ OVERVIEW SECTION ═══ -->
+  <section class="tour-desc-section tab-section active" id="section-overview">
+    <div class="container">
+      <div class="tour-desc-inner">
+
+        <!-- LEFT: Description + Highlights -->
+        <div class="tour-desc-left">
+          <a href="javascript:history.back()" class="back-link" id="back-to-dest">← Volver</a>
+
+          <h2 class="tour-desc-subtitle" id="desc-subtitle">Una Caminata de Múltiples Experiencias</h2>
+          <div class="tour-desc-route">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span id="desc-route">Soraypampa → Salkantay Pass → Chaullay → Lucmabamba → Machu Picchu</span>
+          </div>
+          <div class="tour-desc-body" id="desc-body">
+            Tras aclimatarse en la ciudad del Cusco, capital del majestuoso Imperio Inca, únete a nosotros en la versión premium de la ruta definitiva a Machu Picchu.
+          </div>
+
+          <!-- Highlights -->
+          <div style="margin-top: 50px;">
+            <h3 class="section-sub-title">Highlights de la Experiencia</h3>
+            <div class="highlights-grid" id="highlights-container">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Photo Strip -->
+          <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 40px; border-radius: var(--r-md); overflow: hidden;">
+            <img src="salkantay_glamping.png" alt="Glamping Salkantay" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--r-sm);" />
+            <img src="salkantay_pass.png" alt="Paso Salkantay" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--r-sm);" />
+            <img src="machu_picchu_sunrise.png" alt="Machu Picchu" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--r-sm);" />
+          </div>
+        </div>
+
+        <!-- RIGHT: Booking Sidebar -->
+        <div>
+          <aside class="booking-card" aria-label="Resumen de reserva">
+            <div class="booking-header">
+              <span class="booking-price-label">Precio por persona</span>
+              <div class="booking-price" id="booking-price-display">Desde USD 850.00</div>
+            </div>
+
+            <div class="booking-details-list">
+              <div class="booking-detail-item">
+                <span class="detail-label">Duración</span>
+                <span class="detail-val" id="booking-duration-display">5 Días / 4 Noches</span>
+              </div>
+              <div class="booking-detail-item">
+                <span class="detail-label">Dificultad</span>
+                <span class="detail-val" id="booking-difficulty-display">Moderado a Exigente</span>
+              </div>
+              <div class="booking-detail-item">
+                <span class="detail-label">Altitud Máx.</span>
+                <span class="detail-val" id="booking-altitude-display">4,630 m</span>
+              </div>
+              <div class="booking-detail-item">
+                <span class="detail-label">Grupo Máx.</span>
+                <span class="detail-val" id="booking-group-display">16 personas</span>
+              </div>
+            </div>
+
+            <!-- Pricing Table -->
+            <div class="pricing-section">
+              <table class="pricing-table">
+                <thead>
+                  <tr>
+                    <th>Modalidad</th>
+                    <th>Precio pp</th>
+                  </tr>
+                </thead>
+                <tbody id="pricing-table-body">
+                  <!-- Injected by JS -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Offers -->
+            <div id="offers-module-container"></div>
+
+            <a href="#" class="btn btn-gold-solid btn-whatsapp booking-btn" id="book-tour-button" style="margin-top: 24px; width: 100%; justify-content: center;">
+              📲 Reservar por WhatsApp
+            </a>
+          </aside>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ITINERARY SECTION ═══ -->
+  <section class="tab-section" id="section-itinerary" style="background: var(--bg-main);">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 12px;">El Itinerario</h2>
+      <p class="section-eyebrow" style="margin-bottom: 40px; font-size: 12px; letter-spacing: 0.1em;">Día a día por los Andes</p>
+      
+      <div class="important-alert">
+        <h4>⚠️ Recomendación Médica</h4>
+        <p>Recomendamos <strong>2 a 3 días de aclimatación</strong> en la ciudad del Cusco antes de iniciar el trek. Consulta a tu médico sobre el uso de medicación preventiva para el mal de altura (soroche).</p>
+      </div>
+
+      <div id="itinerary-list-container">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INCLUSIONS SECTION ═══ -->
+  <section class="tab-section" id="section-inclusions" style="background: #fff;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 12px;">Inclusiones</h2>
+      <p class="section-eyebrow" style="margin-bottom: 40px; font-size: 12px; letter-spacing: 0.1em;">Todo lo que incluye tu experiencia</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+        <div>
+          <h3 class="section-sub-title" style="margin-bottom: 24px;">✅ Incluye</h3>
+          <div id="inclusions-list"></div>
+        </div>
+        <div>
+          <h3 class="section-sub-title" style="margin-bottom: 24px;">❌ No Incluye</h3>
+          <div id="exclusions-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BEFORE YOU GO SECTION ═══ -->
+  <section class="tab-section" id="section-before" style="background: var(--bg-main);">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 12px;">Antes de Partir</h2>
+      <p class="section-eyebrow" style="margin-bottom: 40px; font-size: 12px; letter-spacing: 0.1em;">Información esencial para tu viaje</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+        <div>
+          <div class="important-alert" style="margin-bottom: 24px;">
+            <h4>🎫 Entradas a Machu Picchu</h4>
+            <p>Las entradas a Machu Picchu de <strong>marzo a octubre</strong> —especialmente el Circuito 2, el más completo— se agotan con semanas de anticipación. Para reservas en esos meses, si el Circuito 2 no está disponible, garantizamos el <strong>mejor circuito alternativo</strong> para tu fecha. Siempre aseguraremos la mejor experiencia posible.</p>
+          </div>
+          <div class="important-alert">
+            <h4>🏥 Salud y Altitud</h4>
+            <p>El Salkantay Trek supera los <strong>4,630m de altitud</strong>. Es fundamental aclimatarse en Cusco al menos 2 días antes del inicio. Nuestros guías llevan oxígeno de emergencia y botiquín de primeros auxilios. Consulta con tu médico si tienes condiciones cardíacas o respiratorias.</p>
+          </div>
+        </div>
+        <div>
+          <div class="important-alert" style="background: rgba(0,91,62,0.07); border-color: var(--primary-green); margin-bottom: 24px;">
+            <h4 style="color: var(--primary-green);">📋 Requisitos Previos</h4>
+            <p>Para este trek no se requiere experiencia previa en alta montaña, pero sí un <strong>buen nivel físico general</strong>. Recomendamos realizar caminatas de entrenamiento en los meses previos. El peso máximo de la mochila personal es de <strong>7 kg</strong>; el resto lo cargan los caballos.</p>
+          </div>
+          <div class="important-alert" style="background: rgba(0,91,62,0.07); border-color: var(--primary-green);">
+            <h4 style="color: var(--primary-green);">✈️ Mejor Época para Viajar</h4>
+            <p>La <strong>temporada seca (mayo a octubre)</strong> ofrece los días más despejados y las mejores vistas. La temporada lluviosa (noviembre a abril) tiene menos turistas y paisajes más verdes, aunque se requiere equipo impermeable adicional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PACKING LIST SECTION ═══ -->
+  <section class="tab-section" id="section-packing" style="background: #fff;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 12px;">¿Qué Llevar?</h2>
+      <p class="section-eyebrow" style="margin-bottom: 40px; font-size: 12px; letter-spacing: 0.1em;">Lista de equipamiento recomendada</p>
+      <div class="two-col-list" id="packing-list-container"></div>
+    </div>
+  </section>
+
+  <!-- ═══ ACCOMMODATION SECTION ═══ -->
+  <section class="tab-section" id="section-accommodation" style="background: var(--bg-main);">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 12px;">Alojamiento Premium</h2>
+      <p class="section-eyebrow" style="margin-bottom: 40px; font-size: 12px; letter-spacing: 0.1em;">Descansa como mereces en plena naturaleza andina</p>
+      <div class="accommodation-grid" id="accommodation-container"></div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING SECTION ═══ -->
+  <section class="tab-section" id="section-pricing" style="background: #fff;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 12px;">Precio</h2>
+      <div class="pricing-rule"></div>
+
+      <!-- GRUPAL -->
+      <div class="pricing-block">
+        <h3 class="pricing-block-title">
+          Servicio Grupal <span class="pricing-block-price" id="price-group-display">USD 850.00</span> por persona
+          <span class="pricing-block-note">(Disfrutarás de la caminata junto a otros viajeros)</span>
+        </h3>
+        <ul class="pricing-detail-list">
+          <li>El tamaño máximo del grupo es de <strong>16 personas</strong> y el mínimo es de <strong>2 personas</strong>.</li>
+          <li>El guía turístico brindará servicio bilingüe (inglés y español) durante toda la ruta.</li>
+          <li>Los grupos se forman automáticamente según las fechas de salida disponibles.</li>
+          <li>Ideal para viajeros en solitario, parejas o amigos que desean conocer a otros aventureros.</li>
+        </ul>
+      </div>
+
+      <div class="pricing-separator"></div>
+
+      <!-- PRIVADO -->
+      <div class="pricing-block">
+        <h3 class="pricing-block-title">
+          Servicio Privado <span class="pricing-block-note">(confirmado por el cliente)</span>
+        </h3>
+        <p class="pricing-block-desc">La caminata es altamente personalizada, ofreciendo un servicio exclusivo e íntimo para tu grupo. Incluye guía privado, chef exclusivo y flexibilidad en el itinerario.</p>
+
+        <!-- Comparison Table -->
+        <div class="pricing-table-wrapper">
+          <table class="pricing-compare-table">
+            <thead>
+              <tr>
+                <th>Tamaño del Grupo</th>
+                <th>Precio por Persona</th>
+              </tr>
+            </thead>
+            <tbody id="pricing-compare-body">
+              <tr><td>1 Persona</td><td class="price-col">USD 1,750.00</td></tr>
+              <tr><td>2 – 3 Personas</td><td class="price-col">USD 1,450.00</td></tr>
+              <tr><td>4 – 5 Personas</td><td class="price-col">USD 1,250.00</td></tr>
+              <tr><td>6 – 9 Personas</td><td class="price-col">USD 1,050.00</td></tr>
+              <tr><td>10 personas o más</td><td class="price-col">USD 850.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="pricing-cta">
+        <a href="#" class="btn btn-gold-solid btn-whatsapp booking-btn" id="book-group-btn" style="padding: 16px 32px;">📲 Consultar Disponibilidad Grupal</a>
+        <a href="#" class="btn" id="book-private-btn" style="padding: 16px 32px; border: 2px solid var(--primary-green); color: var(--primary-green); font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; border-radius: 2px;">📲 Cotizar Servicio Privado</a>
+      </div>
+
+      <!-- Nota importante -->
+      <div class="important-alert" style="margin-top: 40px;">
+        <h4>🎫 Nota Importante: Entradas a Machu Picchu</h4>
+        <p>Las entradas a Machu Picchu para los meses de <strong>marzo a octubre</strong> se agotan con mucha antelación. Al reservar con Cusco Pathways Adventures, gestionamos la compra de tus entradas inmediatamente para garantizar disponibilidad. El costo de las entradas <strong>está incluido</strong> en el precio del tour.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RELATED TOURS ═══ -->
+  <section class="related-tours-section">
+    <div class="container">
+      <span class="section-eyebrow">Continúa Explorando</span>
+      <h2 class="section-title" style="margin-bottom: 8px;">También Te Podría Interesar</h2>
+      <div class="related-grid" id="related-tours-container">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" id="footer-logo-link">Cusco <span>Pathways</span></a>
+        </div>
+        <div class="footer-contact-card">
+          <a href="mailto:info@cuscopathways.com" class="footer-email" id="email-contact">info@cuscopathways.com</a>
+          <span class="footer-phone">+51 984 000 000</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cusco Pathways Adventures. Todos los derechos reservados.</p>
+        <nav class="footer-nav" aria-label="Enlaces secundarios">
+          <a href="index.html#destinations">Destinos</a>
+          <a href="index.html#manifesto">Manifiesto</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/51984000000?text=Hola%20Cusco%20Pathways,%20deseo%20m%C3%A1s%20informaci%C3%B3n" class="floating-whatsapp" target="_blank" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="#ffffff">
+      <path d="M16 2.5a13.5 13.5 0 0 1 11.66 20.25l1.68 5.64-5.83-1.52A13.5 13.5 0 1 1 16 2.5zm0 2.2a11.3 11.3 0 0 0-9.67 17.15l.38.6-1.02 3.4 3.52-1 .63.36A11.3 11.3 0 1 0 16 4.7zm5.95 14.65c-.32-.16-1.92-.95-2.2-1.06-.3-.1-.5-.16-.72.16-.2.32-.82 1.06-1 1.28-.18.2-.38.23-.7.06-.32-.15-1.37-.5-2.6-1.6-.96-.86-1.6-1.93-1.8-2.25-.18-.32-.02-.5.14-.65.15-.14.32-.37.48-.56.16-.18.22-.32.32-.54.1-.2.05-.4-.02-.56-.08-.16-.73-1.74-1-2.38-.26-.62-.53-.54-.72-.55h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.7 0 1.6 1.17 3.14 1.34 3.36.16.23 2.3 3.5 5.56 4.9.78.33 1.38.53 1.85.68.78.25 1.5.21 2.05.13.62-.1 1.92-.78 2.2-1.54.26-.76.26-1.4.18-1.54-.08-.13-.3-.22-.62-.38z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+
+  <!-- Tab Navigation Logic -->
+  <script>
+    (function initTabs() {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const sections = {
+        'overview': document.getElementById('section-overview'),
+        'itinerary': document.getElementById('section-itinerary'),
+        'inclusions': document.getElementById('section-inclusions'),
+        'before': document.getElementById('section-before'),
+        'packing': document.getElementById('section-packing'),
+        'accommodation': document.getElementById('section-accommodation'),
+        'pricing': document.getElementById('section-pricing'),
+      };
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.tab;
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          Object.values(sections).forEach(s => { if (s) s.classList.remove('active'); });
+          if (sections[target]) sections[target].classList.add('active');
+          // Scroll to tab nav
+          document.getElementById('tour-tab-nav').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
