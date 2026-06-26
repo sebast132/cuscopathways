@@ -2025,7 +2025,16 @@ const toursData = {
     track.style.transform = `translateX(-${shift}px)`;
   }
 
-  setInterval(rotateTestimonials, 4000);
+  let sliderInterval = setInterval(rotateTestimonials, 4000);
+
+  const nextBtn = document.getElementById('test-next-btn');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      clearInterval(sliderInterval);
+      rotateTestimonials();
+      sliderInterval = setInterval(rotateTestimonials, 4000);
+    });
+  }
 
   window.addEventListener('resize', () => {
     currentIndex = 0;
