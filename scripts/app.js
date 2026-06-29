@@ -1,0 +1,670 @@
+/* ══════════════════════════════════════════════════════════
+   CUSCO PATHWAYS ADVENTURES — app.js (Main Logic Layer)
+   ══════════════════════════════════════════════════════════ */
+
+'use strict';
+
+// ─── Navbar Scroll Handler ───────────────────────────────────
+function initNavbar() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrolled = window.scrollY > 40;
+        navbar.classList.toggle('scrolled', scrolled);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+// ─── Mobile Hamburger Menu ───────────────────────────────────
+function initHamburger() {
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (!hamburger || !mobileMenu) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+}
+
+// ─── Destination Page Hydration ──────────────────────────────
+function hydrateDestinationPage() {
+  const destList = document.getElementById('dest-tours-list');
+  if (!destList) return; // Only run on destination.html
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const destKey = urlParams.get('dest');
+  const dest = destinationsData[destKey];
+
+  if (!dest) {
+    destList.innerHTML = '<p class="error-msg">Destino no encontrado.</p>';
+    return;
+  }
+
+  // Update hero
+  const banner = document.getElementById('dest-banner-img');
+  if (banner) banner.src = resolveImagePath(dest.image);
+  const title = document.getElementById('dest-title-display');
+  if (title) title.textContent = dest.title;
+
+  // Render horizontal tour cards
+  destList.innerHTML = '';
+  dest.tours.forEach(tourId => {
+    const tour = toursData[tourId];
+    if(!tour) return;
+    
+    // Extraer overview breve de la descripción
+    let briefOverview = '';
+    if (tour.description) {
+      briefOverview = tour.description.split('<br>')[0];
+    } else if (tour.itinerary && tour.itinerary.length > 0) {
+      briefOverview = tour.itinerary[0].desc;
+    }
+
+    // Formatear precio extraído
+    let rawPrice = tour.priceGroup ? tour.priceGroup.replace('USD ', '').replace('PEN ', '') : '00.00';
+
+    destList.innerHTML += `
+      <a href="tour-detail.html?tour=${tourId}&dest=${destKey}" class="featured-card reveal">
+        <div class="fc-image">
+          <img src="${resolveImagePath(tour.image)}" alt="${tour.title}" loading="lazy" />
+        </div>
+        <div class="fc-content">
+          <div class="fc-meta-top">
+            <span>🕒 ${tour.duration || 'Full Day'}</span>
+            <span>⛰️ ${tour.difficulty || 'Moderada'}</span>
+          </div>
+          <h3 class="fc-title">${tour.title}</h3>
+          <p class="fc-subtitle">${tour.route || tour.subtitle || ''}</p>
+          <p class="fc-desc">${briefOverview}</p>
+          
+          <div class="fc-footer">
+            <div class="fc-footer-left">
+              <span>👥 ${tour.groupSize || 'Hasta 16 Personas'}</span>
+              <span>🏔️ ${tour.altitude || ''}</span>
+              <span class="rating-highlight">★ ${tour.rating || '4.9 (1000 reseñas)'}</span>
+            </div>
+            <div class="fc-footer-right">
+              <span class="fc-price">Desde <strong>$${rawPrice}</strong> pp</span>
+              <span class="btn btn-gold-solid btn-itinerary">VER ITINERARIO</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    `;
+  });
+}
+
+// ─── Tour Detail Hydration ───────────────────────────────────
+function hydrateTourDetailPage() {
+  const itineraryContainer = document.getElementById('itinerary-list-container');
+  if (!itineraryContainer) return;
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const tourKey = urlParams.get('tour');
+  const destKey = urlParams.get('dest');
+  const tour = toursData[tourKey];
+
+  if (!tour) {
+    itineraryContainer.innerHTML = '<p class="error-msg">Tour no encontrado.</p>';
+    return;
+  }
+
+  // ── Page Title
+  const pageTitle = document.getElementById('page-title');
+  if (pageTitle) pageTitle.textContent = `${tour.title} — Cusco Pathways Adventures`;
+
+  // ── Breadcrumb
+  const destLink = document.getElementById('breadcrumb-dest-link');
+  if (destLink && destKey) {
+    destLink.href = `destination.html?dest=${destKey}`;
+    destLink.textContent = destinationsData[destKey]?.title || 'Destino';
+  }
+  const breadcrumbName = document.getElementById('breadcrumb-tour-name');
+  if (breadcrumbName) breadcrumbName.textContent = tour.title;
+
+  // ── Back Button
+  const backBtn = document.getElementById('back-to-dest');
+  if (backBtn && destKey) {
+    backBtn.href = `destination.html?dest=${destKey}`;
+    backBtn.innerHTML = '&larr; Volver a ' + (destinationsData[destKey]?.title || 'Destino');
+  }
+
+  // ── Hero
+  const banner = document.getElementById('tour-banner-img');
+  if (banner) banner.src = resolveImagePath(tour.image);
+  const titleEl = document.getElementById('tour-title-display');
+  if (titleEl) titleEl.textContent = tour.title;
+  const catEl = document.getElementById('tour-category-tag');
+  if (catEl) catEl.textContent = tour.tagline;
+
+  // ── Hero Meta Badges
+  const metaDuration = document.getElementById('meta-duration');
+  if (metaDuration) metaDuration.textContent = tour.duration || '';
+  const metaAlt = document.getElementById('meta-altitude');
+  if (metaAlt) metaAlt.textContent = tour.altitude || '';
+  const metaGrp = document.getElementById('meta-group');
+  if (metaGrp) metaGrp.textContent = tour.groupSize || '';
+  const metaDiff = document.getElementById('meta-difficulty');
+  if (metaDiff) metaDiff.textContent = tour.difficulty || '';
+  const metaRat = document.getElementById('meta-rating');
+  if (metaRat) metaRat.textContent = tour.rating || '';
+
+  // ── Overview: Description
+  const descSubtitle = document.getElementById('desc-subtitle');
+  if (descSubtitle) descSubtitle.textContent = tour.subtitle || tour.title;
+  const descRoute = document.getElementById('desc-route');
+  if (descRoute) descRoute.textContent = tour.route || '';
+  const descBody = document.getElementById('desc-body');
+  if (descBody) descBody.innerHTML = tour.description || '';
+
+  const introTitle = document.getElementById('intro-title');
+  if (introTitle) introTitle.textContent = tour.subtitle || tour.title;
+  const introRoute = document.getElementById('intro-route');
+  if (introRoute) introRoute.textContent = tour.route || '';
+  const introBody = document.getElementById('intro-body');
+  if (introBody) introBody.innerHTML = tour.description || '';
+
+  // ── Summary Card
+  const summaryPrice = document.getElementById('summary-price');
+  if (summaryPrice) summaryPrice.textContent = tour.priceGroup || '';
+  const summaryDuration = document.getElementById('summary-duration');
+  if (summaryDuration) summaryDuration.textContent = tour.duration || '';
+  const summaryDifficulty = document.getElementById('summary-difficulty');
+  if (summaryDifficulty) summaryDifficulty.textContent = tour.difficulty || '';
+  const summaryRoute = document.getElementById('summary-route');
+  if (summaryRoute) summaryRoute.textContent = tour.route || '';
+
+  // ── Highlights
+  const highlightsContainer = document.getElementById('highlights-container');
+  if (highlightsContainer && tour.highlights) {
+    highlightsContainer.innerHTML = tour.highlights.map(h => {
+      if (h.endsWith('.png') || h.endsWith('.jpg') || h.endsWith('.jpeg')) {
+        return `<img src="${resolveImagePath(h)}" alt="Highlight Image" class="highlight-image" loading="lazy">`;
+      }
+      return `
+        <div class="highlight-item">
+          <span class="highlight-star">★</span>
+          <span class="highlight-text">${h}</span>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // ── Sidebar
+  const priceDisplay = document.getElementById('booking-price-display');
+  if (priceDisplay) priceDisplay.textContent = `Desde ${tour.priceGroup}`;
+  const durDisplay = document.getElementById('booking-duration-display');
+  if (durDisplay) durDisplay.textContent = tour.duration;
+  const diffDisplay = document.getElementById('booking-difficulty-display');
+  if (diffDisplay) diffDisplay.textContent = tour.difficulty || '';
+  const altDisplay = document.getElementById('booking-altitude-display');
+  if (altDisplay) altDisplay.textContent = tour.altitude || '';
+  const grpDisplay = document.getElementById('booking-group-display');
+  if (grpDisplay) grpDisplay.textContent = tour.groupSize || '';
+
+  // Pricing table
+  const tableBody = document.getElementById('pricing-table-body');
+  if (tableBody) {
+    tableBody.innerHTML = `
+      <tr><td>Servicio Grupal</td><td>${tour.priceGroup}</td></tr>
+      <tr><td>Servicio Privado</td><td>${tour.pricePrivate}</td></tr>
+    `;
+  }
+
+  // Pricing compare table (Main Section)
+  const compareBody = document.getElementById('pricing-compare-body');
+  if (compareBody && tour.privatePricing) {
+    compareBody.innerHTML = tour.privatePricing.map(row => `
+      <tr>
+        <td>${row.size}</td>
+        <td class="price-col">${row.price}</td>
+      </tr>
+    `).join('');
+  }
+
+  // Pricing section price displays
+  const pgDisplay = document.getElementById('price-group-display');
+  if (pgDisplay) pgDisplay.textContent = tour.priceGroup;
+  const ppDisplay = document.getElementById('price-private-display');
+  if (ppDisplay) ppDisplay.textContent = tour.pricePrivate;
+
+  // ── Offers
+  const offersBox = document.getElementById('offers-module-container');
+  if (offersBox && tour.offer) {
+    offersBox.innerHTML = `
+      <div class="offers-box">
+        <div class="offers-icon">🎁</div>
+        <div class="offers-content">
+          <h4>Beneficio Especial</h4>
+          <p>${tour.offer}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  // ── WhatsApp Buttons
+  const waText = encodeURIComponent(`Hola Cusco Pathways, deseo información y reservar el tour: ${tour.title}`);
+  const waUrl = `https://wa.me/51984000000?text=${waText}`;
+  ['book-tour-button', 'book-group-btn', 'book-private-btn'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) { btn.href = waUrl; btn.target = '_blank'; }
+  });
+
+  // ── Itinerary (Day Blocks)
+  itineraryContainer.innerHTML = '';
+  tour.itinerary.forEach((item, index) => {
+    const isGold = index % 2 !== 0;
+    const block = document.createElement('div');
+    block.className = 'itinerary-day-block reveal';
+    block.innerHTML = `
+      <div class="idb-label ${isGold ? 'gold' : ''}">${item.day}</div>
+      <div class="idb-content">
+        <div class="idb-title">${item.title}</div>
+        ${item.accommodation ? `<div class="idb-accommodation">🏡 ${item.accommodation}</div>` : ''}
+        ${item.image ? `<img src="${resolveImagePath(item.image)}" alt="${item.title}" class="itinerary-day-image" loading="lazy">` : ''}
+        <div class="idb-desc">${item.desc}</div>
+      </div>
+    `;
+    itineraryContainer.appendChild(block);
+  });
+
+  // Render important note below itinerary if exists
+  if (tour.importantNote) {
+    const noteBlock = document.createElement('div');
+    noteBlock.className = 'important-alert note-alert';
+    noteBlock.innerHTML = `
+      <h4>ℹ️ Nota Importante</h4>
+      <p>${tour.importantNote}</p>
+    `;
+    itineraryContainer.appendChild(noteBlock);
+  }
+
+  // ── Inclusions
+  const inclList = document.getElementById('inclusions-list');
+  if (inclList && tour.inclusions) {
+    inclList.innerHTML = tour.inclusions.map(i => `
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <span>${i}</span>
+      </div>
+    `).join('');
+  }
+  const exclList = document.getElementById('exclusions-list');
+  if (exclList && tour.exclusions) {
+    exclList.innerHTML = tour.exclusions.map(e => `
+      <div class="check-item">
+        <div class="cross-icon">×</div>
+        <span>${e}</span>
+      </div>
+    `).join('');
+  }
+
+  // ── Packing List
+  const packingContainer = document.getElementById('packing-list-container');
+  if (packingContainer && tour.packingList) {
+    const categories = [
+      { label: 'Ropa e Indumentaria', icon: '👕', items: tour.packingList.slice(0, 11) },
+      { label: 'Equipamiento Esencial', icon: '🔦', items: tour.packingList.slice(11, 17) },
+      { label: 'Salud & Bienestar', icon: '💊', items: tour.packingList.slice(17, 20) },
+      { label: 'Alimentación Extra', icon: '🍫', items: tour.packingList.slice(20) },
+    ];
+    packingContainer.style.display = 'block';
+    packingContainer.innerHTML = categories.map(cat => `
+      <div class="packing-category">
+        <div class="packing-cat-header">
+          <span class="packing-cat-icon">${cat.icon}</span>
+          <span class="packing-cat-label">${cat.label}</span>
+        </div>
+        ${cat.items.map(item => `
+          <div class="check-item">
+            <div class="check-icon packing-check">✓</div>
+            <span>${item}</span>
+          </div>
+        `).join('')}
+      </div>
+    `).join('');
+  }
+
+  // ── Accommodation
+  const accomContainer = document.getElementById('accommodation-container');
+  if (accomContainer) {
+    if (tour.accommodation && tour.accommodation.length > 0) {
+      accomContainer.innerHTML = tour.accommodation.map(a => `
+        <div class="accom-card reveal">
+          ${a.image ? `<div class="accom-card-img"><img src="${resolveImagePath(a.image)}" alt="${a.name}" loading="lazy" /></div>` : ''}
+          <div class="accom-card-header">
+            <div>
+              <div class="accom-day-label">${a.day}</div>
+              <div class="accom-name">${a.name}</div>
+            </div>
+            <div class="accom-type">${a.type}</div>
+          </div>
+          <div class="accom-body">${a.desc}</div>
+        </div>
+      `).join('');
+    } else {
+      // Hide accommodation tab/section if it's a day tour
+      const accomTabBtn = document.querySelector('[data-tab="accommodation"]');
+      if (accomTabBtn) accomTabBtn.style.display = 'none';
+      const accomSection = document.getElementById('section-accommodation');
+      if (accomSection) accomSection.style.display = 'none';
+    }
+  }
+
+  // ── Related Tours
+  const relatedContainer = document.getElementById('related-tours-container');
+  if (relatedContainer) {
+    const related = tour.relatedTours || Object.keys(toursData).filter(k => k !== tourKey).slice(0, 3);
+    relatedContainer.innerHTML = related.map(rId => {
+      const r = toursData[rId];
+      if (!r) return '';
+      return `
+        <a href="tour-detail.html?tour=${rId}" class="featured-card reveal">
+          <div class="fc-image">
+            <img src="${resolveImagePath(r.image)}" alt="${r.title}" loading="lazy" />
+          </div>
+          <div class="fc-content">
+            <div class="fc-meta-top">
+              <span>🕒 ${r.duration}</span>
+              <span>⛰️ ${r.tagline}</span>
+            </div>
+            <h3 class="fc-title related-title">${r.title}</h3>
+            <p class="fc-desc related-desc">${r.itinerary[0].desc.substring(0, 100)}...</p>
+            <div class="fc-footer">
+              <div class="fc-footer-left"><span>🏷️ ${r.priceGroup}</span></div>
+              <div class="fc-footer-right">
+                <span class="btn btn-gold-solid btn-related">Ver Detalles</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      `;
+    }).join('');
+  }
+}
+
+// ─── Scroll Reveal Animations ────────────────────────────────
+function initReveal() {
+  document.querySelectorAll('.dest-card, .featured-card, .ds-card').forEach(el => el.classList.add('reveal'));
+
+  const revealEls = document.querySelectorAll('.reveal, .card-reveal');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08, rootMargin: '0px 0px -25px 0px' }
+  );
+  revealEls.forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.hero .reveal, .tour-hero .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 100 + i * 150);
+  });
+}
+
+// ─── Auto-fill missing tour fields (fixed logic) ─────────────
+function fillTourData() {
+  const toursToUpdate = [
+    'salkantay-classic', 'salkantay-short', 'valley-traditional', 
+    'valley-super', 'valley-maras', 'cusco-cultural', 
+    'rainbow-classic', 'ausangate-7lakes'
+  ];
+  
+  const template = toursData['salkantay-premium'];
+  
+  toursToUpdate.forEach(key => {
+    const tour = toursData[key];
+    if (!tour) return;
+    
+    // Copy arrays to have the same format
+    if (!tour.inclusions) tour.inclusions = [...template.inclusions];
+    if (!tour.exclusions) tour.exclusions = [...template.exclusions];
+    if (!tour.packingList) tour.packingList = [...template.packingList];
+    
+    // Check if tour is multi-day (check if duration string contains 'días' or 'nights' and is NOT a single day tour)
+    const isMultiDay = tour.duration && 
+      (tour.duration.toLowerCase().includes('días') || 
+       tour.duration.toLowerCase().includes('dias') ||
+       tour.duration.toLowerCase().includes('noches') ||
+       tour.duration.toLowerCase().includes('nights')) && 
+      !tour.duration.startsWith('1 ');
+
+    // Only copy accommodation if it's a multi-day tour
+    if (isMultiDay && !tour.accommodation) {
+      tour.accommodation = [...template.accommodation];
+    } else if (!isMultiDay) {
+      tour.accommodation = []; // Explicitly clear for single day tours
+    }
+    
+    // Generate intro fields if missing
+    if (!tour.introTitle) tour.introTitle = tour.subtitle || 'Una Aventura Inolvidable';
+    if (!tour.introRoute) tour.introRoute = tour.itinerary.map(i => i.title.split(' ')[0]).join(' – ');
+    if (!tour.introBody) {
+      tour.introBody = `<p>Únete a nosotros en esta espectacular experiencia: <strong>${tour.title}</strong>. Descubre paisajes asombrosos, sumérgete en la cultura andina y disfruta del mejor servicio de su clase. Cada detalle ha sido cuidadosamente planeado para ofrecerte confort y aventura en perfecta armonía.</p>
+      <p>Nuestro equipo de profesionales te acompañará en cada paso, garantizando tu seguridad y compartiendo historias fascinantes sobre nuestra herencia milenaria. ¡Prepárate para llevarte recuerdos que durarán toda la vida!</p>`;
+    }
+  });
+}
+
+// ─── Contact Modal ───────────────────────────────────────────
+function initContactModal() {
+  if (document.getElementById('enquire-modal')) return;
+
+  const modalHTML = `
+    <div class="modal-overlay" id="enquire-modal">
+      <div class="modal-container">
+        <button class="modal-close" id="close-modal-btn">&times;</button>
+        
+        <div class="modal-left">
+          <div class="modal-left-content">
+            <img src="${resolveImagePath('logoweb2.png')}" alt="Cusco Pathways" class="modal-left-logo">
+            <h2>¡Planifica tu Aventura!</h2>
+            <p>Déjanos organizar todo por ti. Contáctanos y uno de nuestros especialistas en viajes te brindará todo lo que necesitas para hacer de esta una experiencia inolvidable.</p>
+          </div>
+        </div>
+
+        <div class="modal-right">
+          <h3>Consulta Ahora</h3>
+          <form class="modal-form" onsubmit="event.preventDefault(); alert('Formulario enviado (solo front-end).'); this.closest('.modal-overlay').classList.remove('active');">
+            
+            <div class="form-group">
+              <label class="form-label">Nombre*</label>
+              <input type="text" class="form-input" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Apellido*</label>
+              <input type="text" class="form-input" required placeholder="Tu apellido">
+            </div>
+
+            <div class="form-group form-group-full">
+              <label class="form-label">Correo Electrónico*</label>
+              <input type="email" class="form-input" required placeholder="ejemplo@correo.com">
+              <div class="form-hint">Nunca compartiremos tu correo con nadie más.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">País*</label>
+              <select class="form-select" required>
+                <option value="">Selecciona tu país</option>
+                <option value="US">Estados Unidos</option>
+                <option value="UK">Reino Unido</option>
+                <option value="ES">España</option>
+                <option value="PE">Perú</option>
+                <option value="CA">Canadá</option>
+                <option value="OT">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Teléfono / WhatsApp</label>
+              <input type="tel" class="form-input" placeholder="+1 234 567 8900">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Me interesa:*</label>
+              <select class="form-select" required>
+                <option value="">Selecciona un paquete</option>
+                <option value="Inca Trail">Camino Inca</option>
+                <option value="Salkantay">Salkantay Trek</option>
+                <option value="Sacred Valley">Valle Sagrado & Cusco</option>
+                <option value="Day Treks">Caminatas de 1 Día (Montaña Colores, etc.)</option>
+                <option value="Custom">Paquete a Medida</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Fecha de Salida Estimada</label>
+              <input type="date" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Adultos*</label>
+              <input type="number" class="form-input" required min="1" value="2">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Niños</label>
+              <input type="number" class="form-input" min="0" value="0">
+            </div>
+
+            <div class="form-group form-group-full">
+              <label class="form-label">Tu Mensaje*</label>
+              <textarea class="form-textarea" required placeholder="Cuéntanos más sobre tu viaje soñado..."></textarea>
+            </div>
+
+            <div class="form-checkbox-group">
+              <input type="checkbox" id="newsletter-check">
+              <label for="newsletter-check">Me gustaría recibir correos de Cusco Pathways Adventures con guías de viaje, tips e información.</label>
+            </div>
+
+            <button type="submit" class="modal-submit-btn">Enviar Consulta</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Inject modal into body
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  const modal = document.getElementById('enquire-modal');
+  const closeBtn = document.getElementById('close-modal-btn');
+  const openBtns = document.querySelectorAll('.open-modal-btn');
+
+  // Open logic
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('active');
+    });
+  });
+
+  // Close logic
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  // Close on outside click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+
+  // Esc key close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+    }
+  });
+}
+
+// ─── Tabs Navigation (Tour Detail Page) ──────────────────────
+function initTabs() {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const sections = {
+    'overview': document.getElementById('section-overview'),
+    'itinerary': document.getElementById('section-itinerary'),
+    'inclusions': document.getElementById('section-inclusions'),
+    'before': document.getElementById('section-before'),
+    'packing': document.getElementById('section-packing'),
+    'accommodation': document.getElementById('section-accommodation'),
+    'pricing': document.getElementById('section-pricing'),
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      Object.values(sections).forEach(s => { if (s) s.classList.remove('active'); });
+      if (sections[target]) sections[target].classList.add('active');
+      
+      const tabNav = document.getElementById('tour-tab-nav');
+      if (tabNav) tabNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
+// ─── Libro de Reclamaciones Form Logic ───────────────────────
+function initReclamaciones() {
+  const checkboxMinor = document.getElementById('is-minor');
+  const padreGroup = document.getElementById('padre-group');
+  const padreInput = document.getElementById('padre-input');
+  const form = document.getElementById('reclamaciones-form');
+
+  if (checkboxMinor && padreGroup && padreInput) {
+    checkboxMinor.addEventListener('change', function() {
+      if (this.checked) {
+        padreGroup.style.display = 'block';
+        padreInput.setAttribute('required', 'true');
+      } else {
+        padreGroup.style.display = 'none';
+        padreInput.removeAttribute('required');
+      }
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('¡Reclamo/Queja enviado exitosamente! Nos pondremos en contacto contigo.');
+      this.reset();
+      if (padreGroup) padreGroup.style.display = 'none';
+    });
+  }
+}
+
+// ─── DOM Initializer ─────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  fillTourData();
+  initNavbar();
+  initHamburger();
+  initContactModal();
+  hydrateDestinationPage();
+  hydrateTourDetailPage();
+  initTabs();
+  initReclamaciones();
+  initReveal();
+});

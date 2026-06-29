@@ -1,0 +1,750 @@
+/* ══════════════════════════════════════════════════════════
+   CUSCO PATHWAYS ADVENTURES — pages/tour-detail.css
+   Tour Detail Specific Layouts · Tab Sections · Itineraries · Packing
+   ══════════════════════════════════════════════════════════ */
+
+/* Hero: 75vh Override */
+.tour-hero {
+  height: 75vh;
+  min-height: 550px;
+}
+.tour-hero-content {
+  padding-top: 80px;
+}
+.tour-hero-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.tour-hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+.tour-hero-meta-item span:first-child {
+  color: var(--gold);
+  font-size: 16px;
+}
+
+/* Breadcrumb */
+.tour-breadcrumb {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tour-breadcrumb a {
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s;
+}
+.tour-breadcrumb a:hover { color: var(--gold); }
+.tour-breadcrumb .sep { opacity: 0.5; }
+
+/* ── Section Tab Nav ── */
+.tour-tab-nav {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--bg-border);
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.tour-tab-nav-inner {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.tour-tab-nav-inner::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px 28px 14px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+.tab-btn .tab-icon {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+svg.tab-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.tab-btn:hover { color: var(--gold); }
+.tab-btn.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ── Description Section ── */
+.tour-desc-section {
+  padding: 70px 0 60px;
+  background: var(--bg-main);
+}
+.tour-desc-inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .tour-desc-inner { grid-template-columns: 1fr; }
+}
+.tour-desc-left .back-link {
+  margin-bottom: 24px;
+}
+.tour-desc-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.tour-desc-route {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+.tour-desc-route svg { flex-shrink: 0; }
+.tour-desc-body {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  line-height: 1.85;
+}
+
+/* Highlights two-col grid */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 32px;
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+  .highlights-grid { grid-template-columns: 1fr; }
+}
+.highlight-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.highlight-star {
+  color: var(--gold);
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.highlight-text {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ── Tab Content Sections ── */
+.tab-section {
+  padding: 70px 0;
+  display: none;
+}
+.tab-section.active {
+  display: block;
+}
+.tab-section:nth-child(even) {
+  background: var(--bg-surface-2);
+}
+
+/* Itinerary day blocks */
+.itinerary-day-block {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0;
+  margin-bottom: 16px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  border: 1px solid var(--bg-border);
+}
+.idb-label {
+  background: var(--primary-green);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+}
+.idb-label.gold { background: var(--gold); }
+.idb-content {
+  background: var(--bg-surface);
+  padding: 16px 20px;
+}
+.idb-title {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+.idb-accommodation {
+  font-size: 0.8rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.idb-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Inclusions / Packing */
+.two-col-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 40px;
+  margin-top: 30px;
+}
+@media (max-width: 600px) {
+  .two-col-list { grid-template-columns: 1fr; }
+}
+.check-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+.check-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: #ffffff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-weight: 700;
+}
+.cross-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: #ffffff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+/* Accommodation cards */
+.accommodation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .accommodation-grid { grid-template-columns: 1fr; }
+}
+.accom-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.accom-card-header {
+  background: var(--primary-green);
+  color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accom-day-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.accom-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.accom-type {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.accom-body {
+  padding: 18px 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.accom-card-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.accom-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.accom-card:hover .accom-card-img img {
+  transform: scale(1.04);
+}
+
+/* Packing List Categories */
+.packing-category {
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--r-md);
+  padding: 24px 28px;
+  break-inside: avoid;
+  box-shadow: inset 0 0 0 1px rgba(30,80,50,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.packing-category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(30,80,50,0.1);
+}
+.packing-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(29,184,122,0.2);
+}
+.packing-cat-icon {
+  font-size: 20px;
+}
+.packing-cat-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary-green);
+}
+#packing-list-container {
+  columns: 2;
+  column-gap: 24px;
+}
+@media (max-width: 768px) {
+  #packing-list-container { columns: 1; }
+}
+
+/* Section divider title */
+.section-sub-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-sub-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+}
+
+/* Important Alert Box */
+.important-alert {
+  background: rgba(212, 166, 58, 0.1);
+  border: 1px solid var(--gold);
+  border-radius: var(--r-md);
+  padding: 24px;
+  margin-bottom: 40px;
+}
+.important-alert h4 {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.important-alert p {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+.important-alert strong { color: var(--gold); }
+
+/* Related Tours */
+.related-tours-section {
+  padding: 70px 0;
+  background: var(--bg-main);
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+@media (max-width: 900px) {
+  .related-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .related-grid { grid-template-columns: 1fr; }
+}
+
+/* Booking Sidebar Sticky override */
+.booking-card {
+  position: sticky;
+  top: 140px;
+}
+
+/* ── Tour Intro Description ── */
+.tour-intro-desc {
+  padding: 60px 0 50px;
+  background: var(--bg-main);
+  border-bottom: 1px solid var(--bg-border);
+}
+.tour-intro-desc-inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 50px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .tour-intro-desc-inner { grid-template-columns: 1fr; }
+}
+.tour-intro-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.tour-intro-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--bg-border);
+  margin-bottom: 18px;
+}
+.tour-intro-route {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-style: italic;
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+.tour-intro-body p {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.tour-intro-body p:last-child { margin-bottom: 0; }
+.tour-intro-body strong { color: var(--gold); }
+
+/* Summary Card Styles */
+.tour-summary-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--r-md);
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 120px;
+}
+.tsc-price-box {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--bg-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tsc-price-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.tsc-price-val {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.tsc-price-unit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.tsc-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tsc-details-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.tsc-details-list svg {
+  color: var(--primary-green);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.tsc-details-list strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+.tsc-details-list span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  display: block;
+}
+.tsc-tripadvisor {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--bg-border);
+  display: flex;
+  justify-content: center;
+}
+.tripadvisor-logo {
+  height: 40px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* ── Pricing Comparison Table ── */
+.pricing-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  margin-bottom: 40px;
+}
+.pricing-block {
+  margin-bottom: 40px;
+}
+.pricing-block-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pricing-block-price {
+  color: var(--gold);
+  font-size: 1.15rem;
+}
+.pricing-block-note {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+.pricing-block-desc {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.pricing-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 20px;
+}
+.pricing-detail-list li {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  position: relative;
+}
+.pricing-detail-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+.pricing-detail-list li strong { color: var(--text-main); }
+.pricing-separator {
+  height: 1px;
+  background: var(--bg-border);
+  margin: 32px 0;
+}
+.pricing-table-wrapper {
+  border: 1px solid var(--bg-border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  max-width: 600px;
+}
+.pricing-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+.pricing-compare-table thead tr {
+  background: var(--gold);
+}
+.pricing-compare-table thead th {
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  text-align: left;
+}
+.pricing-compare-table tbody tr {
+  border-bottom: 1px solid var(--bg-border);
+  transition: background 0.2s ease;
+}
+.pricing-compare-table tbody tr:last-child {
+  border-bottom: none;
+}
+.pricing-compare-table tbody tr:nth-child(odd) {
+  background: rgba(212,166,58,0.04);
+}
+.pricing-compare-table tbody tr:hover {
+  background: rgba(212,166,58,0.08);
+}
+.pricing-compare-table td {
+  padding: 14px 24px;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+.pricing-compare-table td.price-col {
+  color: var(--gold);
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+.pricing-cta {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* JS-generated subpage styles */
+.highlight-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  max-height: 200px;
+  object-fit: cover;
+  border: 1px solid var(--bg-border);
+}
+.itinerary-day-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 12px 0 16px 0;
+  max-height: 300px;
+  object-fit: cover;
+  border: 1px solid var(--bg-border);
+}
+.note-alert {
+  margin-top: 40px;
+}
+.packing-check {
+  background: var(--gold) !important;
+  color: #111111 !important;
+  flex-shrink: 0;
+}
+.related-title {
+  margin-bottom: 10px !important;
+}
+.related-desc {
+  flex: 1 !important;
+  font-size: 0.88rem !important;
+}
+.btn-related {
+  padding: 8px 16px !important;
+  font-size: 10px !important;
+  border-radius: 4px !important;
+}

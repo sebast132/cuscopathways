@@ -1,0 +1,133 @@
+/* ══════════════════════════════════════════════════════════
+   CUSCO PATHWAYS ADVENTURES — base.css
+   Design Tokens · Reset · Container · Utilities
+   ══════════════════════════════════════════════════════════ */
+
+:root {
+  /* Color Palette - Light Theme */
+  --bg-main: #F5F1EA;          /* Brand Cream - General background */
+  --bg-surface: #FFFFFF;       /* Pure White - Cards & sidebars */
+  --bg-surface-2: #EDE9E1;     /* Warm Cream - Second level surface */
+  --bg-border: rgba(30,80,50,0.12); /* Subtle green-tinted borders */
+  --text-main: #1C2B22;        /* Deep Forest - General text */
+  --text-muted: #6B7B72;       /* Sage Gray - Subtitles/Descriptions */
+  --text-light: #8A9B91;       /* Sage Gray - Subtle text (footer links, captions) */
+
+  --primary-green: #1B6B46;    /* Forest Green - Brand primary (logo green) */
+  --gold: #C8861A;             /* Deep Gold - Buttons & Highlights (logo gold) */
+  --copper: #A5621A;           /* Cinematic Copper - Fine lines */
+  --ivory: #FAF7F2;            /* Warm Cream - Logo background tone */
+
+  --bg-footer: #1C2B22;        /* Deep Forest - Footer */
+  --bg-dark: #1C2B22;          /* Deep Forest - Dark sections (testimonials, etc.) */
+
+  /* Typography */
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  --font-premium: 'Poppins', sans-serif;
+  --font-headings: 'Montserrat', sans-serif; /* Alias for display font */
+
+  /* Animation Timings */
+  --dur-fast: 0.3s;
+  --dur-mid: 0.6s;
+  --dur-slow: 1.2s;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Structure */
+  --r-sm: 4px;
+  --r-md: 12px;
+  --r-lg: 24px;
+}
+
+/* ═══════════════════════════════════════════ RESET ═══ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul[role="list"] {
+  list-style: none;
+}
+
+/* ═══════════════════════════════════════════ CONTAINER ═══ */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* ═══════════════════════════════════════════ UTILITIES ═══ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all var(--dur-fast) var(--ease-out);
+  cursor: pointer;
+  border-radius: 2px;
+}
+.btn-gold-ghost {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+}
+.btn-gold-ghost:hover {
+  background: var(--gold);
+  color: #fff;
+}
+.btn-gold-solid {
+  background: var(--gold);
+  color: #fff;
+  border: 1px solid var(--gold);
+}
+.btn-gold-solid:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+/* ═══════════════════════════════════════════ ANIMATIONS ═══ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--dur-mid) var(--ease-out), transform var(--dur-mid) var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.card-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Extra utility helpers */
+.align-center {
+  text-align: center;
+}
+.brand-accent-color {
+  color: #34E0A1 !important;
+}

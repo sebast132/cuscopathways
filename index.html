@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="icon" href="logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/images/brand/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
 
@@ -20,42 +20,42 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <div class="nav-inner">
-        <a href="#" class="logo-text" id="logo-link">
-          <img src="logoweb2.png" alt="Cusco Pathways Adventures" class="nav-logo-img">
+        <a href="index.html" class="logo-text" id="logo-link">
+          <img src="assets/images/brand/logoweb2.png" alt="Cusco Pathways Adventures" class="nav-logo-img">
         </a>
         <ul class="nav-links" role="list">
           <li class="dropdown">
             <a href="destination.html?dest=inca-trail" class="nav-link">Inca Trail <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-content">
-              <a href="tour-detail.html?tour=inca-trail">Camino Inca Clásico 4 Días</a>
-              <a href="tour-detail.html?tour=inca-short">Camino Inca Corto 2 Días</a>
+              <a href="tour-detail.html?tour=incatrail-classic&dest=inca-trail">Camino Inca Clásico 4 Días</a>
+              <a href="tour-detail.html?tour=incatrail-short&dest=inca-trail">Camino Inca Corto 2 Días</a>
             </div>
           </li>
           <li class="dropdown">
             <a href="destination.html?dest=salkantay" class="nav-link">Salkantay <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-content">
-              <a href="tour-detail.html?tour=salkantay-premium">Salkantay Trek Premium 5 Días</a>
-              <a href="tour-detail.html?tour=salkantay-classic">Salkantay Trek Clásico 5 Días</a>
-              <a href="tour-detail.html?tour=salkantay-short">Salkantay Trek Corto 4 Días</a>
+              <a href="tour-detail.html?tour=salkantay-premium&dest=salkantay">Salkantay Trek Premium 5 Días</a>
+              <a href="tour-detail.html?tour=salkantay-classic&dest=salkantay">Salkantay Trek Clásico 5 Días</a>
+              <a href="tour-detail.html?tour=salkantay-short&dest=salkantay">Salkantay Trek Corto 4 Días</a>
             </div>
           </li>
           <li class="dropdown">
             <a href="destination.html?dest=cusco-sacred-valley" class="nav-link">Cusco & Sacred Valley <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-content">
-              <a href="tour-detail.html?tour=cusco-cultural">City Tour Cusco</a>
-              <a href="tour-detail.html?tour=valley-trad">Tour Valle Sagrado</a>
-              <a href="tour-detail.html?tour=valley-super">Super Tour Valle Sagrado VIP</a>
-              <a href="tour-detail.html?tour=maras-moray">Maras y Moray</a>
+              <a href="tour-detail.html?tour=cusco-cultural&dest=cusco-sacred-valley">City Tour Cusco</a>
+              <a href="tour-detail.html?tour=valley-traditional&dest=cusco-sacred-valley">Tour Valle Sagrado</a>
+              <a href="tour-detail.html?tour=valley-super&dest=cusco-sacred-valley">Super Tour Valle Sagrado VIP</a>
+              <a href="tour-detail.html?tour=valley-maras&dest=cusco-sacred-valley">Maras y Moray</a>
             </div>
           </li>
           <li class="dropdown">
             <a href="destination.html?dest=rainbow-mountain" class="nav-link">Days Treks <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-content">
-              <a href="tour-detail.html?tour=humantay-classic">Laguna Humantay</a>
-              <a href="tour-detail.html?tour=ausangate-7lakes">Ausangate 7 Lagunas</a>
-              <a href="tour-detail.html?tour=rainbow-mountain">Montaña de Colores</a>
-              <a href="tour-detail.html?tour=palcoyo-mountain">Montaña Palcoyo</a>
-              <a href="tour-detail.html?tour=pallay-punchu">Pallay Punchu</a>
+              <a href="tour-detail.html?tour=humantay-classic&dest=rainbow-mountain">Laguna Humantay</a>
+              <a href="tour-detail.html?tour=ausangate-7lakes&dest=rainbow-mountain">Ausangate 7 Lagunas</a>
+              <a href="tour-detail.html?tour=rainbow-classic&dest=rainbow-mountain">Montaña de Colores</a>
+              <a href="tour-detail.html?tour=palcoyo&dest=rainbow-mountain">Montaña Palcoyo</a>
+              <a href="tour-detail.html?tour=pallay-punchu&dest=rainbow-mountain">Pallay Punchu</a>
             </div>
           </li>
         </ul>
@@ -79,7 +79,7 @@
   <header class="hero" id="hero">
     <div class="hero-bg">
       <!-- Image with nature, mountains, clear sky -->
-      <img src="hero_andes.png" alt="Cordillera de los Andes cinemática" id="hero-bg-img" />
+      <img src="assets/images/hero/hero_andes.png" alt="Cordillera de los Andes cinemática" id="hero-bg-img" />
     </div>
     <div class="hero-content">
       <h1 class="hero-title reveal">FIND YOUR PATH IN CUSCO</h1>
@@ -127,7 +127,7 @@
       <div class="destinations-grid">
         <!-- Inca Trail -->
         <a href="destination.html?dest=inca-trail" class="ds-card reveal">
-          <img src="dest_incatrail.png" alt="Inca Trail" class="ds-bg" />
+          <img src="assets/images/destinations/dest_incatrail.png" alt="Inca Trail" class="ds-bg" loading="lazy" />
           <div class="ds-overlay"></div>
           <div class="ds-content">
             <span class="ds-tag">Camino Inca Clásico</span>
@@ -138,7 +138,7 @@
 
         <!-- Salkantay -->
         <a href="destination.html?dest=salkantay" class="ds-card reveal">
-          <img src="dest_salkantay.png" alt="Salkantay" class="ds-bg" />
+          <img src="assets/images/destinations/dest_salkantay.png" alt="Salkantay" class="ds-bg" loading="lazy" />
           <div class="ds-overlay"></div>
           <div class="ds-content">
             <span class="ds-tag">Cordillera Vilcabamba</span>
@@ -149,7 +149,7 @@
 
         <!-- Cusco & Sacred Valley -->
         <a href="destination.html?dest=cusco-sacred-valley" class="ds-card reveal">
-          <img src="dest_sacredvalley.png" alt="Cusco & Sacred Valley" class="ds-bg" />
+          <img src="assets/images/destinations/dest_sacredvalley.png" alt="Cusco & Sacred Valley" class="ds-bg" loading="lazy" />
           <div class="ds-overlay"></div>
           <div class="ds-content">
             <span class="ds-tag">Imperio Inca</span>
@@ -160,7 +160,7 @@
 
         <!-- Rainbow Mountain -->
         <a href="destination.html?dest=rainbow-mountain" class="ds-card reveal">
-          <img src="tour_rainbow.png" alt="Rainbow Mountain" class="ds-bg" />
+          <img src="assets/images/tours/tour_rainbow.png" alt="Rainbow Mountain" class="ds-bg" loading="lazy" />
           <div class="ds-overlay"></div>
           <div class="ds-content">
             <span class="ds-tag">Apu Ausangate</span>
@@ -173,7 +173,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════ FEATURED TOURS ═══ -->
   <section class="experiences" id="featured-tours" aria-labelledby="featured-heading">
     <div class="container">
       <div class="section-header reveal">
@@ -185,12 +184,11 @@
         <button class="carousel-btn prev-btn" id="fc-prev" aria-label="Ver Anterior">&#10094;</button>
         
         <div class="featured-carousel" id="featured-carousel">
-          
           <!-- City Tour Cusco -->
           <article class="featured-card reveal">
             <div class="fc-image">
-              <div class="fc-badge"><span style="font-size: 16px; margin-bottom: 2px;">🏅</span> Top</div>
-              <img src="city_plaza_cusco.png" alt="City Tour Cusco" />
+              <div class="fc-badge">🏅 Top</div>
+              <img src="assets/images/city/city_plaza_cusco.png" alt="City Tour Cusco" loading="lazy" />
             </div>
             <div class="fc-content">
               <div class="fc-meta-top">
@@ -199,17 +197,17 @@
               </div>
               <h3 class="fc-title">City Tour Cusco</h3>
               <p class="fc-subtitle">Cusco → Sacsayhuamán → Qenqo → Puca Pucara → Tambomachay</p>
-              <p class="fc-desc" style="flex: 1;">Cusco no es simplemente una ciudad — es un museo viviente construido sobre cimientos incas.</p>
+              <p class="fc-desc">Cusco no es simplemente una ciudad — es un museo viviente construido sobre cimientos incas.</p>
               
               <div class="fc-footer">
                 <div class="fc-footer-left">
                   <span>👥 Hasta 12 Personas</span>
                   <span>🏔️ ~3,700m / 12,140ft</span>
-                  <span style="color:var(--gold);">★ 4.8 (3,124 reseñas)</span>
+                  <span class="rating-highlight">★ 4.8 (3,124 reseñas)</span>
                 </div>
                 <div class="fc-footer-right">
                   <span class="fc-price">Desde <strong>$00.00</strong> pp</span>
-                  <a href="tour-detail.html?tour=cusco-cultural" class="btn btn-gold-solid" style="padding: 10px 20px; font-size: 10px; border-radius: 4px; text-transform: uppercase;">VER ITINERARIO</a>
+                  <a href="tour-detail.html?tour=cusco-cultural&dest=cusco-sacred-valley" class="btn btn-gold-solid btn-itinerary">VER ITINERARIO</a>
                 </div>
               </div>
             </div>
@@ -218,7 +216,7 @@
           <!-- Super Valle Sagrado -->
           <article class="featured-card reveal">
             <div class="fc-image">
-              <img src="sv_ollantaytambo_principal.png" alt="Super Valle Sagrado" />
+              <img src="assets/images/sacred-valley/sv_ollantaytambo_principal.png" alt="Super Valle Sagrado" loading="lazy" />
             </div>
             <div class="fc-content">
               <div class="fc-meta-top">
@@ -227,17 +225,17 @@
               </div>
               <h3 class="fc-title">Super Valle Sagrado VIP</h3>
               <p class="fc-subtitle">Chinchero → Moray → Salineras de Maras → Urubamba → Ollantaytambo → Pisac</p>
-              <p class="fc-desc" style="flex: 1;">El Valle Sagrado de los Incas esconde más secretos de los que la mayoría de los viajeros logran ver. Hemos diseñado el "Super Valle" para aquellos que lo quieren todo en un día de inmersión total.</p>
+              <p class="fc-desc">El Valle Sagrado de los Incas esconde más secretos de los que la mayoría de los viajeros logran ver. Hemos diseñado el "Super Valle" para aquellos que lo quieren todo en un día de inmersión total.</p>
               
               <div class="fc-footer">
                 <div class="fc-footer-left">
                   <span>👥 Max. 12 pasajeros</span>
                   <span>🏔️ 3,762m</span>
-                  <span style="color:var(--gold);">★ 4.9 (2,840 reseñas)</span>
+                  <span class="rating-highlight">★ 4.9 (2,840 reseñas)</span>
                 </div>
                 <div class="fc-footer-right">
                   <span class="fc-price">Desde <strong>$00.00</strong> pp</span>
-                  <a href="tour-detail.html?tour=valley-super" class="btn btn-gold-solid" style="padding: 10px 20px; font-size: 10px; border-radius: 4px; text-transform: uppercase;">VER ITINERARIO</a>
+                  <a href="tour-detail.html?tour=valley-super&dest=cusco-sacred-valley" class="btn btn-gold-solid btn-itinerary">VER ITINERARIO</a>
                 </div>
               </div>
             </div>
@@ -246,7 +244,7 @@
           <!-- Laguna Humantay -->
           <article class="featured-card reveal">
             <div class="fc-image">
-              <img src="humantay_main.png" alt="Laguna Humantay" />
+              <img src="assets/images/day-treks/humantay_main.png" alt="Laguna Humantay" loading="lazy" />
             </div>
             <div class="fc-content">
               <div class="fc-meta-top">
@@ -255,17 +253,17 @@
               </div>
               <h3 class="fc-title">Tour Laguna Humantay</h3>
               <p class="fc-subtitle">Cusco → Mollepata → Soraypampa → Laguna Humantay</p>
-              <p class="fc-desc" style="flex: 1;">Anidada bajo los glaciares de las montañas Humantay y Salkantay, la Laguna Humantay es uno de los paisajes más perfectamente compuestos de la naturaleza.</p>
+              <p class="fc-desc">Anidada bajo los glaciares de las montañas Humantay y Salkantay, la Laguna Humantay es uno de los paisajes más perfectamente compuestos de la naturaleza.</p>
               
               <div class="fc-footer">
                 <div class="fc-footer-left">
                   <span>👥 Max. 12 pasajeros</span>
                   <span>🏔️ 4,200m</span>
-                  <span style="color:var(--gold);">★ 4.9 (4,032 reseñas)</span>
+                  <span class="rating-highlight">★ 4.9 (4,032 reseñas)</span>
                 </div>
                 <div class="fc-footer-right">
                   <span class="fc-price">Desde <strong>$00.00</strong> pp</span>
-                  <a href="tour-detail.html?tour=humantay-classic" class="btn btn-gold-solid" style="padding: 10px 20px; font-size: 10px; border-radius: 4px; text-transform: uppercase;">VER ITINERARIO</a>
+                  <a href="tour-detail.html?tour=humantay-classic&dest=rainbow-mountain" class="btn btn-gold-solid btn-itinerary">VER ITINERARIO</a>
                 </div>
               </div>
             </div>
@@ -274,7 +272,7 @@
           <!-- Ausangate 7 Lagunas -->
           <article class="featured-card reveal">
             <div class="fc-image">
-              <img src="ausangate_luna.png" alt="Ausangate 7 Lagunas" />
+              <img src="assets/images/day-treks/ausangate_luna.png" alt="Ausangate 7 Lagunas" loading="lazy" />
             </div>
             <div class="fc-content">
               <div class="fc-meta-top">
@@ -283,17 +281,17 @@
               </div>
               <h3 class="fc-title">Ausangate 7 Lagunas</h3>
               <p class="fc-subtitle">Cusco → Pacchanta → 7 Lagunas → Aguas Termales → Cusco</p>
-              <p class="fc-desc" style="flex: 1;">El macizo del Ausangate — la montaña más alta y sagrada de la región de Cusco a 6,384m — guarda un mundo de extraordinarias lagunas de colores.</p>
+              <p class="fc-desc">El macizo del Ausangate — la montaña más alta y sagrada de la región de Cusco a 6,384m — guarda un mundo de extraordinarias lagunas de colores.</p>
               
               <div class="fc-footer">
                 <div class="fc-footer-left">
                   <span>👥 Max. 12 pasajeros</span>
                   <span>🏔️ 4,800m</span>
-                  <span style="color:var(--gold);">★ 4.8 (1,530 reseñas)</span>
+                  <span class="rating-highlight">★ 4.8 (1,530 reseñas)</span>
                 </div>
                 <div class="fc-footer-right">
                   <span class="fc-price">Desde <strong>$00.00</strong> pp</span>
-                  <a href="tour-detail.html?tour=ausangate-7lakes" class="btn btn-gold-solid" style="padding: 10px 20px; font-size: 10px; border-radius: 4px; text-transform: uppercase;">VER ITINERARIO</a>
+                  <a href="tour-detail.html?tour=ausangate-7lakes&dest=rainbow-mountain" class="btn btn-gold-solid btn-itinerary">VER ITINERARIO</a>
                 </div>
               </div>
             </div>
@@ -308,63 +306,63 @@
   </section>
 
   <!-- ═══════════════════════════════════════════ TESTIMONIALS ═══ -->
-  <section class="testimonials-section" style="padding: 60px 0; background: var(--bg-dark); overflow: hidden; border-top: 1px solid rgba(255,255,255,0.05);">
+  <section class="testimonials-section">
     <div class="container">
-      <div class="section-header" style="margin-bottom: 40px; text-align: center;">
-        <span class="section-eyebrow" style="color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 700;">Lo Que Dicen Nuestros Clientes</span>
-        <h2 class="section-title" style="color: var(--text-main); font-family: var(--font-headings); font-size: 2rem;"><span style="color: #34E0A1;">🦉</span> Testimonios de TripAdvisor</h2>
+      <div class="section-header align-center">
+        <span class="section-eyebrow">Lo Que Dicen Nuestros Clientes</span>
+        <h2 class="section-title"><span class="brand-accent-color">🦉</span> Testimonios de TripAdvisor</h2>
       </div>
 
-      <div class="testimonials-carousel-wrapper" style="position: relative; max-width: 1200px; margin: 0 auto; overflow: hidden; padding: 0 50px;">
-        <button id="test-next-btn" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: var(--gold); border: none; color: #fff; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: background 0.3s;" onmouseover="this.style.background='#b07515'" onmouseout="this.style.background='var(--gold)'">&#10095;</button>
-        <div class="testimonials-track" id="testimonials-track" style="display: flex; transition: transform 0.5s ease-in-out;">
+      <div class="testimonials-carousel-wrapper">
+        <button id="test-next-btn">&#10095;</button>
+        <div class="testimonials-track" id="testimonials-track">
           
           <!-- Testimonio 1 -->
           <article class="testimonial-card">
-            <div class="test-stars" style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</div>
-            <h4 class="test-title" style="color: var(--text-main); font-family: var(--font-premium); margin-bottom: 10px;">¡El mejor viaje de nuestra vida!</h4>
-            <p class="test-quote" style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 15px;">"Hicimos el Salkantay Trek con Cusco Pathways y fue una experiencia que jamás olvidaremos. Los guías, la comida, los campamentos... todo fue de primera."</p>
-            <p class="test-author" style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">— María G., Mayo 2026</p>
+            <div class="test-stars">★★★★★</div>
+            <h4 class="test-title">¡El mejor viaje de nuestra vida!</h4>
+            <p class="test-quote">"Hicimos el Salkantay Trek con Cusco Pathways y fue una experiencia que jamás olvidaremos. Los guías, la comida, los campamentos... todo fue de primera."</p>
+            <p class="test-author">— María G., Mayo 2026</p>
           </article>
 
           <!-- Testimonio 2 -->
           <article class="testimonial-card">
-            <div class="test-stars" style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</div>
-            <h4 class="test-title" style="color: var(--text-main); font-family: var(--font-premium); margin-bottom: 10px;">Servicio VIP inigualable</h4>
-            <p class="test-quote" style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 15px;">"Tomamos el tour del Valle Sagrado VIP y superó con creces nuestras expectativas. La organización fue impecable de principio a fin, evitamos las multitudes."</p>
-            <p class="test-author" style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">— Carlos R., Abril 2026</p>
+            <div class="test-stars">★★★★★</div>
+            <h4 class="test-title">Servicio VIP inigualable</h4>
+            <p class="test-quote">"Tomamos el tour del Valle Sagrado VIP y superó con creces nuestras expectativas. La organización fue impecable de principio a fin, evitamos las multitudes."</p>
+            <p class="test-author">— Carlos R., Abril 2026</p>
           </article>
 
           <!-- Testimonio 3 -->
           <article class="testimonial-card">
-            <div class="test-stars" style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</div>
-            <h4 class="test-title" style="color: var(--text-main); font-family: var(--font-premium); margin-bottom: 10px;">Magia pura en Humantay</h4>
-            <p class="test-quote" style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 15px;">"Un paisaje irreal, de película. Nuestro guía fue súper paciente ya que me costó un poco la altura. El desayuno y el almuerzo fueron un lujo."</p>
-            <p class="test-author" style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">— Laura M., Marzo 2026</p>
+            <div class="test-stars">★★★★★</div>
+            <h4 class="test-title">Magia pura en Humantay</h4>
+            <p class="test-quote">"Un paisaje irreal, de película. Nuestro guía fue súper paciente ya que me costó un poco la altura. El desayuno y el almuerzo fueron un lujo."</p>
+            <p class="test-author">— Laura M., Marzo 2026</p>
           </article>
 
           <!-- Testimonio 4 -->
           <article class="testimonial-card">
-            <div class="test-stars" style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</div>
-            <h4 class="test-title" style="color: var(--text-main); font-family: var(--font-premium); margin-bottom: 10px;">Profesionales 100%</h4>
-            <p class="test-quote" style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 15px;">"Me recomendaron esta agencia y no se equivocaron. Tienen un estándar altísimo en calidad. Hicimos el City Tour y nos enseñaron cosas que no están en los libros."</p>
-            <p class="test-author" style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">— Roberto S., Junio 2026</p>
+            <div class="test-stars">★★★★★</div>
+            <h4 class="test-title">Profesionales 100%</h4>
+            <p class="test-quote">"Me recomendaron esta agencia y no se equivocaron. Tienen un estándar altísimo en calidad. Hicimos el City Tour y nos enseñaron cosas que no están en los libros."</p>
+            <p class="test-author">— Roberto S., Junio 2026</p>
           </article>
 
           <!-- Testimonio 5 -->
           <article class="testimonial-card">
-            <div class="test-stars" style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</div>
-            <h4 class="test-title" style="color: var(--text-main); font-family: var(--font-premium); margin-bottom: 10px;">Increíbles 7 Lagunas</h4>
-            <p class="test-quote" style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 15px;">"Ausangate es otro planeta, pero ir con una agencia que cuida todos los detalles hace la diferencia. Terminamos en las aguas termales con una vista brutal."</p>
-            <p class="test-author" style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">— Elena y Jorge, Enero 2026</p>
+            <div class="test-stars">★★★★★</div>
+            <h4 class="test-title">Increíbles 7 Lagunas</h4>
+            <p class="test-quote">"Ausangate es otro planeta, pero ir con una agencia que cuida todos los detalles hace la diferencia. Terminamos en las aguas termales con una vista brutal."</p>
+            <p class="test-author">— Elena y Jorge, Enero 2026</p>
           </article>
 
           <!-- Testimonio 6 -->
           <article class="testimonial-card">
-            <div class="test-stars" style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">★★★★★</div>
-            <h4 class="test-title" style="color: var(--text-main); font-family: var(--font-premium); margin-bottom: 10px;">Una conexión genuina</h4>
-            <p class="test-quote" style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 15px;">"No somos de los que compran tours, pero el Camino Inca hay que hacerlo así. El respeto que muestran por la cultura local y su equipo es admirable."</p>
-            <p class="test-author" style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">— Familia Torres, Febrero 2026</p>
+            <div class="test-stars">★★★★★</div>
+            <h4 class="test-title">Una conexión genuina</h4>
+            <p class="test-quote">"No somos de los que compran tours, pero el Camino Inca hay que hacerlo así. El respeto que muestran por la cultura local y su equipo es admirable."</p>
+            <p class="test-author">— Familia Torres, Febrero 2026</p>
           </article>
 
         </div>
@@ -375,63 +373,65 @@
   <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
   <footer class="footer" id="footer">
     <div class="container">
-      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <div class="footer-grid">
         
         <!-- Columna 1: Branding -->
-        <div class="footer-brand-col" style="display: flex; flex-direction: column; gap: 16px;">
-          <a href="index.html" class="footer-logo"><img src="logoweb2.png" alt="Cusco Pathways" class="footer-logo-img" style="max-width: 150px; opacity: 0.9;"></a>
-          <p style="color: var(--text-light); font-size: 14px; line-height: 1.6;">Curadores de viajes premium y aventuras inmersivas en los Andes peruanos.</p>
-          <div class="social-icons" style="display: flex; gap: 16px; margin-top: 8px;">
-            <a href="#" style="color: var(--gold); text-decoration: none; font-size: 20px; transition: color 0.3s;" aria-label="Instagram">📸</a>
-            <a href="#" style="color: var(--gold); text-decoration: none; font-size: 20px; transition: color 0.3s;" aria-label="Facebook">📘</a>
-            <a href="#" style="color: var(--gold); text-decoration: none; font-size: 20px; transition: color 0.3s;" aria-label="TikTok">🎵</a>
-            <a href="#" style="color: var(--gold); text-decoration: none; font-size: 20px; transition: color 0.3s;" aria-label="TripAdvisor">🦉</a>
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/images/brand/logoweb2.png" alt="Cusco Pathways" class="footer-logo-img" loading="lazy">
+          </a>
+          <p class="footer-text">Curadores de viajes premium y aventuras inmersivas en los Andes peruanos.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon" aria-label="TikTok">🎵</a>
+            <a href="#" class="social-icon" aria-label="TripAdvisor">🦉</a>
           </div>
         </div>
 
         <!-- Columna 2: Explorar -->
         <div class="footer-links-col">
-          <h4 style="color: var(--text-main); margin-bottom: 16px; font-weight: 600; font-size: 16px;">Explorar</h4>
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; margin: 0;">
-            <li><a href="index.html#destinations" style="color: var(--text-light); text-decoration: none; font-size: 14px; transition: color 0.3s;">Destinos</a></li>
-            <li><a href="index.html#featured-tours" style="color: var(--text-light); text-decoration: none; font-size: 14px; transition: color 0.3s;">Rutas Icónicas</a></li>
-            <li><a href="index.html#manifesto" style="color: var(--text-light); text-decoration: none; font-size: 14px; transition: color 0.3s;">Nuestro Manifiesto</a></li>
+          <h4 class="footer-heading">Explorar</h4>
+          <ul class="footer-list">
+            <li><a href="index.html#destinations" class="footer-link">Destinos</a></li>
+            <li><a href="index.html#featured-tours" class="footer-link">Rutas Icónicas</a></li>
+            <li><a href="index.html#manifesto" class="footer-link">Nuestro Manifiesto</a></li>
           </ul>
         </div>
 
         <!-- Columna 3: Contacto -->
         <div class="footer-contact-col">
-          <h4 style="color: var(--text-main); margin-bottom: 16px; font-weight: 600; font-size: 16px;">Contacto</h4>
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; color: var(--text-light); font-size: 14px; margin: 0;">
-            <li style="display: flex; align-items: center; gap: 8px;">📧 <a href="mailto:info@cuscopathways.com" style="color: var(--gold); text-decoration: none;">info@cuscopathways.com</a></li>
-            <li style="display: flex; align-items: center; gap: 8px;">📱 <a href="tel:+51984000000" style="color: var(--text-light); text-decoration: none;">+51 984 000 000</a></li>
-            <li style="display: flex; align-items: center; gap: 8px;">🕒 Lun-Sáb, 8:00 am - 7:00 pm</li>
+          <h4 class="footer-heading">Contacto</h4>
+          <ul class="footer-list">
+            <li class="footer-contact-item">📧 <a href="mailto:info@cuscopathways.com" class="footer-link-highlight">info@cuscopathways.com</a></li>
+            <li class="footer-contact-item">📱 <a href="tel:+51984000000" class="footer-link">+51 984 000 000</a></li>
+            <li class="footer-contact-item">🕒 Lun-Sáb, 8:00 am - 7:00 pm</li>
           </ul>
         </div>
 
         <!-- Columna 4: Legal & Reclamaciones -->
         <div class="footer-legal-col">
-          <h4 style="color: var(--text-main); margin-bottom: 16px; font-weight: 600; font-size: 16px;">Soporte y Legal</h4>
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; margin: 0;">
-            <li><a href="#" style="color: var(--text-light); text-decoration: none; font-size: 14px; transition: color 0.3s;">Términos y Condiciones</a></li>
-            <li><a href="#" style="color: var(--text-light); text-decoration: none; font-size: 14px; transition: color 0.3s;">Políticas de Privacidad</a></li>
+          <h4 class="footer-heading">Soporte y Legal</h4>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
           </ul>
-          <div class="reclamaciones" style="margin-top: 24px;">
-            <a href="reclamaciones.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.1); padding: 12px; border-radius: 8px; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.1)'">
-              <span style="font-size: 28px;">📖</span>
-              <span style="color: var(--text-light); font-size: 12px; line-height: 1.3;">Libro de<br><strong style="color: var(--text-main); font-weight: 600;">Reclamaciones</strong></span>
+          <div class="reclamaciones">
+            <a href="reclamaciones.html" class="reclamaciones-link">
+              <span class="reclamaciones-icon">📖</span>
+              <span class="reclamaciones-text">Libro de<br><strong>Reclamaciones</strong></span>
             </a>
           </div>
         </div>
 
       </div>
 
-      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px;">
-        <p style="color: var(--text-light); font-size: 13px; margin: 0;">&copy; 2026 Cusco Pathways Adventures. Todos los derechos reservados.</p>
-        <div class="payment-methods" style="display: flex; gap: 12px; font-size: 24px;">
-          <span title="Visa" style="opacity: 0.8;">💳</span>
-          <span title="Mastercard" style="opacity: 0.8;">🏦</span>
-          <span title="PayPal" style="opacity: 0.8;">📱</span>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Cusco Pathways Adventures. Todos los derechos reservados.</p>
+        <div class="payment-methods">
+          <span title="Visa">💳</span>
+          <span title="Mastercard">🏦</span>
+          <span title="PayPal">📱</span>
         </div>
       </div>
     </div>
@@ -443,6 +443,8 @@
     </svg>
   </a>
 
-  <script src="script.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/carousel.js"></script>
 </body>
 </html>
