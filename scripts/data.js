@@ -43,22 +43,22 @@ function resolveImagePath(filename) {
 const destinationsData = {
   'inca-trail': {
     title: 'Inca Trail',
-    image: 'dest_incatrail.png',
+    image: 'dest_incatrail.webp',
     tours: ['incatrail-classic', 'incatrail-short']
   },
   'salkantay': {
     title: 'Salkantay',
-    image: 'dest_salkantay.png',
+    image: 'dest_salkantay.webp',
     tours: ['salkantay-premium', 'salkantay-classic', 'salkantay-short']
   },
   'cusco-sacred-valley': {
     title: 'Cusco & Sacred Valley',
-    image: 'dest_sacredvalley.png',
+    image: 'dest_sacredvalley.webp',
     tours: ['cusco-cultural', 'valley-traditional', 'valley-super', 'valley-maras']
   },
   'rainbow-mountain': {
     title: 'Day Treks',
-    image: 'tour_rainbow.png',
+    image: 'tour_rainbow.webp',
     tours: ['rainbow-classic', 'humantay-classic', 'ausangate-7lakes', 'palcoyo', 'pallay-punchu']
   }
 };
@@ -79,8 +79,8 @@ const toursData = {
     level: 'Tour grupal Premium',
     acclimatization: 'Mín. 2 días en Cusco',
     rating: '4.9 (1,243 reseñas)',
-    image: 'dest_salkantay.png',
-    heroImage: 'dest_salkantay.png',
+    image: 'dest_salkantay.webp',
+    heroImage: 'dest_salkantay.webp',
     brochure: 'assets/documents/CuscoPathways_PremiumSalkantayTrek_5Days_ENG.pdf',
     map: 'assets/images/salkantay/premium_salkantay_map.webp',
     description: `Toda la grandeza del Clásico, elevada. Cada comodidad está mejorada: sleeping bag y bastones incluidos, caballo de emergencia Día 2, aguas termales Cocalmayo Día 3, tren privado Día 4, Vistadome Observatory de regreso, hotel 3 estrellas en Aguas Calientes, duffle 10kg, traslados aeropuerto.<br><br><strong>¿Por qué elegirnos?</strong><br>El Salkantay Premium es para quienes lo quieren todo: la belleza salvaje de los Andes, el logro del Paso Salkantay y el lujo de saber que cada comodidad está arreglada. Desde la llegada al aeropuerto hasta el tren Vistadome Observatory de regreso, cada detalle está cuidado.`,
@@ -132,10 +132,10 @@ const toursData = {
       'Traje de baño para Aguas Termales'
     ],
     accommodation: [
-      { day: 'Día 1', name: 'Sky Camp', type: 'Domos de Lujo', image: 'accom_sky_camp.png', desc: 'Espectaculares domos transparentes geodésicos ubicados a 3,900m de altitud con vista directa al nevado Salkantay y al cielo estrellado. Cada domo cuenta con camas matrimoniales de colchón premium, ropa de cama tipo hotel, iluminación cálida y baño privado con agua caliente. Al caer la noche, la bóveda celeste se convierte en tu techo de estrellas.' },
-      { day: 'Día 2', name: 'Mountain Sky View Camp', type: 'Domos Panorámicos', image: 'accom_mountain_sky.png', desc: 'Ubicados en un mirador natural privilegiado a 3,800m, estos domos panorámicos ofrecen vistas de 180° a los nevados de la Cordillera Vilcabamba. El interior incluye calefacción, edredones de alta montaña y servicio de cena preparada por nuestro chef. Un lugar donde el silencio de los Andes se convierte en la mejor melodía para descansar.' },
-      { day: 'Día 3', name: 'Super Jungle Domes', type: 'Domos Ecológicos', image: 'accom_jungle_domes.png', desc: 'Inmersos entre la exuberante vegetación de la ceja de selva, estos domos ecológicos fusionan diseño sostenible y confort selvático. Cada unidad tiene terraza privada con hamacas, ducha de agua caliente y ventilación natural. Por la noche, el canto de las aves tropicales y el murmullo de los ríos te acompañarán en un sueño profundo y reparador.' },
-      { day: 'Día 4', name: 'Hotel 3★ Aguas Calientes', type: 'Hotel Boutique', image: 'accom_hotel_aguas.png', desc: 'Hotel boutique moderno en el corazón de Aguas Calientes (Machu Picchu Pueblo), a solo 5 minutos caminando de la parada del bus a la ciudadela. Habitación doble con baño privado, TV, wifi, textiles andinos decorativos y desayuno buffet incluido. Ideal para descansar y prepararse para la gran visita del último día.' },
+      { day: 'Día 1', name: 'Sky Camp', type: 'Domos de Lujo', image: 'accom_sky_camp.webp', desc: 'Espectaculares domos transparentes geodésicos ubicados a 3,900m de altitud con vista directa al nevado Salkantay y al cielo estrellado. Cada domo cuenta con camas matrimoniales de colchón premium, ropa de cama tipo hotel, iluminación cálida y baño privado con agua caliente. Al caer la noche, la bóveda celeste se convierte en tu techo de estrellas.' },
+      { day: 'Día 2', name: 'Mountain Sky View Camp', type: 'Domos Panorámicos', image: 'accom_mountain_sky.webp', desc: 'Ubicados en un mirador natural privilegiado a 3,800m, estos domos panorámicos ofrecen vistas de 180° a los nevados de la Cordillera Vilcabamba. El interior incluye calefacción, edredones de alta montaña y servicio de cena preparada por nuestro chef. Un lugar donde el silencio de los Andes se convierte en la mejor melodía para descansar.' },
+      { day: 'Día 3', name: 'Super Jungle Domes', type: 'Domos Ecológicos', image: 'accom_jungle_domes.webp', desc: 'Inmersos entre la exuberante vegetación de la ceja de selva, estos domos ecológicos fusionan diseño sostenible y confort selvático. Cada unidad tiene terraza privada con hamacas, ducha de agua caliente y ventilación natural. Por la noche, el canto de las aves tropicales y el murmullo de los ríos te acompañarán en un sueño profundo y reparador.' },
+      { day: 'Día 4', name: 'Hotel 3★ Aguas Calientes', type: 'Hotel Boutique', image: 'accom_hotel_aguas.webp', desc: 'Hotel boutique moderno en el corazón de Aguas Calientes (Machu Picchu Pueblo), a solo 5 minutos caminando de la parada del bus a la ciudadela. Habitación doble con baño privado, TV, wifi, textiles andinos decorativos y desayuno buffet incluido. Ideal para descansar y prepararse para la gran visita del último día.' },
     ],
     pricePrivate: 'USD 1,250.00',
     priceGroup: 'USD 850.00',
@@ -185,8 +185,8 @@ const toursData = {
     altitude: '4,630 m',
     groupSize: 'Max. 16 pasajeros',
     rating: '4.9 (1,243 reseñas)',
-    image: 'dest_salkantay.png',
-    heroImage: 'dest_salkantay.png',
+    image: 'dest_salkantay.webp',
+    heroImage: 'dest_salkantay.webp',
     brochure: 'assets/documents/CuscoPathways_ClassicSalkantayTrek_5Days.pdf',
     map: 'assets/images/salkantay/classic_salkantay_map.webp',
     description: `En 5 días, cruza el Paso Salkantay a 4,630m, camina de cumbres glaciares por el bosque nublado hasta la selva peruana, duerme en campamentos exclusivos y párate ante Machu Picchu. Clasificado entre las 25 mejores rutas de trekking del mundo por National Geographic.<br><br><strong>¿Por qué elegirnos?</strong><br>El Salkantay Clásico es el referente frente al cual se miden todos los demás treks andinos. Ofrece un sendero abierto con variedad extraordinaria — de paisajes glaciales a selva tropical. Con Cusco Pathways Adventure vives esta ruta con campamentos privados exclusivos, cocina gourmet de montaña y guías certificados. Esto no es simplemente un trek a Machu Picchu. Es una inmersión total en el alma de los Andes.`,
@@ -293,8 +293,8 @@ const toursData = {
     altitude: '4,630m / 15,190ft — Salkantay Pass',
     groupSize: 'Max. 16 pasajeros',
     rating: '4.9 (1,243 reseñas)',
-    image: 'dest_salkantay.png',
-    heroImage: 'dest_salkantay.png',
+    image: 'dest_salkantay.webp',
+    heroImage: 'dest_salkantay.webp',
     brochure: 'assets/documents/CuscoPathways_ShortSalkantayTrek_4Days_ENG.pdf',
     map: 'assets/images/salkantay/short_salkantay_map.webp',
     description: `El Salkantay Corto ofrece las experiencias más icónicas — Laguna Humantay, Paso Salkantay, bosque nublado y Machu Picchu — en un ajustado itinerario de 4 días. Al eliminar el desvío a Llactapata e incorporar traslado privado el Día 3, mantiene el desafío altitudinal completo.<br><br><strong>¿Por qué elegirnos?</strong><br>Menos tiempo, cero compromisos. Cuatro días son suficientes para vivir el arco emocional completo — el lago turquesa, el imponente paso, el descenso a la selva y la maravilla de Machu Picchu.`,
@@ -393,10 +393,10 @@ const toursData = {
     start: 'KM 82 Piscacucho, 2,700m',
     acclimatization: 'Mín. 2 días en Cusco',
     rating: '4.9 (8,193 reseñas)',
-    image: 'tour_incatrail.png',
-    heroImage: 'dest_incatrail.png',
+    image: 'tour_incatrail.webp',
+    heroImage: 'dest_incatrail.webp',
     brochure: 'assets/documents/CuscoPathways_ClassicIncaTrail_4Days_ENG.pdf',
-    brochureBgImage: 'tour_incatrail.png',
+    brochureBgImage: 'tour_incatrail.webp',
     map: 'assets/images/inca-trail/classic_inca_trail_map.webp',
     description: `El Camino Inca Clásico — una antigua calzada de 44km construida por manos incas, atravesando bosque nublado, tundra alpina y pasos impresionantes para llegar a Machu Picchu a través de la Puerta del Sol al amanecer. Con permisos diarios estrictamente limitados, cada paso lleva el peso del privilegio. Este es el trek que define una vida.<br><br><strong>¿Por qué elegirnos?</strong><br>Existen treks, y luego está el Camino Inca. Caminar estas piedras es unirse a un linaje de peregrinos de cinco siglos. Llegar a Machu Picchu a través de la Puerta del Sol — no en bus, sino a pie — distingue este viaje de cualquier otro en el mundo. Reserva con anticipación. Los cupos son preciados.`,
     highlights: [
@@ -497,8 +497,8 @@ const toursData = {
     start: 'KM 104, 2,100m',
     acclimatization: '1-2 días en Cusco recomendado',
     rating: '4.8 (5,237 reseñas)',
-    image: 'tour_shortinca.png',
-    heroImage: 'dest_incatrail.png',
+    image: 'tour_shortinca.webp',
+    heroImage: 'dest_incatrail.webp',
     brochure: 'assets/documents/CuscoPathways_ShortIncaTrail_2Days_ENG.pdf',
     map: 'assets/images/inca-trail/short_inca_trail_map.webp',
     description: `El Camino Inca Corto destila la sección más dramática en una poderosa experiencia de 2 días — caminando desde el KM 104 por el bosque nublado hasta Wiñay Wayna y la Puerta del Sol, para luego entrar a Machu Picchu al amanecer. Una noche en Aguas Calientes. Dos circuitos de Machu Picchu. En 48 horas.<br><br><strong>¿Por qué elegirnos?</strong><br>Para quienes han soñado con caminar el Camino Inca pero no pueden dedicar cuatro días, el Camino Inca Corto ofrece la experiencia esencial: piedra antigua bajo tus pies, el silencio del bosque nublado, Wiñay Wayna y la Puerta del Sol. Llegar a Machu Picchu a pie transforma el encuentro completamente.`,
@@ -582,18 +582,18 @@ const toursData = {
     start: 'Cusco City',
     acclimatization: '1-2 días en Cusco recomendado',
     rating: '4.8 (3,124 reseñas)',
-    image: 'city_plaza_cusco.png',
-    heroImage: 'city_plaza_cusco.png',
+    image: 'city_plaza_cusco.webp',
+    heroImage: 'city_plaza_cusco.webp',
     brochure: 'assets/documents/CuscoPathways_CityTour_CulturalPath.pdf',
     map: 'assets/images/city/cusco_city_tour_map.webp',
     description: `Cusco no es simplemente una ciudad — es un museo viviente construido sobre cimientos incas. Este city tour de medio día te lleva a los seis sitios más significativos: Sacsayhuamán, Qenqo, Puca Pucara, Tambomachay, la Catedral del Cusco y el Qoricancha — el templo más sagrado del Imperio Inca.<br><br><strong>¿Por qué elegirnos?</strong><br>Antes de aventurarte en las montañas, deja que Cusco revele su historia completa. La ciudad que los españoles encontraron en 1533 era una metrópolis de piedra perfectamente encajada, templos dorados y sistemas de agua que rivalizaban con Roma. El City Tour es el primer capítulo esencial de cualquier itinerario en Cusco.`,
     highlights: [
-      'city_sacsayhuaman.png',
-      'city_qenqo.png',
-      'city_puca_pucara.png',
-      'city_tambomachay.png',
-      'city_plaza_cusco.png',
-      'city_qoricancha.png'
+      'city_sacsayhuaman.webp',
+      'city_qenqo.webp',
+      'city_puca_pucara.webp',
+      'city_tambomachay.webp',
+      'city_plaza_cusco.webp',
+      'city_qoricancha.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -620,37 +620,37 @@ const toursData = {
         title: 'Sacsayhuamán',
         desc: 'La fortaleza colosal con muros en zigzag construidos con piedras que pesan más de 20 toneladas, encajadas con una precisión asombrosa.',
         accommodation: 'Altitud: ~3,700m',
-        image: 'city_sacsayhuaman.png'
+        image: 'city_sacsayhuaman.webp'
       },
       {
         day: 'Parada 2',
         title: 'Qenqo',
         desc: 'Cámaras subterráneas talladas en piedra caliza que revelan la comprensión inca de la astronomía y servían para rituales de momificación.',
-        image: 'city_qenqo.png'
+        image: 'city_qenqo.webp'
       },
       {
         day: 'Parada 3',
         title: 'Puca Pucara',
         desc: 'Conocida como la "Fortaleza Roja", esta construcción militar controlaba el acceso a la capital imperial y ofrece hermosas vistas del valle.',
-        image: 'city_puca_pucara.png'
+        image: 'city_puca_pucara.webp'
       },
       {
         day: 'Parada 4',
         title: 'Tambomachay',
         desc: 'El lugar de descanso del Inca, con fuentes de agua cristalina y acueductos que fluyen ininterrumpidamente desde hace más de 500 años.',
-        image: 'city_tambomachay.png'
+        image: 'city_tambomachay.webp'
       },
       {
         day: 'Parada 5',
         title: 'Plaza de Armas y Catedral',
         desc: 'Visitamos la icónica Plaza de Armas del Cusco y la Catedral, una obra maestra del barroco andino construida sobre el antiguo palacio del Inca Viracocha.',
-        image: 'city_plaza_cusco.png'
+        image: 'city_plaza_cusco.webp'
       },
       {
         day: 'Parada 6',
         title: 'Qoricancha (Templo del Sol)',
         desc: 'El Recinto Dorado, el templo inca más importante dedicado al Dios Sol, sobre cuyas paredes finamente labradas se construyó el convento de Santo Domingo.',
-        image: 'city_qoricancha.png'
+        image: 'city_qoricancha.webp'
       }
     ],
     priceGroup: 'USD 00.00',
@@ -677,20 +677,20 @@ const toursData = {
     start: 'Cusco, 7:00 a.m.',
     acclimatization: 'Opcional (bueno para el 1er día)',
     rating: '4.7 (4,521 reseñas)',
-    image: 'sv_ollantaytambo_principal.png',
-    heroImage: 'sv_ollantaytambo_principal.png',
+    image: 'sv_ollantaytambo_principal.webp',
+    heroImage: 'sv_ollantaytambo_principal.webp',
     brochure: 'assets/documents/CuscoPathways_SacredValley_TraditionalPath.pdf',
     map: 'assets/images/sacred-valley/sacred_valley_map.webp',
     description: `El Valle Sagrado de los Incas — Willcamayu en quechua, 'Río Sagrado' — es el corazón del Imperio Inca. El Camino Tradicional te lleva por sus sitios más icónicos: Chinchero, Moray, las Salineras de Maras, Ollantaytambo y el complejo de Pisac con su famoso mercado artesanal.<br><br><strong>¿Por qué elegirnos?</strong><br>El Valle Sagrado no es un telón de fondo para Machu Picchu — es un destino por mérito propio. Ollantaytambo es el único centro urbano inca en el mundo todavía habitado en su forma original. Las terrazas de Moray siguen siendo uno de los mayores misterios arqueológicos sin resolver. Un día completo aquí es el contexto esencial que hace que Machu Picchu tenga sentido.`,
     highlights: [
-      'sv_chinchero_campanario.png',
-      'sv_chinchero_plaza.png',
-      'sv_mantas.png',
-      'sv_mercado_pisac.png',
-      'sv_ollantaytambo_principal.png',
-      'sv_ollantaytambo_panoramica.png',
-      'sv_ollantaytambo_hombre.png',
-      'sv_pisac_ruinas.png'
+      'sv_chinchero_campanario.webp',
+      'sv_chinchero_plaza.webp',
+      'sv_mantas.webp',
+      'sv_mercado_pisac.webp',
+      'sv_ollantaytambo_principal.webp',
+      'sv_ollantaytambo_panoramica.webp',
+      'sv_ollantaytambo_hombre.webp',
+      'sv_pisac_ruinas.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -718,7 +718,7 @@ const toursData = {
         day: 'Parada 1',
         title: 'Chinchero',
         desc: 'Visitamos las ruinas incas y la hermosa plaza con su iglesia colonial. Luego participamos en una demostración textil donde aprenderemos sobre el antiguo arte del teñido y tejido en los Andes.',
-        image: 'sv_chinchero_plaza.png',
+        image: 'sv_chinchero_plaza.webp',
         accommodation: 'Altitud: 3,762m'
       },
       {
@@ -735,19 +735,19 @@ const toursData = {
         day: 'Parada 4',
         title: 'Ollantaytambo',
         desc: 'Conocida como la única ciudad inca viva, recorreremos sus impresionantes terrazas y el complejo arqueológico con bloques monolíticos que sirvieron como templo y fortaleza.',
-        image: 'sv_ollantaytambo_principal.png'
+        image: 'sv_ollantaytambo_principal.webp'
       },
       {
         day: 'Parada 5',
         title: 'Pisac Ruinas',
         desc: 'Recorreremos el complejo arqueológico de Pisac, conocido por sus amplias terrazas agrícolas y por albergar el mayor cementerio inca descubierto.',
-        image: 'sv_pisac_ruinas.png'
+        image: 'sv_pisac_ruinas.webp'
       },
       {
         day: 'Parada 6',
         title: 'Mercado de Pisac',
         desc: 'Finalizaremos el día sumergiéndonos en el colorido mercado artesanal de Pisac, famoso por su platería, textiles y cerámica.',
-        image: 'sv_mercado_pisac.png'
+        image: 'sv_mercado_pisac.webp'
       }
     ],
     priceGroup: 'USD 00.00',
@@ -774,20 +774,20 @@ const toursData = {
     start: 'Cusco, 7:00 a.m.',
     acclimatization: 'Opcional',
     rating: '4.9 (2,104 reseñas)',
-    image: 'sv_ollantaytambo_panoramica.png',
-    heroImage: 'sv_ollantaytambo_panoramica.png',
+    image: 'sv_ollantaytambo_panoramica.webp',
+    heroImage: 'sv_ollantaytambo_panoramica.webp',
     brochure: 'assets/documents/CuscoPathways_SuperSacredValley_ExtendedPath.pdf',
     map: 'assets/images/sacred-valley/super_sacred_valley_map.webp',
     description: `Todo lo del Tour Valle Sagrado Tradicional — y más. El Camino Extendido incluye todos los sitios icónicos (Chinchero, Moray, Maras, Urubamba, Ollantaytambo, Pisac) con tiempo y profundidad adicionales en cada destino. Para viajeros que quieren ir más allá de la superficie.<br><br><strong>¿Por qué elegirnos?</strong><br>Algunos lugares merecen más que una mirada apresurada. El Super Tour Valle Sagrado es para el viajero que sabe que la profundidad de la experiencia importa más que la velocidad de cobertura. Con tiempo sin prisa en cada sitio y guía experto, esta es la manera definitiva de experimentar el Valle Sagrado.`,
     highlights: [
-      'sv_chinchero_plaza.png',
-      'sv_chinchero_campanario.png',
-      'sv_ollantaytambo_panoramica.png',
-      'sv_ollantaytambo_hombre.png',
-      'sv_pisac_ruinas.png',
-      'sv_mantas.png',
-      'sv_mercado_pisac.png',
-      'sv_ollantaytambo_principal.png'
+      'sv_chinchero_plaza.webp',
+      'sv_chinchero_campanario.webp',
+      'sv_ollantaytambo_panoramica.webp',
+      'sv_ollantaytambo_hombre.webp',
+      'sv_pisac_ruinas.webp',
+      'sv_mantas.webp',
+      'sv_mercado_pisac.webp',
+      'sv_ollantaytambo_principal.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -815,7 +815,7 @@ const toursData = {
         day: 'Parada 1',
         title: 'Chinchero: Tiempo Extendido',
         desc: 'Recorrido sin prisa por las ruinas incas y la iglesia colonial. Participación activa en una demostración textil extendida, donde incluso podrás intentar tejer tú mismo con las maestras locales.',
-        image: 'sv_chinchero_campanario.png',
+        image: 'sv_chinchero_campanario.webp',
         accommodation: 'Altitud: 3,762m'
       },
       {
@@ -832,19 +832,19 @@ const toursData = {
         day: 'Parada 4',
         title: 'Ollantaytambo: Recorrido Profundo',
         desc: 'Además de la fortaleza, caminaremos por los cuarteles residenciales incas originales (\'canchas\') y veremos el agua fluir por canales construidos antes de la llegada de Colón.',
-        image: 'sv_ollantaytambo_panoramica.png'
+        image: 'sv_ollantaytambo_panoramica.webp'
       },
       {
         day: 'Parada 5',
         title: 'Pisac: Complejo Completo',
         desc: 'Exploración minuciosa de todo el complejo arqueológico: el Intihuatana (reloj solar), el Templo del Sol y el extenso cementerio inca en la ladera de la montaña.',
-        image: 'sv_pisac_ruinas.png'
+        image: 'sv_pisac_ruinas.webp'
       },
       {
         day: 'Parada 6',
         title: 'Mercado de Pisac',
         desc: 'Tiempo abundante para caminar por el famoso mercado artesanal, conversar con los vendedores y conseguir los mejores textiles y platería antes del regreso a Cusco.',
-        image: 'sv_mercado_pisac.png'
+        image: 'sv_mercado_pisac.webp'
       }
     ],
     priceGroup: 'USD 00.00',
@@ -871,20 +871,20 @@ const toursData = {
     start: 'Cusco',
     acclimatization: 'Opcional',
     rating: '4.8 (1,842 reseñas)',
-    image: 'moray_panoramico.png',
-    heroImage: 'moray_panoramico.png',
+    image: 'moray_panoramico.webp',
+    heroImage: 'moray_panoramico.webp',
     brochure: 'assets/documents/CuscoPathways_MarasMoray_SaltSacredPath.pdf',
     description: `Dos de los sitios más inusuales y fotogénicos de todo el Valle Sagrado combinados en un tour de día completo. Las Salineras de Maras — más de 3,000 destellantes piscinas de sal blanca cosechadas desde antes de los incas — y Moray — las misteriosas terrazas circulares consideradas el primer laboratorio de investigación agrícola del mundo. Añade Chinchero, almuerzo buffet, Laguna Huaypo y Ollantaytambo.<br><br><strong>¿Por qué elegirnos?</strong><br>Moray y Maras son dos de los sitios visualmente más impactantes de toda América del Sur — y sin embargo permanecen fuera del circuito turístico principal. Las terrazas circulares de Moray parecen sacadas de otro mundo. Las piscinas de sal de Maras, fotografiadas al amanecer, no tienen comparación en la Tierra.`,
     highlights: [
-      'moray_panoramico.png',
-      'maras_mirador.png',
-      'chinchero_tejedora.png',
-      'moray_vista.png',
-      'maras_viajera.png',
-      'chinchero_tintes.png',
-      'moray_1.png',
-      'maras_2.png',
-      'maras_1.png'
+      'moray_panoramico.webp',
+      'maras_mirador.webp',
+      'chinchero_tejedora.webp',
+      'moray_vista.webp',
+      'maras_viajera.webp',
+      'chinchero_tintes.webp',
+      'moray_1.webp',
+      'maras_2.webp',
+      'maras_1.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -911,20 +911,20 @@ const toursData = {
         day: 'Parada 1',
         title: 'Chinchero',
         desc: 'Visitamos las ruinas incas y la demostración textil, donde maestras tejedoras nos mostrarán el uso de tintes naturales y técnicas ancestrales.',
-        image: 'chinchero_tejedora.png',
+        image: 'chinchero_tejedora.webp',
         accommodation: 'Altitud: 3,762m'
       },
       {
         day: 'Parada 2',
         title: 'Laboratorio de Moray',
         desc: 'El guía nos explicará cómo los incas diseñaron hasta 15°C de diferencia de temperatura entre los anillos de estas impresionantes terrazas circulares concéntricas.',
-        image: 'moray_vista.png'
+        image: 'moray_vista.webp'
       },
       {
         day: 'Parada 3',
         title: 'Salineras de Maras',
         desc: 'Caminaremos entre miles de brillantes piscinas blancas donde las familias locales siguen cosechando sal de un manantial subterráneo utilizando técnicas pre-incas.',
-        image: 'maras_mirador.png'
+        image: 'maras_mirador.webp'
       },
       {
         day: 'Parada 4',
@@ -961,18 +961,18 @@ const toursData = {
     start: 'Cusco, 3:30-4:00am',
     acclimatization: 'MÍNIMO 3 días en Cusco ENCARECIDAMENTE',
     rating: '4.8 (5,120 reseñas)',
-    image: 'rainbow_trekkers.png',
-    heroImage: 'rainbow_trekkers.png',
+    image: 'rainbow_trekkers.webp',
+    heroImage: 'rainbow_trekkers.webp',
     brochure: 'assets/documents/CuscoPathways_RainbowMountain_ColorfulPath.pdf',
     map: 'assets/images/day-treks/rainbow_mountain_map.webp',
     description: `Oculta para el mundo hasta que un glaciar se retiró alrededor de 2015, Vinicunca — la Montaña de Colores — se ha convertido en uno de los paisajes más fotografiados de la Tierra. Sus sedimentos minerales en capas pintan la ladera en vívidas franjas de rojo, rosa, turquesa y amarillo. A 5,200m, llegar a la cima es un logro físico genuino.<br><br><strong>¿Por qué elegirnos?</strong><br>Vinicunca es el sitio natural más buscado de América del Sur. La combinación de color de otro mundo, altitud extrema y el vasto panorama andino crea una experiencia genuinamente diferente a cualquier otra en la Tierra. Con Cusco Pathways Adventure llegas con un guía experto que sitúa la montaña en su contexto geológico y cultural.`,
     highlights: [
-      'rainbow_trekkers.png',
-      'rainbow_llamas.png',
-      'rainbow_viajero.png',
-      'rainbow_caminata.png',
-      'rainbow_mujer_poncho.png',
-      'rainbow_vinicunca_llama.png'
+      'rainbow_trekkers.webp',
+      'rainbow_llamas.webp',
+      'rainbow_viajero.webp',
+      'rainbow_caminata.webp',
+      'rainbow_mujer_poncho.webp',
+      'rainbow_vinicunca_llama.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -1018,19 +1018,19 @@ const toursData = {
         day: 'Parada 3',
         title: 'Ascenso por la Puna Andina',
         desc: 'Ascenderemos durante unas 2 horas a través de la puna alta, un camino desafiante pero hermoso rodeado de imponentes montañas nevadas.',
-        image: 'rainbow_caminata.png'
+        image: 'rainbow_caminata.webp'
       },
       {
         day: 'Parada 4',
         title: 'Fauna y Paisajes',
         desc: 'Durante el recorrido estaremos acompañados por pastizales habitados por rebaños de alpacas y llamas que pastan libremente en su hábitat natural.',
-        image: 'rainbow_llamas.png'
+        image: 'rainbow_llamas.webp'
       },
       {
         day: 'Parada 5',
         title: 'La Cima de Vinicunca',
         desc: 'Llegada a la asombrosa Montaña de Colores (5,200m). Tendremos tiempo suficiente para recuperar el aliento, escuchar la explicación geológica y tomar fotografías memorables.',
-        image: 'rainbow_viajero.png',
+        image: 'rainbow_viajero.webp',
         accommodation: 'Altitud máx: 5,200m'
       },
       {
@@ -1063,19 +1063,19 @@ const toursData = {
     start: 'Cusco',
     acclimatization: '2-3 días en Cusco recomendados',
     rating: '4.8 (1,530 reseñas)',
-    image: 'ausangate_luna.png',
-    heroImage: 'ausangate_luna.png',
+    image: 'ausangate_luna.webp',
+    heroImage: 'ausangate_luna.webp',
     brochure: 'assets/documents/CuscoPathways_Ausangate7Lakes_SacredLakesPath.pdf',
     map: 'assets/images/day-treks/ausangate_7_lakes_map.webp',
     description: `El macizo del Ausangate — la montaña más alta y sagrada de la región de Cusco a 6,384m — guarda un mundo de extraordinarias lagunas de colores. El sendero de las 7 Lagunas te lleva por uno de los paisajes más dramáticos del altiplano peruano: lagunas turquesas, verdes y cobalto bajo las faldas del glaciar, comunidades quechuas tradicionales, alpacas y llamas a 4,800m, y las fuentes termales naturales de Pacchanta. Desayuno y almuerzo con familias andinas locales.<br><br><strong>¿Por qué elegirnos?</strong><br>Mientras la Montaña de Colores se ha vuelto famosa, las 7 Lagunas del Ausangate siguen siendo un secreto. La combinación de extraordinaria belleza natural con inmersión cultural genuina — desayuno y almuerzo con familias quechuas, aguas termales compartidas con locales — hace de esta una de las experiencias de un día más completas y auténticas de todo el portafolio.`,
     highlights: [
-      'ausangate_luna.png',
-      'ausangate_andina.png',
-      'ausangate_otorongo.png',
-      'ausangate_hatun.png',
-      'ausangate_apachetas.png',
-      'ausangate_alpacas.png',
-      'ausangate_panel.png'
+      'ausangate_luna.webp',
+      'ausangate_andina.webp',
+      'ausangate_otorongo.webp',
+      'ausangate_hatun.webp',
+      'ausangate_apachetas.webp',
+      'ausangate_alpacas.webp',
+      'ausangate_panel.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -1116,25 +1116,25 @@ const toursData = {
         day: 'Parada 2',
         title: 'Ascenso Glaciar',
         desc: 'El sendero asciende por un espectacular terreno glaciar donde observaremos la vida cotidiana de comunidades que se ha mantenido sin cambios por siglos.',
-        image: 'ausangate_andina.png'
+        image: 'ausangate_andina.webp'
       },
       {
         day: 'Parada 3',
         title: 'Las 7 Lagunas de Ausangate',
         desc: 'Visitaremos las extraordinarias lagunas turquesas, verdes y cobalto, incluyendo Otorongo y Hatun Puka Qocha, alcanzando un punto máximo de 4,800m.',
-        image: 'ausangate_hatun.png'
+        image: 'ausangate_hatun.webp'
       },
       {
         day: 'Parada 4',
         title: 'Fauna y Montañas',
         desc: 'Caminaremos rodeados del impresionante macizo del Ausangate y observaremos llamas y alpacas en su hábitat natural.',
-        image: 'ausangate_alpacas.png'
+        image: 'ausangate_alpacas.webp'
       },
       {
         day: 'Parada 5',
         title: 'Aguas Termales',
         desc: 'Almuerzo tradicional preparado por una familia local (genuino intercambio cultural) y opción de relajarse en las fuentes termales de Pacchanta.',
-        image: 'ausangate_luna.png',
+        image: 'ausangate_luna.webp',
         accommodation: 'Altitud máx: 4,800m'
       }
     ],
@@ -1162,15 +1162,15 @@ const toursData = {
     start: 'Cusco, 4:00am',
     acclimatization: '1-2 días en Cusco recomendados',
     rating: '4.9 (4,032 reseñas)',
-    image: 'humantay_main.png',
-    heroImage: 'humantay_main.png',
+    image: 'humantay_main.webp',
+    heroImage: 'humantay_main.webp',
     brochure: 'assets/documents/CuscoPathways_HumantayLake_TurquoisePath.pdf',
     description: `Anidada bajo los glaciares de las montañas Humantay y Salkantay, la Laguna Humantay es uno de los paisajes más perfectamente compuestos de la naturaleza. Sus aguas esmeralda-turquesas brillan contra nieve perpetua a más de 4,200m. Considerada sagrada por las comunidades andinas locales como sitio de ofrendas a los Apus. Una caminata de 5km y un almuerzo preparado por un chef en el exclusivo Sky Camp.<br><br><strong>¿Por qué elegirnos?</strong><br>Algunos lugares existen en la intersección de la belleza natural y el poder espiritual. La Laguna Humantay es uno de ellos. El color de sus aguas — un turquesa-esmeralda imposible que cambia con la luz — no tiene igual en la región de Cusco. Con menos de 4 horas de caminata con guía profesional y almuerzo preparado por un chef en un exclusivo campamento de montaña, es una de las experiencias extraordinarias más accesibles de los Andes.`,
     highlights: [
-      'humantay_main.png',
-      'humantay_sendero.png',
-      'humantay_trekkers.png',
-      'humantay_pareja.png'
+      'humantay_main.webp',
+      'humantay_sendero.webp',
+      'humantay_trekkers.webp',
+      'humantay_pareja.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -1210,20 +1210,20 @@ const toursData = {
         day: 'Parada 3',
         title: 'Ascenso a la Laguna',
         desc: 'Caminata de ascenso de 2.5km (aproximadamente 1.5 horas) por terreno andino de alta altitud con vistas espectaculares del entorno montañoso.',
-        image: 'humantay_sendero.png'
+        image: 'humantay_sendero.webp'
       },
       {
         day: 'Parada 4',
         title: 'La Laguna Humantay',
         desc: 'Llegada a la asombrosa laguna turquesa (4,200m). Tiempo libre para tomar fotografías inolvidables, absorber el profundo silencio y conectar con la naturaleza.',
-        image: 'humantay_pareja.png',
+        image: 'humantay_pareja.webp',
         accommodation: 'Altitud máx: 4,200m'
       },
       {
         day: 'Parada 5',
         title: 'Almuerzo en Sky Camp',
         desc: 'Descenso a Soraypampa para disfrutar de un merecido y delicioso almuerzo preparado por nuestro chef en el exclusivo Sky Camp. Regreso a Cusco llegando aproximadamente a las 6:30pm.',
-        image: 'humantay_trekkers.png'
+        image: 'humantay_trekkers.webp'
       }
     ],
     priceGroup: 'USD 00.00',
@@ -1250,18 +1250,18 @@ const toursData = {
     start: 'Cusco, 4:00am',
     acclimatization: '2+ días en Cusco recomendados',
     rating: '4.9 (420 reseñas)',
-    image: 'pallay_cresta.png',
-    heroImage: 'pallay_cresta.png',
+    image: 'pallay_cresta.webp',
+    heroImage: 'pallay_cresta.webp',
     brochure: 'assets/documents/CuscoPathways_PallayPunchu_WovenPath.pdf',
     map: 'assets/images/day-treks/pallay_punchu_map.webp',
     description: `Pallay Punchu — quechua para 'poncho tejido' — es la tercera y menos visitada de las Montañas Arcoíris de Cusco. Descubierta durante el confinamiento por Covid-19 en 2020 y todavía prácticamente desconocida para el turismo masivo, ofrece el recorrido de cresta más dramático de las tres experiencias: bordes dentados que se elevan como una corona natural, en tonos de cian, marrón y magenta, con el azul profundo de la Laguna de Langui muy abajo.<br><br><strong>¿Por qué elegirnos?</strong><br>Hay una montaña en los Andes que parece tejida a mano — construida de bandas minerales alternas tan precisas como el textil de un maestro tejedor. Pallay Punchu es esa montaña. Descubierta solo durante el confinamiento global de 2020, sigue siendo prácticamente desconocida, genuinamente sin multitudes y absolutamente extraordinaria. En una región donde algunos de los sitios más famosos del mundo están saturados de visitantes, Pallay Punchu es todavía un lugar donde puedes estar solo en una montaña pintada de cian y magenta y escuchar solo el viento.`,
     highlights: [
-      'pallay_cresta.png',
-      'pallay_mirador.png',
-      'pallay_mujer.png',
-      'pallay_roca.png',
-      'pallay_trekker.png',
-      'pallay_vacio.png'
+      'pallay_cresta.webp',
+      'pallay_mirador.webp',
+      'pallay_mujer.webp',
+      'pallay_roca.webp',
+      'pallay_trekker.webp',
+      'pallay_vacio.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -1308,19 +1308,19 @@ const toursData = {
         day: 'Parada 3',
         title: 'Montaña Pallay Punchu',
         desc: 'La cresta multicolor dentada de Pallay Punchu se eleva ante ti — capas de cian, marrón y magenta formando picos agudos.',
-        image: 'pallay_roca.png'
+        image: 'pallay_roca.webp'
       },
       {
         day: 'Parada 4',
         title: 'Cresta Multicolor',
         desc: 'Caminaremos por la cresta dentada maravillándonos con su único rango de colores.',
-        image: 'pallay_cresta.png'
+        image: 'pallay_cresta.webp'
       },
       {
         day: 'Parada 5',
         title: 'Descenso y Retorno',
         desc: 'Momento para la foto icónica con un poncho andino. Descenso y retorno con un box lunch en el sendero.',
-        image: 'pallay_mujer.png',
+        image: 'pallay_mujer.webp',
         accommodation: 'Altitud máx: 4,730m'
       }
     ],
@@ -1348,19 +1348,19 @@ const toursData = {
     start: 'Cusco, 4:00am',
     acclimatization: '2+ días en Cusco recomendados',
     rating: '4.9 (2,104 reseñas)',
-    image: 'palcoyo_panoramica.png',
-    heroImage: 'palcoyo_panoramica.png',
+    image: 'palcoyo_panoramica.webp',
+    heroImage: 'palcoyo_panoramica.webp',
     brochure: 'assets/documents/CuscoPathways_Palccoyo_ScenicPath.pdf',
     map: 'assets/images/day-treks/palcoyo_map.webp',
     description: `Palcoyo es el hermano más tranquilo y accesible de la Montaña de Colores — y para muchos viajeros que conocen ambas, la experiencia más gratificante. Donde Vinicunca ofrece una única cima dramática, Palcoyo presenta toda una cordillera: tres montañas coloridas visibles simultáneamente, un bosque de piedra de extraordinarias formaciones geológicas y un vistazo al río carmesí del Valle Rojo. Menos concurrido, caminata más corta, igual de impresionante.<br><br><strong>¿Por qué elegirnos?</strong><br>Palcoyo es lo que la Montaña de Colores habría sido antes de que el mundo la descubriera: tres extraordinarias montañas coloridas visibles a la vez, un bosque de piedra que desafía la descripción, un río del Valle Rojo del color del óxido y casi sin colas. La parada en Checacupe — puentes de tres eras, el sitio donde cayó Túpac Amaru II — añade una profundidad histórica que la Montaña de Colores no puede ofrecer.`,
     highlights: [
-      'palcoyo_panoramica.png',
-      'palcoyo_cumbre.png',
-      'palcoyo_alpacas.png',
-      'palcoyo_mujer.png',
-      'palcoyo_mirador.png',
-      'palcoyo_bosque.png',
-      'palcoyo_sendero.png'
+      'palcoyo_panoramica.webp',
+      'palcoyo_cumbre.webp',
+      'palcoyo_alpacas.webp',
+      'palcoyo_mujer.webp',
+      'palcoyo_mirador.webp',
+      'palcoyo_bosque.webp',
+      'palcoyo_sendero.webp'
     ],
     inclusions: [
       'Transporte privado ida y vuelta',
@@ -1396,25 +1396,25 @@ const toursData = {
         day: 'Parada 2',
         title: 'Mirador de Palcoyo',
         desc: 'Caminata de 20 minutos por pastizales andinos hasta llegar al primer mirador de Palcoyo.',
-        image: 'palcoyo_sendero.png'
+        image: 'palcoyo_sendero.webp'
       },
       {
         day: 'Parada 3',
         title: 'Montañas Coloridas',
         desc: 'Continuamos 25 minutos hasta la montaña principal. Aquí se abre el panorama completo con tres montañas coloridas visibles juntas.',
-        image: 'palcoyo_panoramica.png'
+        image: 'palcoyo_panoramica.webp'
       },
       {
         day: 'Parada 4',
         title: 'Alpacas y Bosque',
         desc: 'Fotografía junto a alpacas decoradas localmente y ascenso al Bosque de Piedra para ver formaciones geológicas de otro mundo.',
-        image: 'palcoyo_alpacas.png'
+        image: 'palcoyo_alpacas.webp'
       },
       {
         day: 'Parada 5',
         title: 'Checacupe y Retorno',
         desc: 'Vistazo al río carmesí del Valle Rojo. En el regreso, paramos en Checacupe para visitar sus puentes históricos antes del almuerzo buffet.',
-        image: 'palcoyo_bosque.png',
+        image: 'palcoyo_bosque.webp',
         accommodation: 'Altitud máx: 4,730m'
       }
     ],

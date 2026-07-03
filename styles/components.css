@@ -539,7 +539,7 @@
 /* Columna Izquierda (Imagen y Marca) */
 .modal-left {
   flex: 1;
-  background: url('../assets/images/hero/modal_trekking_cusco.png') center/cover;
+  background: url('../assets/images/hero/modal_trekking_cusco.webp') center/cover;
   position: relative;
   padding: 40px;
   display: flex;

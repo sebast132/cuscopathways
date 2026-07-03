@@ -198,7 +198,7 @@ function hydrateTourDetailPage() {
   const highlightsContainer = document.getElementById('highlights-container');
   if (highlightsContainer && tour.highlights) {
     highlightsContainer.innerHTML = tour.highlights.map(h => {
-      if (h.endsWith('.png') || h.endsWith('.jpg') || h.endsWith('.jpeg')) {
+      if (h.endsWith('.webp') || h.endsWith('.jpg') || h.endsWith('.jpeg')) {
         return `<img src="${resolveImagePath(h)}" alt="Highlight Image" class="highlight-image" loading="lazy">`;
       }
       return `
@@ -561,7 +561,7 @@ function initContactModal() {
         
         <div class="modal-left">
           <div class="modal-left-content">
-            <img src="${resolveImagePath('logoweb2.png')}" alt="Cusco Pathways" class="modal-left-logo">
+            <img src="${resolveImagePath('logoweb2.webp')}" alt="Cusco Pathways" class="modal-left-logo">
             <h2>¡Planifica tu Aventura!</h2>
             <p>Déjanos organizar todo por ti. Contáctanos y uno de nuestros especialistas en viajes te brindará todo lo que necesitas para hacer de esta una experiencia inolvidable.</p>
           </div>
@@ -736,12 +736,41 @@ function initReclamaciones() {
   }
 }
 
+// ─── Hero Slideshow ──────────────────────────────────────────
+function initHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length === 0) return;
+
+  let currentSlide = 0;
+  const slideInterval = 6000;
+
+  function nextSlide() {
+    const prev = slides[currentSlide];
+    prev.classList.remove('active');
+    prev.classList.add('last-active');
+
+    currentSlide = (currentSlide + 1) % slides.length;
+    const next = slides[currentSlide];
+    next.classList.remove('last-active');
+    next.classList.add('active');
+
+    slides.forEach((slide, idx) => {
+      if (idx !== currentSlide && slide !== prev) {
+        slide.classList.remove('last-active');
+      }
+    });
+  }
+
+  setInterval(nextSlide, slideInterval);
+}
+
 // ─── DOM Initializer ─────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   fillTourData();
   initNavbar();
   initHamburger();
   initContactModal();
+  initHeroSlideshow();
   hydrateDestinationPage();
   hydrateTourDetailPage();
   initTabs();
