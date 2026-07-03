@@ -401,6 +401,86 @@ function hydrateTourDetailPage() {
       `;
     }).join('');
   }
+
+  // ── Resources Section (Brochure and Map)
+  const resourcesSection = document.getElementById('tour-resources-section');
+  const resourcesGrid = document.getElementById('tour-resources-grid');
+  if (resourcesSection && resourcesGrid) {
+    if (tour.brochure || tour.map) {
+      resourcesSection.style.display = 'block';
+      let html = '';
+
+      if (tour.brochure) {
+        const bgImg = tour.brochureBgImage || tour.image;
+        html += `
+          <a href="${resolveImagePath(tour.brochure)}" target="_blank" class="resource-card" id="btn-download-brochure">
+            <div class="resource-card-bg" style="background-image: url(${resolveImagePath(bgImg)})"></div>
+            <div class="resource-card-overlay"></div>
+            <div class="resource-card-content">
+              <span class="resource-btn">Descargar Folleto</span>
+            </div>
+          </a>
+        `;
+      }
+
+      if (tour.map) {
+        html += `
+          <a href="#" class="resource-card" id="btn-view-map">
+            <div class="resource-card-bg" style="background-image: url(${resolveImagePath(tour.map)})"></div>
+            <div class="resource-card-overlay"></div>
+            <div class="resource-card-content">
+              <span class="resource-btn">Ver Mapa</span>
+            </div>
+          </a>
+        `;
+      }
+
+      resourcesGrid.innerHTML = html;
+
+      // Handle single card centering
+      if (!tour.brochure || !tour.map) {
+        resourcesGrid.classList.add('single-card');
+      } else {
+        resourcesGrid.classList.remove('single-card');
+      }
+
+      // Add lightbox triggers for map if map exists
+      const mapBtn = document.getElementById('btn-view-map');
+      const mapLightbox = document.getElementById('map-lightbox');
+      const lightboxImg = document.getElementById('lightbox-map-img');
+      const closeLightboxBtn = document.getElementById('close-lightbox-btn');
+
+      if (mapBtn && mapLightbox && lightboxImg) {
+        mapBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          lightboxImg.src = resolveImagePath(tour.map);
+          mapLightbox.classList.add('active');
+        });
+
+        const closeLightbox = () => {
+          mapLightbox.classList.remove('active');
+        };
+
+        if (closeLightboxBtn) {
+          closeLightboxBtn.addEventListener('click', closeLightbox);
+        }
+
+        mapLightbox.addEventListener('click', (e) => {
+          if (e.target === mapLightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && mapLightbox.classList.contains('active')) {
+            closeLightbox();
+          }
+        });
+      }
+    } else {
+      resourcesSection.style.display = 'none';
+    }
+  }
 }
 
 // ─── Scroll Reveal Animations ────────────────────────────────

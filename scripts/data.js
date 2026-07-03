@@ -81,6 +81,8 @@ const toursData = {
     rating: '4.9 (1,243 reseñas)',
     image: 'dest_salkantay.png',
     heroImage: 'dest_salkantay.png',
+    brochure: 'assets/documents/CuscoPathways_PremiumSalkantayTrek_5Days_ENG.pdf',
+    map: 'assets/images/salkantay/premium_salkantay_map.webp',
     description: `Toda la grandeza del Clásico, elevada. Cada comodidad está mejorada: sleeping bag y bastones incluidos, caballo de emergencia Día 2, aguas termales Cocalmayo Día 3, tren privado Día 4, Vistadome Observatory de regreso, hotel 3 estrellas en Aguas Calientes, duffle 10kg, traslados aeropuerto.<br><br><strong>¿Por qué elegirnos?</strong><br>El Salkantay Premium es para quienes lo quieren todo: la belleza salvaje de los Andes, el logro del Paso Salkantay y el lujo de saber que cada comodidad está arreglada. Desde la llegada al aeropuerto hasta el tren Vistadome Observatory de regreso, cada detalle está cuidado.`,
     highlights: [
       'Todos los atractivos del Clásico',
@@ -185,6 +187,8 @@ const toursData = {
     rating: '4.9 (1,243 reseñas)',
     image: 'dest_salkantay.png',
     heroImage: 'dest_salkantay.png',
+    brochure: 'assets/documents/CuscoPathways_ClassicSalkantayTrek_5Days.pdf',
+    map: 'assets/images/salkantay/classic_salkantay_map.webp',
     description: `En 5 días, cruza el Paso Salkantay a 4,630m, camina de cumbres glaciares por el bosque nublado hasta la selva peruana, duerme en campamentos exclusivos y párate ante Machu Picchu. Clasificado entre las 25 mejores rutas de trekking del mundo por National Geographic.<br><br><strong>¿Por qué elegirnos?</strong><br>El Salkantay Clásico es el referente frente al cual se miden todos los demás treks andinos. Ofrece un sendero abierto con variedad extraordinaria — de paisajes glaciales a selva tropical. Con Cusco Pathways Adventure vives esta ruta con campamentos privados exclusivos, cocina gourmet de montaña y guías certificados. Esto no es simplemente un trek a Machu Picchu. Es una inmersión total en el alma de los Andes.`,
     highlights: [
       'Una de las 25 mejores rutas de trekking del mundo',
@@ -291,6 +295,8 @@ const toursData = {
     rating: '4.9 (1,243 reseñas)',
     image: 'dest_salkantay.png',
     heroImage: 'dest_salkantay.png',
+    brochure: 'assets/documents/CuscoPathways_ShortSalkantayTrek_4Days_ENG.pdf',
+    map: 'assets/images/salkantay/short_salkantay_map.webp',
     description: `El Salkantay Corto ofrece las experiencias más icónicas — Laguna Humantay, Paso Salkantay, bosque nublado y Machu Picchu — en un ajustado itinerario de 4 días. Al eliminar el desvío a Llactapata e incorporar traslado privado el Día 3, mantiene el desafío altitudinal completo.<br><br><strong>¿Por qué elegirnos?</strong><br>Menos tiempo, cero compromisos. Cuatro días son suficientes para vivir el arco emocional completo — el lago turquesa, el imponente paso, el descenso a la selva y la maravilla de Machu Picchu.`,
     highlights: [
       'Laguna Humantay (4,200m)',
@@ -389,6 +395,9 @@ const toursData = {
     rating: '4.9 (8,193 reseñas)',
     image: 'tour_incatrail.png',
     heroImage: 'dest_incatrail.png',
+    brochure: 'assets/documents/CuscoPathways_ClassicIncaTrail_4Days_ENG.pdf',
+    brochureBgImage: 'tour_incatrail.png',
+    map: 'assets/images/inca-trail/classic_inca_trail_map.webp',
     description: `El Camino Inca Clásico — una antigua calzada de 44km construida por manos incas, atravesando bosque nublado, tundra alpina y pasos impresionantes para llegar a Machu Picchu a través de la Puerta del Sol al amanecer. Con permisos diarios estrictamente limitados, cada paso lleva el peso del privilegio. Este es el trek que define una vida.<br><br><strong>¿Por qué elegirnos?</strong><br>Existen treks, y luego está el Camino Inca. Caminar estas piedras es unirse a un linaje de peregrinos de cinco siglos. Llegar a Machu Picchu a través de la Puerta del Sol — no en bus, sino a pie — distingue este viaje de cualquier otro en el mundo. Reserva con anticipación. Los cupos son preciados.`,
     highlights: [
       'Camina 44km de senderos incas originales',
@@ -490,6 +499,8 @@ const toursData = {
     rating: '4.8 (5,237 reseñas)',
     image: 'tour_shortinca.png',
     heroImage: 'dest_incatrail.png',
+    brochure: 'assets/documents/CuscoPathways_ShortIncaTrail_2Days_ENG.pdf',
+    map: 'assets/images/inca-trail/short_inca_trail_map.webp',
     description: `El Camino Inca Corto destila la sección más dramática en una poderosa experiencia de 2 días — caminando desde el KM 104 por el bosque nublado hasta Wiñay Wayna y la Puerta del Sol, para luego entrar a Machu Picchu al amanecer. Una noche en Aguas Calientes. Dos circuitos de Machu Picchu. En 48 horas.<br><br><strong>¿Por qué elegirnos?</strong><br>Para quienes han soñado con caminar el Camino Inca pero no pueden dedicar cuatro días, el Camino Inca Corto ofrece la experiencia esencial: piedra antigua bajo tus pies, el silencio del bosque nublado, Wiñay Wayna y la Puerta del Sol. Llegar a Machu Picchu a pie transforma el encuentro completamente.`,
     highlights: [
       'Sección más espectacular',
@@ -573,6 +584,8 @@ const toursData = {
     rating: '4.8 (3,124 reseñas)',
     image: 'city_plaza_cusco.png',
     heroImage: 'city_plaza_cusco.png',
+    brochure: 'assets/documents/CuscoPathways_CityTour_CulturalPath.pdf',
+    map: 'assets/images/city/cusco_city_tour_map.webp',
     description: `Cusco no es simplemente una ciudad — es un museo viviente construido sobre cimientos incas. Este city tour de medio día te lleva a los seis sitios más significativos: Sacsayhuamán, Qenqo, Puca Pucara, Tambomachay, la Catedral del Cusco y el Qoricancha — el templo más sagrado del Imperio Inca.<br><br><strong>¿Por qué elegirnos?</strong><br>Antes de aventurarte en las montañas, deja que Cusco revele su historia completa. La ciudad que los españoles encontraron en 1533 era una metrópolis de piedra perfectamente encajada, templos dorados y sistemas de agua que rivalizaban con Roma. El City Tour es el primer capítulo esencial de cualquier itinerario en Cusco.`,
     highlights: [
       'city_sacsayhuaman.png',
@@ -666,6 +679,8 @@ const toursData = {
     rating: '4.7 (4,521 reseñas)',
     image: 'sv_ollantaytambo_principal.png',
     heroImage: 'sv_ollantaytambo_principal.png',
+    brochure: 'assets/documents/CuscoPathways_SacredValley_TraditionalPath.pdf',
+    map: 'assets/images/sacred-valley/sacred_valley_map.webp',
     description: `El Valle Sagrado de los Incas — Willcamayu en quechua, 'Río Sagrado' — es el corazón del Imperio Inca. El Camino Tradicional te lleva por sus sitios más icónicos: Chinchero, Moray, las Salineras de Maras, Ollantaytambo y el complejo de Pisac con su famoso mercado artesanal.<br><br><strong>¿Por qué elegirnos?</strong><br>El Valle Sagrado no es un telón de fondo para Machu Picchu — es un destino por mérito propio. Ollantaytambo es el único centro urbano inca en el mundo todavía habitado en su forma original. Las terrazas de Moray siguen siendo uno de los mayores misterios arqueológicos sin resolver. Un día completo aquí es el contexto esencial que hace que Machu Picchu tenga sentido.`,
     highlights: [
       'sv_chinchero_campanario.png',
@@ -761,6 +776,8 @@ const toursData = {
     rating: '4.9 (2,104 reseñas)',
     image: 'sv_ollantaytambo_panoramica.png',
     heroImage: 'sv_ollantaytambo_panoramica.png',
+    brochure: 'assets/documents/CuscoPathways_SuperSacredValley_ExtendedPath.pdf',
+    map: 'assets/images/sacred-valley/super_sacred_valley_map.webp',
     description: `Todo lo del Tour Valle Sagrado Tradicional — y más. El Camino Extendido incluye todos los sitios icónicos (Chinchero, Moray, Maras, Urubamba, Ollantaytambo, Pisac) con tiempo y profundidad adicionales en cada destino. Para viajeros que quieren ir más allá de la superficie.<br><br><strong>¿Por qué elegirnos?</strong><br>Algunos lugares merecen más que una mirada apresurada. El Super Tour Valle Sagrado es para el viajero que sabe que la profundidad de la experiencia importa más que la velocidad de cobertura. Con tiempo sin prisa en cada sitio y guía experto, esta es la manera definitiva de experimentar el Valle Sagrado.`,
     highlights: [
       'sv_chinchero_plaza.png',
@@ -856,6 +873,7 @@ const toursData = {
     rating: '4.8 (1,842 reseñas)',
     image: 'moray_panoramico.png',
     heroImage: 'moray_panoramico.png',
+    brochure: 'assets/documents/CuscoPathways_MarasMoray_SaltSacredPath.pdf',
     description: `Dos de los sitios más inusuales y fotogénicos de todo el Valle Sagrado combinados en un tour de día completo. Las Salineras de Maras — más de 3,000 destellantes piscinas de sal blanca cosechadas desde antes de los incas — y Moray — las misteriosas terrazas circulares consideradas el primer laboratorio de investigación agrícola del mundo. Añade Chinchero, almuerzo buffet, Laguna Huaypo y Ollantaytambo.<br><br><strong>¿Por qué elegirnos?</strong><br>Moray y Maras son dos de los sitios visualmente más impactantes de toda América del Sur — y sin embargo permanecen fuera del circuito turístico principal. Las terrazas circulares de Moray parecen sacadas de otro mundo. Las piscinas de sal de Maras, fotografiadas al amanecer, no tienen comparación en la Tierra.`,
     highlights: [
       'moray_panoramico.png',
@@ -945,6 +963,8 @@ const toursData = {
     rating: '4.8 (5,120 reseñas)',
     image: 'rainbow_trekkers.png',
     heroImage: 'rainbow_trekkers.png',
+    brochure: 'assets/documents/CuscoPathways_RainbowMountain_ColorfulPath.pdf',
+    map: 'assets/images/day-treks/rainbow_mountain_map.webp',
     description: `Oculta para el mundo hasta que un glaciar se retiró alrededor de 2015, Vinicunca — la Montaña de Colores — se ha convertido en uno de los paisajes más fotografiados de la Tierra. Sus sedimentos minerales en capas pintan la ladera en vívidas franjas de rojo, rosa, turquesa y amarillo. A 5,200m, llegar a la cima es un logro físico genuino.<br><br><strong>¿Por qué elegirnos?</strong><br>Vinicunca es el sitio natural más buscado de América del Sur. La combinación de color de otro mundo, altitud extrema y el vasto panorama andino crea una experiencia genuinamente diferente a cualquier otra en la Tierra. Con Cusco Pathways Adventure llegas con un guía experto que sitúa la montaña en su contexto geológico y cultural.`,
     highlights: [
       'rainbow_trekkers.png',
@@ -1045,6 +1065,8 @@ const toursData = {
     rating: '4.8 (1,530 reseñas)',
     image: 'ausangate_luna.png',
     heroImage: 'ausangate_luna.png',
+    brochure: 'assets/documents/CuscoPathways_Ausangate7Lakes_SacredLakesPath.pdf',
+    map: 'assets/images/day-treks/ausangate_7_lakes_map.webp',
     description: `El macizo del Ausangate — la montaña más alta y sagrada de la región de Cusco a 6,384m — guarda un mundo de extraordinarias lagunas de colores. El sendero de las 7 Lagunas te lleva por uno de los paisajes más dramáticos del altiplano peruano: lagunas turquesas, verdes y cobalto bajo las faldas del glaciar, comunidades quechuas tradicionales, alpacas y llamas a 4,800m, y las fuentes termales naturales de Pacchanta. Desayuno y almuerzo con familias andinas locales.<br><br><strong>¿Por qué elegirnos?</strong><br>Mientras la Montaña de Colores se ha vuelto famosa, las 7 Lagunas del Ausangate siguen siendo un secreto. La combinación de extraordinaria belleza natural con inmersión cultural genuina — desayuno y almuerzo con familias quechuas, aguas termales compartidas con locales — hace de esta una de las experiencias de un día más completas y auténticas de todo el portafolio.`,
     highlights: [
       'ausangate_luna.png',
@@ -1142,6 +1164,7 @@ const toursData = {
     rating: '4.9 (4,032 reseñas)',
     image: 'humantay_main.png',
     heroImage: 'humantay_main.png',
+    brochure: 'assets/documents/CuscoPathways_HumantayLake_TurquoisePath.pdf',
     description: `Anidada bajo los glaciares de las montañas Humantay y Salkantay, la Laguna Humantay es uno de los paisajes más perfectamente compuestos de la naturaleza. Sus aguas esmeralda-turquesas brillan contra nieve perpetua a más de 4,200m. Considerada sagrada por las comunidades andinas locales como sitio de ofrendas a los Apus. Una caminata de 5km y un almuerzo preparado por un chef en el exclusivo Sky Camp.<br><br><strong>¿Por qué elegirnos?</strong><br>Algunos lugares existen en la intersección de la belleza natural y el poder espiritual. La Laguna Humantay es uno de ellos. El color de sus aguas — un turquesa-esmeralda imposible que cambia con la luz — no tiene igual en la región de Cusco. Con menos de 4 horas de caminata con guía profesional y almuerzo preparado por un chef en un exclusivo campamento de montaña, es una de las experiencias extraordinarias más accesibles de los Andes.`,
     highlights: [
       'humantay_main.png',
@@ -1229,6 +1252,8 @@ const toursData = {
     rating: '4.9 (420 reseñas)',
     image: 'pallay_cresta.png',
     heroImage: 'pallay_cresta.png',
+    brochure: 'assets/documents/CuscoPathways_PallayPunchu_WovenPath.pdf',
+    map: 'assets/images/day-treks/pallay_punchu_map.webp',
     description: `Pallay Punchu — quechua para 'poncho tejido' — es la tercera y menos visitada de las Montañas Arcoíris de Cusco. Descubierta durante el confinamiento por Covid-19 en 2020 y todavía prácticamente desconocida para el turismo masivo, ofrece el recorrido de cresta más dramático de las tres experiencias: bordes dentados que se elevan como una corona natural, en tonos de cian, marrón y magenta, con el azul profundo de la Laguna de Langui muy abajo.<br><br><strong>¿Por qué elegirnos?</strong><br>Hay una montaña en los Andes que parece tejida a mano — construida de bandas minerales alternas tan precisas como el textil de un maestro tejedor. Pallay Punchu es esa montaña. Descubierta solo durante el confinamiento global de 2020, sigue siendo prácticamente desconocida, genuinamente sin multitudes y absolutamente extraordinaria. En una región donde algunos de los sitios más famosos del mundo están saturados de visitantes, Pallay Punchu es todavía un lugar donde puedes estar solo en una montaña pintada de cian y magenta y escuchar solo el viento.`,
     highlights: [
       'pallay_cresta.png',
@@ -1325,6 +1350,8 @@ const toursData = {
     rating: '4.9 (2,104 reseñas)',
     image: 'palcoyo_panoramica.png',
     heroImage: 'palcoyo_panoramica.png',
+    brochure: 'assets/documents/CuscoPathways_Palccoyo_ScenicPath.pdf',
+    map: 'assets/images/day-treks/palcoyo_map.webp',
     description: `Palcoyo es el hermano más tranquilo y accesible de la Montaña de Colores — y para muchos viajeros que conocen ambas, la experiencia más gratificante. Donde Vinicunca ofrece una única cima dramática, Palcoyo presenta toda una cordillera: tres montañas coloridas visibles simultáneamente, un bosque de piedra de extraordinarias formaciones geológicas y un vistazo al río carmesí del Valle Rojo. Menos concurrido, caminata más corta, igual de impresionante.<br><br><strong>¿Por qué elegirnos?</strong><br>Palcoyo es lo que la Montaña de Colores habría sido antes de que el mundo la descubriera: tres extraordinarias montañas coloridas visibles a la vez, un bosque de piedra que desafía la descripción, un río del Valle Rojo del color del óxido y casi sin colas. La parada en Checacupe — puentes de tres eras, el sitio donde cayó Túpac Amaru II — añade una profundidad histórica que la Montaña de Colores no puede ofrecer.`,
     highlights: [
       'palcoyo_panoramica.png',
