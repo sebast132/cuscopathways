@@ -719,3 +719,173 @@
 .featured-card .fc-desc {
   flex: 1;
 }
+
+/* ═══════════════════════════════════════════ STATS BAR ═══ */
+.stats-bar {
+  background-color: var(--primary-green);
+  border-top: 4px solid var(--gold);
+  padding: 40px 0;
+  color: var(--ivory);
+  position: relative;
+  z-index: 10;
+}
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.stats-item {
+  flex: 1 1 200px;
+  max-width: 240px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 10px;
+}
+.stats-icon {
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  transition: transform 0.5s var(--ease-out);
+}
+.stats-number {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.stats-label {
+  font-family: var(--font-premium);
+  font-size: 12px;
+  font-weight: 500;
+  color: #EDE9E1;
+  opacity: 0.9;
+}
+.stats-item:hover {
+  transform: translateY(-5px);
+}
+.stats-item:hover .stats-icon {
+  transform: scale(1.2) rotate(15deg);
+}
+
+@media (min-width: 992px) {
+  .stats-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+@media (max-width: 991px) {
+  .stats-item {
+    flex: 1 1 calc(33.333% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .stats-item {
+    flex: 1 1 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+  .stats-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+/* ─── The Cusco Pathways Difference Section ─── */
+.difference-section {
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.difference-section .section-title {
+  color: #FFFFFF;
+}
+.difference-section .section-eyebrow {
+  color: var(--gold);
+}
+.difference-section .section-subtitle {
+  text-align: center;
+  color: #A2B5AB;
+  font-family: var(--font-body);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.difference-card {
+  background-color: #23352c;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--r-md);
+  padding: 40px 30px;
+  text-align: center;
+  transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+.difference-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(200, 134, 26, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+.diff-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(27, 107, 70, 0.25);
+  border: 1.5px solid rgba(27, 107, 70, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  transition: transform 0.4s var(--ease-out);
+}
+.difference-card:hover .diff-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+.diff-icon-wrapper i {
+  color: var(--gold);
+  font-size: 26px;
+}
+.diff-card-title {
+  font-family: var(--font-display);
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.diff-card-desc {
+  font-family: var(--font-body);
+  color: #A2B5AB;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .difference-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .difference-grid {
+    grid-template-columns: 1fr;
+  }
+  .difference-section {
+    padding: 70px 0;
+  }
+}

@@ -56,7 +56,7 @@ function hydrateDestinationPage() {
   const dest = destinationsData[destKey];
 
   if (!dest) {
-    destList.innerHTML = '<p class="error-msg">Destino no encontrado.</p>';
+    destList.innerHTML = '<p class="error-msg">Destination not found.</p>';
     return;
   }
 
@@ -91,7 +91,7 @@ function hydrateDestinationPage() {
         <div class="fc-content">
           <div class="fc-meta-top">
             <span>🕒 ${tour.duration || 'Full Day'}</span>
-            <span>⛰️ ${tour.difficulty || 'Moderada'}</span>
+            <span>⛰️ ${tour.difficulty || 'Moderate'}</span>
           </div>
           <h3 class="fc-title">${tour.title}</h3>
           <p class="fc-subtitle">${tour.route || tour.subtitle || ''}</p>
@@ -99,13 +99,13 @@ function hydrateDestinationPage() {
           
           <div class="fc-footer">
             <div class="fc-footer-left">
-              <span>👥 ${tour.groupSize || 'Hasta 16 Personas'}</span>
+              <span>👥 ${tour.groupSize || 'Up to 16 People'}</span>
               <span>🏔️ ${tour.altitude || ''}</span>
-              <span class="rating-highlight">★ ${tour.rating || '4.9 (1000 reseñas)'}</span>
+              <span class="rating-highlight">★ ${tour.rating || '4.9 (1,000 reviews)'}</span>
             </div>
             <div class="fc-footer-right">
-              <span class="fc-price">Desde <strong>$${rawPrice}</strong> pp</span>
-              <span class="btn btn-gold-solid btn-itinerary">VER ITINERARIO</span>
+              <span class="fc-price">From <strong>$${rawPrice}</strong> pp</span>
+              <span class="btn btn-gold-solid btn-itinerary">VIEW ITINERARY</span>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ function hydrateTourDetailPage() {
   const tour = toursData[tourKey];
 
   if (!tour) {
-    itineraryContainer.innerHTML = '<p class="error-msg">Tour no encontrado.</p>';
+    itineraryContainer.innerHTML = '<p class="error-msg">Tour not found.</p>';
     return;
   }
 
@@ -137,7 +137,7 @@ function hydrateTourDetailPage() {
   const destLink = document.getElementById('breadcrumb-dest-link');
   if (destLink && destKey) {
     destLink.href = `destination.html?dest=${destKey}`;
-    destLink.textContent = destinationsData[destKey]?.title || 'Destino';
+    destLink.textContent = destinationsData[destKey]?.title || 'Destination';
   }
   const breadcrumbName = document.getElementById('breadcrumb-tour-name');
   if (breadcrumbName) breadcrumbName.textContent = tour.title;
@@ -146,7 +146,7 @@ function hydrateTourDetailPage() {
   const backBtn = document.getElementById('back-to-dest');
   if (backBtn && destKey) {
     backBtn.href = `destination.html?dest=${destKey}`;
-    backBtn.innerHTML = '&larr; Volver a ' + (destinationsData[destKey]?.title || 'Destino');
+    backBtn.innerHTML = '&larr; Back to ' + (destinationsData[destKey]?.title || 'Destination');
   }
 
   // ── Hero
@@ -212,7 +212,7 @@ function hydrateTourDetailPage() {
 
   // ── Sidebar
   const priceDisplay = document.getElementById('booking-price-display');
-  if (priceDisplay) priceDisplay.textContent = `Desde ${tour.priceGroup}`;
+  if (priceDisplay) priceDisplay.textContent = `From ${tour.priceGroup}`;
   const durDisplay = document.getElementById('booking-duration-display');
   if (durDisplay) durDisplay.textContent = tour.duration;
   const diffDisplay = document.getElementById('booking-difficulty-display');
@@ -226,8 +226,8 @@ function hydrateTourDetailPage() {
   const tableBody = document.getElementById('pricing-table-body');
   if (tableBody) {
     tableBody.innerHTML = `
-      <tr><td>Servicio Grupal</td><td>${tour.priceGroup}</td></tr>
-      <tr><td>Servicio Privado</td><td>${tour.pricePrivate}</td></tr>
+      <tr><td>Group Service</td><td>${tour.priceGroup}</td></tr>
+      <tr><td>Private Service</td><td>${tour.pricePrivate}</td></tr>
     `;
   }
 
@@ -255,7 +255,7 @@ function hydrateTourDetailPage() {
       <div class="offers-box">
         <div class="offers-icon">🎁</div>
         <div class="offers-content">
-          <h4>Beneficio Especial</h4>
+          <h4>Special Benefit</h4>
           <p>${tour.offer}</p>
         </div>
       </div>
@@ -263,7 +263,7 @@ function hydrateTourDetailPage() {
   }
 
   // ── WhatsApp Buttons
-  const waText = encodeURIComponent(`Hola Cusco Pathways, deseo información y reservar el tour: ${tour.title}`);
+  const waText = encodeURIComponent(`Hello Cusco Pathways, I would like information and to book the tour: ${tour.title}`);
   const waUrl = `https://wa.me/51984000000?text=${waText}`;
   ['book-tour-button', 'book-group-btn', 'book-private-btn'].forEach(id => {
     const btn = document.getElementById(id);
@@ -293,7 +293,7 @@ function hydrateTourDetailPage() {
     const noteBlock = document.createElement('div');
     noteBlock.className = 'important-alert note-alert';
     noteBlock.innerHTML = `
-      <h4>ℹ️ Nota Importante</h4>
+      <h4>ℹ️ Important Note</h4>
       <p>${tour.importantNote}</p>
     `;
     itineraryContainer.appendChild(noteBlock);
@@ -323,10 +323,10 @@ function hydrateTourDetailPage() {
   const packingContainer = document.getElementById('packing-list-container');
   if (packingContainer && tour.packingList) {
     const categories = [
-      { label: 'Ropa e Indumentaria', icon: '👕', items: tour.packingList.slice(0, 11) },
-      { label: 'Equipamiento Esencial', icon: '🔦', items: tour.packingList.slice(11, 17) },
-      { label: 'Salud & Bienestar', icon: '💊', items: tour.packingList.slice(17, 20) },
-      { label: 'Alimentación Extra', icon: '🍫', items: tour.packingList.slice(20) },
+      { label: 'Clothing & Apparel', icon: '👕', items: tour.packingList.slice(0, 11) },
+      { label: 'Essential Gear', icon: '🔦', items: tour.packingList.slice(11, 17) },
+      { label: 'Health & Wellness', icon: '💊', items: tour.packingList.slice(17, 20) },
+      { label: 'Extra Snacks', icon: '🍫', items: tour.packingList.slice(20) },
     ];
     packingContainer.style.display = 'block';
     packingContainer.innerHTML = categories.map(cat => `
@@ -393,7 +393,7 @@ function hydrateTourDetailPage() {
             <div class="fc-footer">
               <div class="fc-footer-left"><span>🏷️ ${r.priceGroup}</span></div>
               <div class="fc-footer-right">
-                <span class="btn btn-gold-solid btn-related">Ver Detalles</span>
+                <span class="btn btn-gold-solid btn-related">View Details</span>
               </div>
             </div>
           </div>
@@ -417,7 +417,7 @@ function hydrateTourDetailPage() {
             <div class="resource-card-bg" style="background-image: url(${resolveImagePath(bgImg)})"></div>
             <div class="resource-card-overlay"></div>
             <div class="resource-card-content">
-              <span class="resource-btn">Descargar Folleto</span>
+              <span class="resource-btn">Download Brochure</span>
             </div>
           </a>
         `;
@@ -429,7 +429,7 @@ function hydrateTourDetailPage() {
             <div class="resource-card-bg" style="background-image: url(${resolveImagePath(tour.map)})"></div>
             <div class="resource-card-overlay"></div>
             <div class="resource-card-content">
-              <span class="resource-btn">Ver Mapa</span>
+              <span class="resource-btn">View Map</span>
             </div>
           </a>
         `;
@@ -541,11 +541,11 @@ function fillTourData() {
     }
     
     // Generate intro fields if missing
-    if (!tour.introTitle) tour.introTitle = tour.subtitle || 'Una Aventura Inolvidable';
+    if (!tour.introTitle) tour.introTitle = tour.subtitle || 'An Unforgettable Adventure';
     if (!tour.introRoute) tour.introRoute = tour.itinerary.map(i => i.title.split(' ')[0]).join(' – ');
     if (!tour.introBody) {
-      tour.introBody = `<p>Únete a nosotros en esta espectacular experiencia: <strong>${tour.title}</strong>. Descubre paisajes asombrosos, sumérgete en la cultura andina y disfruta del mejor servicio de su clase. Cada detalle ha sido cuidadosamente planeado para ofrecerte confort y aventura en perfecta armonía.</p>
-      <p>Nuestro equipo de profesionales te acompañará en cada paso, garantizando tu seguridad y compartiendo historias fascinantes sobre nuestra herencia milenaria. ¡Prepárate para llevarte recuerdos que durarán toda la vida!</p>`;
+      tour.introBody = `<p>Join us on this spectacular experience: <strong>${tour.title}</strong>. Discover breathtaking landscapes, immerse yourself in Andean culture, and enjoy the best service in its class. Every detail has been carefully planned to offer you comfort and adventure in perfect harmony.</p>
+      <p>Our team of professionals will accompany you every step of the way, ensuring your safety and sharing fascinating stories about our millennial heritage. Get ready to take home memories that will last a lifetime!</p>`;
     }
   });
 }
@@ -562,74 +562,74 @@ function initContactModal() {
         <div class="modal-left">
           <div class="modal-left-content">
             <img src="${resolveImagePath('logoweb2.webp')}" alt="Cusco Pathways" class="modal-left-logo">
-            <h2>¡Planifica tu Aventura!</h2>
-            <p>Déjanos organizar todo por ti. Contáctanos y uno de nuestros especialistas en viajes te brindará todo lo que necesitas para hacer de esta una experiencia inolvidable.</p>
+            <h2>Plan Your Adventure!</h2>
+            <p>Let us organize everything for you. Contact us and one of our travel specialists will provide you with everything you need to make this an unforgettable experience.</p>
           </div>
         </div>
 
         <div class="modal-right">
-          <h3>Consulta Ahora</h3>
-          <form class="modal-form" onsubmit="event.preventDefault(); alert('Formulario enviado (solo front-end).'); this.closest('.modal-overlay').classList.remove('active');">
+          <h3>Inquire Now</h3>
+          <form class="modal-form" onsubmit="event.preventDefault(); alert('Form submitted (front-end only).'); this.closest('.modal-overlay').classList.remove('active');">
             
             <div class="form-group">
-              <label class="form-label">Nombre*</label>
-              <input type="text" class="form-input" required placeholder="Tu nombre">
+              <label class="form-label">First Name*</label>
+              <input type="text" class="form-input" required placeholder="Your first name">
             </div>
             <div class="form-group">
-              <label class="form-label">Apellido*</label>
-              <input type="text" class="form-input" required placeholder="Tu apellido">
+              <label class="form-label">Last Name*</label>
+              <input type="text" class="form-input" required placeholder="Your last name">
             </div>
 
             <div class="form-group form-group-full">
-              <label class="form-label">Correo Electrónico*</label>
-              <input type="email" class="form-input" required placeholder="ejemplo@correo.com">
-              <div class="form-hint">Nunca compartiremos tu correo con nadie más.</div>
+              <label class="form-label">Email Address*</label>
+              <input type="email" class="form-input" required placeholder="example@email.com">
+              <div class="form-hint">We will never share your email with anyone else.</div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">País*</label>
+              <label class="form-label">Country*</label>
               <select class="form-select" required>
-                <option value="">Selecciona tu país</option>
-                <option value="US">Estados Unidos</option>
-                <option value="UK">Reino Unido</option>
-                <option value="ES">España</option>
-                <option value="PE">Perú</option>
-                <option value="CA">Canadá</option>
-                <option value="OT">Otro</option>
+                <option value="">Select your country</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="ES">Spain</option>
+                <option value="PE">Peru</option>
+                <option value="CA">Canada</option>
+                <option value="OT">Other</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Teléfono / WhatsApp</label>
+              <label class="form-label">Phone / WhatsApp</label>
               <input type="tel" class="form-input" placeholder="+1 234 567 8900">
             </div>
 
             <div class="form-group">
-              <label class="form-label">Me interesa:*</label>
+              <label class="form-label">I am interested in:*</label>
               <select class="form-select" required>
-                <option value="">Selecciona un paquete</option>
-                <option value="Inca Trail">Camino Inca</option>
+                <option value="">Select a package</option>
+                <option value="Inca Trail">Inca Trail</option>
                 <option value="Salkantay">Salkantay Trek</option>
-                <option value="Sacred Valley">Valle Sagrado & Cusco</option>
-                <option value="Day Treks">Caminatas de 1 Día (Montaña Colores, etc.)</option>
-                <option value="Custom">Paquete a Medida</option>
+                <option value="Sacred Valley">Sacred Valley & Cusco</option>
+                <option value="Day Treks">1-Day Treks (Rainbow Mountain, etc.)</option>
+                <option value="Machu Picchu">Machu Picchu Tours</option>
+                <option value="Custom">Custom Package</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Fecha de Salida Estimada</label>
+              <label class="form-label">Estimated Departure Date</label>
               <input type="date" class="form-input">
             </div>
 
             <div class="form-group">
-              <label class="form-label">Adultos*</label>
+              <label class="form-label">Adults*</label>
               <input type="number" class="form-input" required min="1" value="2">
             </div>
             <div class="form-group">
-              <label class="form-label">Niños</label>
+              <label class="form-label">Children</label>
               <input type="number" class="form-input" min="0" value="0">
             </div>
 
             <div class="form-group form-group-full">
-              <label class="form-label">Tu Mensaje*</label>
               <textarea class="form-textarea" required placeholder="Cuéntanos más sobre tu viaje soñado..."></textarea>
             </div>
 
@@ -729,7 +729,7 @@ function initReclamaciones() {
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('¡Reclamo/Queja enviado exitosamente! Nos pondremos en contacto contigo.');
+      alert('Claim/Complaint submitted successfully! We will get in touch with you.');
       this.reset();
       if (padreGroup) padreGroup.style.display = 'none';
     });
