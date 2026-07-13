@@ -303,3 +303,20 @@
   background-color: #1DA851;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .tour-content-section {
+    padding: 40px 0 !important;
+  }
+  .back-link {
+    margin-bottom: 24px !important;
+  }
+  .booking-card {
+    padding: 20px !important;
+  }
+  .offers-box {
+    flex-direction: column;
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+}

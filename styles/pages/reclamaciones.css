@@ -188,3 +188,55 @@ select.form-control {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.lr-submit-btn {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 400px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .lr-header {
+    padding: 80px 0 20px;
+  }
+  .lr-title {
+    font-size: 1.8rem;
+  }
+  .lr-subtitle {
+    font-size: 0.95rem;
+  }
+  .lr-container {
+    margin: 20px auto 40px;
+    padding: 0 16px;
+  }
+  .lr-box {
+    padding: 16px;
+  }
+  .form-control {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    padding: 12px 14px;
+    min-height: 48px;
+  }
+  .col {
+    min-width: 100% !important;
+  }
+  .input-group select {
+    width: 90px;
+  }
+  .lr-definitions {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+  .lr-legal-warnings {
+    padding: 16px;
+    font-size: 0.8rem;
+  }
+  .lr-submit-btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+    max-width: 100%;
+    min-height: 48px;
+  }
+}

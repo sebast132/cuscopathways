@@ -630,15 +630,15 @@ function initContactModal() {
             </div>
 
             <div class="form-group form-group-full">
-              <textarea class="form-textarea" required placeholder="Cuéntanos más sobre tu viaje soñado..."></textarea>
+              <textarea class="form-textarea" required placeholder="Tell us more about your dream trip..."></textarea>
             </div>
 
             <div class="form-checkbox-group">
               <input type="checkbox" id="newsletter-check">
-              <label for="newsletter-check">Me gustaría recibir correos de Cusco Pathways Adventures con guías de viaje, tips e información.</label>
+              <label for="newsletter-check">I would like to receive emails from Cusco Pathways Adventures with travel guides, tips and information.</label>
             </div>
 
-            <button type="submit" class="modal-submit-btn">Enviar Consulta</button>
+            <button type="submit" class="modal-submit-btn">Send Enquiry</button>
           </form>
         </div>
       </div>
@@ -657,6 +657,14 @@ function initContactModal() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       modal.classList.add('active');
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (hamburger && mobileMenu && hamburger.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      }
     });
   });
 
