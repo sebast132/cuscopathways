@@ -932,4 +932,12 @@
     width: 100% !important;
     padding: 14px 0 !important;
   }
+  .fc-desc {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

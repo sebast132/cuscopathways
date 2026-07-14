@@ -76,6 +76,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+.tours-grid .featured-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+}
 @media (max-width: 1024px) {
   .tours-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -359,12 +364,15 @@
     gap: 16px !important;
   }
   .fc-footer-left {
+    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap !important;
-    gap: 10px !important;
+    gap: 12px !important;
     font-size: 11px !important;
   }
   .fc-footer-right {
     display: flex !important;
+    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;

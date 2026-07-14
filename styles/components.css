@@ -220,6 +220,10 @@
   color: var(--primary-green);
 }
 
+.nav-mobile-actions {
+  display: none;
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -399,6 +403,35 @@ body.menu-open {
   .nav-inner .btn-enquire { display: none; }
   .nav-inner { min-height: 56px; }
   .nav-logo-img { height: 36px; max-height: 36px; }
+  .nav-mobile-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+  .nav-mobile-actions a,
+  .nav-mobile-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--primary-green);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+    padding: 0;
+  }
+  .nav-mobile-actions a:hover,
+  .nav-mobile-actions button:hover {
+    color: var(--gold);
+    background-color: rgba(30, 80, 50, 0.05);
+  }
   .hamburger {
     display: flex;
     width: 36px;

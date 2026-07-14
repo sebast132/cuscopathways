@@ -67,7 +67,7 @@ function initMobileMenu(mobileMenu, hamburger) {
         const tour = toursData[tourId];
         if (tour) {
           listHTML += `
-            <li><a href="tour-detail.html?tour=${tourId}">${tour.title}</a></li>
+            <li><a href="tour-detail.html?tour=${tourId}&dest=${destKey}">${tour.title}</a></li>
           `;
         }
       });
@@ -94,7 +94,7 @@ function initMobileMenu(mobileMenu, hamburger) {
       <a href="tel:+51984000000" class="mobile-menu-phone">
         <i class="fas fa-phone-alt"></i> +51 984 000 000
       </a>
-      <span class="mobile-menu-hours">Mon–Sat: 8:00am–7:00pm | WhatsApp: 24/7</span>
+      <span class="mobile-menu-hours">Mon–Sat: 8:00am–7:00pm | <a href="https://wa.me/51984000000?text=Hello%20Cusco%20Pathways,%20I%20would%20like%20more%20information" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">WhatsApp: 24/7</a></span>
     </div>
   `;
 
