@@ -561,84 +561,128 @@ function initContactModal() {
         
         <div class="modal-left">
           <div class="modal-left-content">
-            <img src="${resolveImagePath('logoweb2.webp')}" alt="Cusco Pathways" class="modal-left-logo">
-            <h2>Plan Your Adventure!</h2>
-            <p>Let us organize everything for you. Contact us and one of our travel specialists will provide you with everything you need to make this an unforgettable experience.</p>
+            <span class="modal-tag">GET IN TOUCH</span>
+            <h2>Plan Your <span class="text-gold">Cusco Adventure</span></h2>
+            <div class="modal-divider"></div>
+            <p>Ready to start planning? Fill in the form and we'll reply within 24 hours with availability, pricing, and everything you need to know. Or just message us on WhatsApp — we're always there.</p>
+            
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">WhatsApp</span>
+                  <a href="https://wa.me/51984000000?text=Hello%20Cusco%20Pathways,%20I%20would%20like%20more%20information" target="_blank" class="contact-value">+51 984 000 000</a>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:info@cuscopathwaysadventures.com" class="contact-value">info@cuscopathwaysadventures.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Office — Cusco, Peru</span>
+                  <span class="contact-value">Jr. Ancash Mza. I Lote. 12 Urb. San Borja Alta, Wanchaq</span>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Office Hours</span>
+                  <span class="contact-value">Mon–Sat: 8:00am–7:00pm | WhatsApp: 24/7</span>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Legal Registration</span>
+                  <span class="contact-value">RUC: 20615958167 — Cusco, Perú</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="modal-right">
-          <h3>Inquire Now</h3>
+          <h3><i class="fas fa-compass" style="color: var(--gold); margin-right: 8px;"></i>Tell Us About Your Trip</h3>
           <form class="modal-form" onsubmit="event.preventDefault(); alert('Form submitted (front-end only).'); this.closest('.modal-overlay').classList.remove('active');">
             
             <div class="form-group">
-              <label class="form-label">First Name*</label>
-              <input type="text" class="form-input" required placeholder="Your first name">
+              <label class="form-label">FIRST NAME *</label>
+              <input type="text" class="form-input" required placeholder="John">
             </div>
             <div class="form-group">
-              <label class="form-label">Last Name*</label>
-              <input type="text" class="form-input" required placeholder="Your last name">
+              <label class="form-label">LAST NAME *</label>
+              <input type="text" class="form-input" required placeholder="Smith">
             </div>
 
             <div class="form-group form-group-full">
-              <label class="form-label">Email Address*</label>
-              <input type="email" class="form-input" required placeholder="example@email.com">
-              <div class="form-hint">We will never share your email with anyone else.</div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Country*</label>
-              <select class="form-select" required>
-                <option value="">Select your country</option>
-                <option value="US">United States</option>
-                <option value="UK">United Kingdom</option>
-                <option value="ES">Spain</option>
-                <option value="PE">Peru</option>
-                <option value="CA">Canada</option>
-                <option value="OT">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Phone / WhatsApp</label>
-              <input type="tel" class="form-input" placeholder="+1 234 567 8900">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">I am interested in:*</label>
-              <select class="form-select" required>
-                <option value="">Select a package</option>
-                <option value="Inca Trail">Inca Trail</option>
-                <option value="Salkantay">Salkantay Trek</option>
-                <option value="Sacred Valley">Sacred Valley & Cusco</option>
-                <option value="Day Treks">1-Day Treks (Rainbow Mountain, etc.)</option>
-                <option value="Machu Picchu">Machu Picchu Tours</option>
-                <option value="Custom">Custom Package</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Estimated Departure Date</label>
-              <input type="date" class="form-input">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Adults*</label>
-              <input type="number" class="form-input" required min="1" value="2">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Children</label>
-              <input type="number" class="form-input" min="0" value="0">
+              <label class="form-label">EMAIL ADDRESS *</label>
+              <input type="email" class="form-input" required placeholder="john@example.com">
             </div>
 
             <div class="form-group form-group-full">
-              <textarea class="form-textarea" required placeholder="Tell us more about your dream trip..."></textarea>
+              <label class="form-label">WHATSAPP / PHONE</label>
+              <input type="tel" class="form-input" placeholder="+1 555 000 0000 (include country code)">
             </div>
 
-            <div class="form-checkbox-group">
-              <input type="checkbox" id="newsletter-check">
-              <label for="newsletter-check">I would like to receive emails from Cusco Pathways Adventures with travel guides, tips and information.</label>
+            <div class="form-group form-group-full">
+              <label class="form-label">TOUR OF INTEREST *</label>
+              <select class="form-select" required id="modal-tour-select">
+                <option value="">— Select a tour —</option>
+              </select>
             </div>
 
-            <button type="submit" class="modal-submit-btn">Send Enquiry</button>
+            <div class="form-group">
+              <label class="form-label">APPROXIMATE TRAVEL DATE</label>
+              <input type="date" class="form-input" placeholder="dd/mm/aaaa">
+            </div>
+            <div class="form-group">
+              <label class="form-label">NUMBER OF PEOPLE *</label>
+              <select class="form-select" required>
+                <option value="">— Select —</option>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10+">10+ people</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label class="form-label">MESSAGE / QUESTIONS</label>
+              <textarea class="form-textarea" placeholder="Tell us about your fitness level, dietary needs, special requests, or any questions..."></textarea>
+            </div>
+
+            <div class="form-privacy-note">
+              <i class="fas fa-lock" style="color: #2ecc71; margin-right: 6px;"></i>Your information is 100% private and will never be shared.
+            </div>
+
+            <button type="submit" class="modal-submit-btn">
+              <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>SEND MY ENQUIRY
+            </button>
           </form>
         </div>
       </div>
@@ -651,12 +695,33 @@ function initContactModal() {
   const modal = document.getElementById('enquire-modal');
   const closeBtn = document.getElementById('close-modal-btn');
   const openBtns = document.querySelectorAll('.open-modal-btn');
+  const tourSelect = document.getElementById('modal-tour-select');
+
+  // Populate tours select options dynamically
+  if (tourSelect && typeof toursData !== 'undefined') {
+    tourSelect.innerHTML = '<option value="">— Select a tour —</option>';
+    Object.keys(toursData).forEach(key => {
+      const tour = toursData[key];
+      const opt = document.createElement('option');
+      opt.value = key;
+      opt.textContent = tour.title;
+      tourSelect.appendChild(opt);
+    });
+  }
 
   // Open logic
   openBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       modal.classList.add('active');
+      
+      // Auto pre-select tour from URL if applicable
+      const urlParams = new URLSearchParams(window.location.search);
+      const currentTourKey = urlParams.get('tour');
+      if (currentTourKey && tourSelect) {
+        tourSelect.value = currentTourKey;
+      }
+      
       const hamburger = document.getElementById('hamburger');
       const mobileMenu = document.getElementById('mobile-menu');
       if (hamburger && mobileMenu && hamburger.classList.contains('open')) {

@@ -143,7 +143,7 @@ const toursData = {
       { day: 'Day 4', name: 'Hotel 3★ Aguas Calientes', type: 'Boutique Hotel', image: 'accom_hotel_aguas.webp', desc: 'Modern boutique hotel in the heart of Aguas Calientes (Machu Picchu Pueblo), just a 5-minute walk from the bus stop to the citadel. Double room with private bathroom, TV, Wi-Fi, decorative Andean textiles, and buffet breakfast included. Ideal for resting and preparing for the grand visit on the final day.' },
     ],
     pricePrivate: 'USD 1,250.00',
-    priceGroup: 'USD 850.00',
+    priceGroup: 'USD 1,059.00',
     offer: 'Includes a 30-minute massage at Soraypampa camp and priority access to Humantay Lake.',
     importantNote: 'Important Information: Pre-departure briefing at 5:00pm the night before. Full payment due 2 days prior. Original passport mandatory. Book Machu Picchu tickets 3 months in advance. Vistadome Observatory train available for 2026 bookings.',
     relatedTours: ['salkantay-classic', 'salkantay-short', 'humantay-classic'],
@@ -277,7 +277,7 @@ const toursData = {
       }
     ],
     pricePrivate: 'USD 1,650.00',
-    priceGroup: 'USD 695.00',
+    priceGroup: 'USD 669.00',
     privatePricing: [
       { size: '1 Person', price: 'USD 1,650.00' },
       { size: '2 – 3 People', price: 'USD 1,300.00' },
@@ -373,7 +373,7 @@ const toursData = {
       }
     ],
     pricePrivate: 'USD 1,520.00',
-    priceGroup: 'USD 620.00',
+    priceGroup: 'USD 600.00',
     privatePricing: [
       { size: '1 Person', price: 'USD 1,520.00' },
       { size: '2 – 3 People', price: 'USD 1,200.00' },
@@ -658,7 +658,7 @@ const toursData = {
         image: 'city_qoricancha.webp'
       }
     ],
-    priceGroup: 'USD 00.00',
+    priceGroup: 'USD 55.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
       { size: '3 – 5 People', price: 'USD 200.00' },
@@ -755,7 +755,7 @@ const toursData = {
         image: 'sv_mercado_pisac.webp'
       }
     ],
-    priceGroup: 'USD 00.00',
+    priceGroup: 'USD 60.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
       { size: '3 – 5 People', price: 'USD 200.00' },
@@ -852,7 +852,7 @@ const toursData = {
         image: 'sv_mercado_pisac.webp'
       }
     ],
-    priceGroup: 'USD 00.00',
+    priceGroup: 'USD 75.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
       { size: '3 – 5 People', price: 'USD 200.00' },
@@ -942,7 +942,7 @@ const toursData = {
         desc: 'We end the afternoon exploring the impressive archaeological site of Ollantaytambo, the only Inca town still inhabited in its original blocks, before returning to Cusco.'
       }
     ],
-    priceGroup: 'USD 00.00',
+    priceGroup: 'USD 99.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
       { size: '3 – 5 People', price: 'USD 200.00' },
@@ -1044,7 +1044,7 @@ const toursData = {
         desc: 'We descend for 1 hour back to Fulawasipata. We travel back for a well-deserved, comforting lunch and will arrive in Cusco between 4:30 and 5:00 pm.'
       }
     ],
-    priceGroup: 'USD 00.00',
+    priceGroup: 'USD 48.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
       { size: '3 – 5 People', price: 'USD 200.00' },
@@ -1143,7 +1143,7 @@ const toursData = {
         accommodation: 'Max Altitude: 4,800m'
       }
     ],
-    priceGroup: 'USD 00.00',
+    priceGroup: 'USD 52.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
       { size: '3 – 5 People', price: 'USD 200.00' },
@@ -1231,7 +1231,7 @@ const toursData = {
         image: 'humantay_trekkers.webp'
       }
     ],
-    priceGroup: 'USD 00.00',
+    priceGroup: 'USD 48.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
       { size: '3 – 5 People', price: 'USD 200.00' },
@@ -1318,7 +1318,7 @@ const toursData = {
     accommodation: [
       { day: 'Day 1', name: 'Sky Camp', type: 'Luxury Domes', image: 'accom_sky_camp.webp', desc: 'Spectacular transparent geodesic domes located at 3,900m altitude with direct views of Salkantay peak and the starry sky. Each dome features premium double mattresses, hotel-quality bedding, warm lighting, and a private bathroom with hot water. At night, the celestial vault becomes your starry ceiling.' }
     ],
-    priceGroup: 'USD 295.00',
+    priceGroup: 'USD 260.00',
     pricePrivate: 'USD 495.00',
     privatePricing: [
       { size: '1 Person', price: 'USD 595.00' },
@@ -1418,7 +1418,7 @@ const toursData = {
     accommodation: [
       { day: 'Day 1', name: 'Hotel 3★ Aguas Calientes', type: 'Boutique Hotel', image: 'accom_hotel_aguas.webp', desc: 'Modern boutique hotel in the heart of Aguas Calientes (Machu Picchu Pueblo), just a 5-minute walk from the bus stop to the citadel. Double room with private bathroom, TV, Wi-Fi, decorative Andean textiles, and buffet breakfast included. Ideal for resting and preparing for the grand visit on the final day.' }
     ],
-    priceGroup: 'USD 500.00',
+    priceGroup: 'USD 490.00',
     pricePrivate: 'USD 695.00',
     privatePricing: [
       { size: '1 Person', price: 'USD 895.00' },
@@ -1503,7 +1503,7 @@ const toursData = {
       }
     ],
     accommodation: [],
-    priceGroup: 'USD 380.00',
+    priceGroup: 'USD 375.00',
     pricePrivate: 'USD 495.00',
     privatePricing: [
       { size: '1 Person', price: 'USD 595.00' },

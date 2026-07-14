@@ -610,13 +610,13 @@
 /* Contenedor Principal */
 .modal-container {
   width: 100%;
-  max-width: 950px;
+  max-width: 980px;
   max-height: 90vh;
-  background: var(--bg-surface);
+  background: #121C16; /* Dark brand background */
   border-radius: var(--r-lg);
   overflow: hidden;
   display: flex;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
   position: relative;
   transform: translateY(20px) scale(0.98);
   transition: transform 0.3s ease;
@@ -632,8 +632,8 @@
   right: 20px;
   background: transparent;
   border: none;
-  font-size: 24px;
-  color: var(--text-muted);
+  font-size: 28px;
+  color: rgba(245, 241, 234, 0.6);
   cursor: pointer;
   z-index: 10;
   transition: color 0.2s;
@@ -645,63 +645,124 @@
 /* Columna Izquierda (Imagen y Marca) */
 .modal-left {
   flex: 1;
-  background: url('../assets/images/hero/modal_trekking_cusco.webp') center/cover;
-  position: relative;
-  padding: 40px;
+  background: #0B120E; /* Dark background as in the image */
+  padding: 45px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.modal-left::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(17, 17, 17, 0.6);
+  align-items: flex-start;
+  text-align: left;
+  border-right: 1px solid rgba(200, 134, 26, 0.1);
 }
 .modal-left-content {
   position: relative;
   z-index: 2;
-  color: #F5F1E8;
+  color: #FFFFFF;
+  width: 100%;
 }
-.modal-left-logo {
-  width: 120px;
-  margin-bottom: 24px;
-  filter: brightness(0) invert(1);
+.modal-tag {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 8px;
 }
 .modal-left h2 {
   font-family: var(--font-display);
   font-size: 2.2rem;
-  margin-bottom: 16px;
-  color: #F5F1E8;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  color: #FFFFFF;
+}
+.modal-left h2 .text-gold {
+  color: var(--gold);
+}
+.modal-divider {
+  width: 40px;
+  height: 3px;
+  background-color: var(--gold);
+  margin-bottom: 24px;
 }
 .modal-left p {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
-  color: #F5F1E8;
+  color: rgba(245, 241, 234, 0.8);
+  margin-bottom: 36px;
+}
+
+/* Contact info styling */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact-icon-wrapper {
+  width: 42px;
+  height: 42px;
+  background-color: #122118;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(200, 134, 26, 0.15);
+}
+.contact-icon-wrapper i {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+.contact-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+.contact-value {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(245, 241, 234, 0.65);
+  transition: color 0.2s;
+}
+a.contact-value:hover {
+  color: var(--gold);
 }
 
 /* Columna Derecha (Formulario) */
 .modal-right {
-  flex: 1;
-  background: #FFFFFF;
-  padding: 40px;
+  flex: 1.1;
+  background: #121C16;
+  padding: 45px 40px;
   overflow-y: auto;
 }
 .modal-right h3 {
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: var(--primary-green);
-  margin-bottom: 24px;
+  color: var(--gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
 }
 
 /* Formulario Grid */
 .modal-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
 }
 .form-group-full {
   grid-column: span 2;
@@ -711,71 +772,88 @@
   flex-direction: column;
 }
 .form-label {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: var(--text-main);
-  margin-bottom: 6px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid rgba(122, 106, 88, 0.3);
-  border-radius: var(--r-sm);
+  border: 1px solid rgba(200, 134, 26, 0.2);
+  border-radius: 6px;
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--text-main);
-  background: #FFFFFF;
-  transition: border-color 0.2s;
+  color: #FFFFFF;
+  background: #1A2820;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--primary-green);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(200, 134, 26, 0.15);
+}
+.form-input::placeholder, .form-textarea::placeholder {
+  color: rgba(245, 241, 234, 0.35);
 }
 .form-textarea {
   resize: vertical;
   min-height: 100px;
 }
-.form-hint {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 4px;
+
+/* Custom Dropdown Arrow */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C8861A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
 }
-.form-checkbox-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+
+/* Options style in select */
+.form-select option {
+  background-color: #121C16;
+  color: #FFFFFF;
+}
+
+.form-privacy-note {
   grid-column: span 2;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.form-checkbox-group input {
-  margin-top: 4px;
-}
-.form-checkbox-group label {
   font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.4;
+  color: rgba(245, 241, 234, 0.5);
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
 }
 
 .modal-submit-btn {
   grid-column: span 2;
-  background: var(--primary-green);
-  color: #fff;
+  background: #006847; /* dark emerald green */
+  color: #FFFFFF;
   border: none;
   padding: 16px;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  border-radius: var(--r-md);
+  border-radius: 6px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: background 0.3s;
-  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background var(--dur-fast), transform var(--dur-fast);
+  margin-top: 12px;
 }
 .modal-submit-btn:hover {
-  background: var(--gold);
+  background: #004D34;
+  transform: translateY(-1px);
+}
+.modal-submit-btn:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
@@ -799,7 +877,7 @@
   }
   .form-group,
   .form-group-full,
-  .form-checkbox-group,
+  .form-privacy-note,
   .modal-submit-btn {
     grid-column: span 1;
   }
@@ -823,7 +901,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(28,43,34,0.1);
+    background: rgba(245, 241, 234, 0.1);
     border-radius: 50%;
+    color: #FFFFFF;
   }
 }
