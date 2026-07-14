@@ -612,11 +612,11 @@
   width: 100%;
   max-width: 980px;
   max-height: 90vh;
-  background: #121C16; /* Dark brand background */
+  background: var(--bg-surface); /* original white background */
   border-radius: var(--r-lg);
   overflow: hidden;
   display: flex;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
   position: relative;
   transform: translateY(20px) scale(0.98);
   transition: transform 0.3s ease;
@@ -633,7 +633,7 @@
   background: transparent;
   border: none;
   font-size: 28px;
-  color: rgba(245, 241, 234, 0.6);
+  color: var(--text-muted);
   cursor: pointer;
   z-index: 10;
   transition: color 0.2s;
@@ -645,20 +645,33 @@
 /* Columna Izquierda (Imagen y Marca) */
 .modal-left {
   flex: 1;
-  background: #0B120E; /* Dark background as in the image */
+  background: url('../assets/images/hero/modal_trekking_cusco.webp') center/cover; /* original background image */
+  position: relative;
   padding: 45px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  border-right: 1px solid rgba(200, 134, 26, 0.1);
+}
+.modal-left::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(28, 43, 34, 0.7); /* dark deep forest overlay for text contrast */
+  z-index: 1;
 }
 .modal-left-content {
   position: relative;
   z-index: 2;
   color: #FFFFFF;
   width: 100%;
+}
+.modal-left-logo {
+  width: 120px;
+  margin-bottom: 24px;
+  filter: brightness(0) invert(1); /* makes the brand logo white */
+  display: block;
 }
 .modal-tag {
   font-family: var(--font-display);
@@ -690,7 +703,7 @@
   font-family: var(--font-body);
   font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(245, 241, 234, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 36px;
 }
 
@@ -709,13 +722,13 @@
 .contact-icon-wrapper {
   width: 42px;
   height: 42px;
-  background-color: #122118;
+  background-color: rgba(27, 107, 70, 0.4); /* translucent brand green */
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid rgba(200, 134, 26, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .contact-icon-wrapper i {
   color: var(--gold);
@@ -735,7 +748,7 @@
 .contact-value {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: rgba(245, 241, 234, 0.65);
+  color: rgba(255, 255, 255, 0.85);
   transition: color 0.2s;
 }
 a.contact-value:hover {
@@ -745,14 +758,14 @@ a.contact-value:hover {
 /* Columna Derecha (Formulario) */
 .modal-right {
   flex: 1.1;
-  background: #121C16;
+  background: var(--bg-surface); /* original white background */
   padding: 45px 40px;
   overflow-y: auto;
 }
 .modal-right h3 {
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: var(--gold);
+  color: var(--primary-green); /* original green brand color */
   margin-bottom: 28px;
   display: flex;
   align-items: center;
@@ -772,31 +785,31 @@ a.contact-value:hover {
   flex-direction: column;
 }
 .form-label {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-main);
   margin-bottom: 8px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid rgba(200, 134, 26, 0.2);
-  border-radius: 6px;
+  border: 1px solid rgba(122, 106, 88, 0.3);
+  border-radius: var(--r-sm);
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: #FFFFFF;
-  background: #1A2820;
+  color: var(--text-main);
+  background: #FFFFFF;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(200, 134, 26, 0.15);
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(27, 107, 70, 0.1);
 }
 .form-input::placeholder, .form-textarea::placeholder {
-  color: rgba(245, 241, 234, 0.35);
+  color: var(--text-muted);
 }
 .form-textarea {
   resize: vertical;
@@ -806,7 +819,7 @@ a.contact-value:hover {
 /* Custom Dropdown Arrow */
 .form-select {
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C8861A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231B6B46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 14px center;
   background-size: 16px;
@@ -815,14 +828,14 @@ a.contact-value:hover {
 
 /* Options style in select */
 .form-select option {
-  background-color: #121C16;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: var(--text-main);
 }
 
 .form-privacy-note {
   grid-column: span 2;
   font-size: 0.8rem;
-  color: rgba(245, 241, 234, 0.5);
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   margin-top: 6px;
@@ -830,14 +843,14 @@ a.contact-value:hover {
 
 .modal-submit-btn {
   grid-column: span 2;
-  background: #006847; /* dark emerald green */
+  background: var(--primary-green); /* brand primary green button */
   color: #FFFFFF;
   border: none;
   padding: 16px;
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
-  border-radius: 6px;
+  border-radius: var(--r-md);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -849,7 +862,7 @@ a.contact-value:hover {
   margin-top: 12px;
 }
 .modal-submit-btn:hover {
-  background: #004D34;
+  background: var(--gold);
   transform: translateY(-1px);
 }
 .modal-submit-btn:active {
@@ -901,8 +914,8 @@ a.contact-value:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(245, 241, 234, 0.1);
+    background: rgba(28, 43, 34, 0.08); /* subtle dark background on white modal body */
     border-radius: 50%;
-    color: #FFFFFF;
+    color: var(--text-main);
   }
 }

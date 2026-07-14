@@ -561,6 +561,7 @@ function initContactModal() {
         
         <div class="modal-left">
           <div class="modal-left-content">
+            <img src="${resolveImagePath('logoweb2.webp')}" alt="Cusco Pathways" class="modal-left-logo">
             <span class="modal-tag">GET IN TOUCH</span>
             <h2>Plan Your <span class="text-gold">Cusco Adventure</span></h2>
             <div class="modal-divider"></div>
