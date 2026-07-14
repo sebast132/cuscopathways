@@ -920,6 +920,10 @@ svg.tab-icon {
   .tour-summary-card {
     grid-row: 1 !important;
     width: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 20px !important;
   }
   .tour-intro-text {
     grid-row: 2 !important;
@@ -953,6 +957,11 @@ svg.tab-icon {
   }
   .tour-hero-content {
     padding-top: 40px !important;
+  }
+  .tour-main-title {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.02em !important;
   }
   .tour-hero-meta {
     gap: 12px 16px !important;

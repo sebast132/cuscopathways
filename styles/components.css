@@ -322,15 +322,18 @@ body.menu-open {
   transition: transform 0.3s ease;
   color: var(--gold);
 }
-.accordion-content {
+.mobile-menu .accordion-content {
   display: none;
   padding: 4px 0 14px 16px;
   list-style: none;
+  max-height: none !important;
+  overflow: visible !important;
+  transition: none !important;
 }
-.accordion-content li {
+.mobile-menu .accordion-content li {
   padding: 8px 0;
 }
-.accordion-content a {
+.mobile-menu .accordion-content a {
   font-family: var(--font-body);
   font-size: 14px;
   color: var(--text-muted);
@@ -338,13 +341,15 @@ body.menu-open {
   display: block;
   transition: color 0.2s;
 }
-.accordion-content a:hover {
+.mobile-menu .accordion-content a:hover {
   color: var(--gold);
 }
-.accordion-item.open .accordion-content {
-  display: block;
+.mobile-menu .accordion-item.open .accordion-content {
+  display: block !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
-.accordion-item.open .accordion-header i {
+.mobile-menu .accordion-item.open .accordion-header i {
   transform: rotate(180deg);
 }
 
