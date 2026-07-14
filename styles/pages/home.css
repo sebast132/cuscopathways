@@ -882,42 +882,54 @@
   }
 }
 @media (max-width: 768px) {
+  .hero {
+    height: 85vh !important;
+    min-height: 480px !important;
+    padding-top: 56px !important;
+  }
+  .hero-badges {
+    display: none !important;
+  }
   .difference-grid {
     grid-template-columns: 1fr;
   }
   .difference-section {
-    padding: 45px 0 !important;
+    padding: 32px 0 !important;
   }
   .hero-title {
-    font-size: 30px !important;
-    line-height: 1.25 !important;
-    margin-bottom: 16px !important;
+    font-size: 26px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
   }
   .hero-subtitle {
-    font-size: 15px !important;
-    margin-bottom: 30px !important;
+    font-size: 14px !important;
+    margin-bottom: 24px !important;
   }
   .manifesto,
   .destinations-section,
   .experiences {
-    padding: 45px 0 !important;
+    padding: 32px 0 !important;
   }
   .testimonials-section {
-    padding: 40px 0 !important;
+    padding: 32px 0 !important;
   }
   .section-title {
-    font-size: 26px !important;
+    font-size: 22px !important;
+  }
+  .section-subtitle {
+    font-size: 13px !important;
   }
   .section-header {
-    margin-bottom: 35px !important;
+    margin-bottom: 24px !important;
   }
   .hero-buttons {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 24px;
   }
   .hero-buttons .btn {
     width: 100% !important;
+    padding: 14px 0 !important;
   }
 }

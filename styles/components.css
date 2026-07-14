@@ -250,18 +250,24 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile Menu */
+/* Mobile Menu Accordion & Drawer */
+body.menu-open {
+  overflow: hidden;
+}
 .mobile-menu {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   background-color: var(--ivory);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--dur-fast);
   z-index: 999;
+  overflow-y: auto;
+  padding-top: 56px;
 }
 .mobile-menu.open {
   opacity: 1;
@@ -270,43 +276,155 @@
 .mobile-menu-inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  align-items: stretch;
+  gap: 20px;
   width: 100%;
-  max-width: 320px;
-  padding: 40px 20px;
+  padding: 24px;
 }
 .mobile-menu-cta {
   width: 100%;
   min-height: 48px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   border-radius: var(--r-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
 }
-.mobile-menu ul {
+
+/* Accordion Menu */
+.mobile-accordion-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.accordion-item {
+  border-bottom: 1px solid rgba(28, 43, 34, 0.08);
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 14px 0;
+  color: var(--primary-green);
+  cursor: pointer;
+}
+.accordion-header i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  color: var(--gold);
+}
+.accordion-content {
+  display: none;
+  padding: 4px 0 14px 16px;
+  list-style: none;
+}
+.accordion-content li {
+  padding: 8px 0;
+}
+.accordion-content a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: block;
+  transition: color 0.2s;
+}
+.accordion-content a:hover {
+  color: var(--gold);
+}
+.accordion-item.open .accordion-content {
+  display: block;
+}
+.accordion-item.open .accordion-header i {
+  transform: rotate(180deg);
+}
+
+.mobile-menu-link {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 14px 0;
+  color: var(--primary-green);
+  border-bottom: 1px solid rgba(28, 43, 34, 0.08);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Mobile Menu Contact Footer */
+.mobile-menu-contact {
+  margin-top: 30px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 100%;
+  gap: 8px;
+  padding-bottom: 40px;
 }
-.mobile-menu .nav-link {
+.mobile-menu-contact-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.mobile-menu-phone {
+  font-family: var(--font-display);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.mobile-menu-phone i {
+  color: var(--gold);
+}
+.mobile-menu-hours {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .nav-inner .btn-enquire { display: none; }
-  .nav-inner { min-height: 70px; }
-  .nav-logo-img { height: 48px; max-height: 48px; }
+  .nav-inner { min-height: 56px; }
+  .nav-logo-img { height: 36px; max-height: 36px; }
   .hamburger {
     display: flex;
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     align-items: center;
     justify-content: center;
+  }
+  .floating-whatsapp {
+    bottom: 75px !important;
+    width: 48px !important;
+    height: 48px !important;
+    right: 16px !important;
+  }
+  .floating-whatsapp svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .footer {
+    padding: 40px 0 20px !important;
+  }
+  .footer-grid {
+    gap: 24px !important;
+    margin-bottom: 24px !important;
+  }
+  .footer-list {
+    gap: 8px !important;
   }
 }
 

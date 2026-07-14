@@ -29,17 +29,116 @@ function initHamburger() {
   const mobileMenu = document.getElementById('mobile-menu');
   if (!hamburger || !mobileMenu) return;
 
+  // Dynamically populate mobile accordion menu
+  initMobileMenu(mobileMenu, hamburger);
+
   hamburger.addEventListener('click', () => {
     const isOpen = hamburger.classList.toggle('open');
     mobileMenu.classList.toggle('open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
     hamburger.setAttribute('aria-expanded', String(isOpen));
     mobileMenu.setAttribute('aria-hidden', String(!isOpen));
   });
+}
 
+function initMobileMenu(mobileMenu, hamburger) {
+  let listHTML = '<div class="mobile-menu-inner">';
+  
+  // Add CTA button at top
+  listHTML += '<button class="btn btn-gold-solid open-modal-btn mobile-menu-cta">Enquire Now</button>';
+  
+  // Add Accordion list
+  listHTML += '<ul class="mobile-accordion-list">';
+
+  // Destination items
+  if (typeof destinationsData !== 'undefined' && typeof toursData !== 'undefined') {
+    Object.keys(destinationsData).forEach(destKey => {
+      const dest = destinationsData[destKey];
+      listHTML += `
+        <li class="accordion-item">
+          <div class="accordion-header">
+            <span>${dest.title}</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <ul class="accordion-content">
+      `;
+      
+      dest.tours.forEach(tourId => {
+        const tour = toursData[tourId];
+        if (tour) {
+          listHTML += `
+            <li><a href="tour-detail.html?tour=${tourId}">${tour.title}</a></li>
+          `;
+        }
+      });
+      
+      listHTML += `
+          </ul>
+        </li>
+      `;
+    });
+  }
+
+  // General pages
+  listHTML += `
+    <li><a href="index.html#testimonials-section" class="mobile-menu-link">Testimonials</a></li>
+    <li><a href="reclamaciones.html" class="mobile-menu-link">Complaints Book</a></li>
+  `;
+
+  listHTML += '</ul>';
+
+  // Contact Footer
+  listHTML += `
+    <div class="mobile-menu-contact">
+      <span class="mobile-menu-contact-title">Talk to Us</span>
+      <a href="tel:+51984000000" class="mobile-menu-phone">
+        <i class="fas fa-phone-alt"></i> +51 984 000 000
+      </a>
+      <span class="mobile-menu-hours">Mon–Sat: 8:00am–7:00pm | WhatsApp: 24/7</span>
+    </div>
+  `;
+
+  listHTML += '</div>';
+
+  mobileMenu.innerHTML = listHTML;
+
+  // Accordion click handlers
+  const accordionHeaders = mobileMenu.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.accordion-item');
+      mobileMenu.querySelectorAll('.accordion-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('open');
+        }
+      });
+      item.classList.toggle('open');
+    });
+  });
+
+  // Re-bind modal triggers in newly generated HTML
+  const mobileCta = mobileMenu.querySelector('.mobile-menu-cta');
+  if (mobileCta) {
+    mobileCta.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modal = document.getElementById('enquire-modal');
+      if (modal) {
+        modal.classList.add('active');
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  // Close menu on navigation link clicks
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
       mobileMenu.classList.remove('open');
+      document.body.classList.remove('menu-open');
       hamburger.setAttribute('aria-expanded', 'false');
       mobileMenu.setAttribute('aria-hidden', 'true');
     });
@@ -479,6 +578,41 @@ function hydrateTourDetailPage() {
       }
     } else {
       resourcesSection.style.display = 'none';
+    }
+  }
+
+  // ── Mobile Sticky Bottom Bar
+  const stickyBar = document.getElementById('mobile-sticky-bar');
+  if (stickyBar) {
+    stickyBar.innerHTML = `
+      <div class="msb-price-box">
+        <span class="msb-price-label">Starting From:</span>
+        <span class="msb-price-val">${tour.priceGroup || 'USD 00.00'}</span>
+      </div>
+      <div class="msb-actions">
+        <a href="mailto:info@cuscopathwaysadventures.com?subject=Enquiry:%20${encodeURIComponent(tour.title)}" class="msb-btn-mail">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/51984000000?text=Hello%20Cusco%20Pathways,%20I%20am%20interested%20in%20the%20${encodeURIComponent(tour.title)}" target="_blank" class="msb-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="btn btn-gold-solid msb-btn-book">BOOK ONLINE</button>
+      </div>
+    `;
+
+    const bookBtn = stickyBar.querySelector('.msb-btn-book');
+    if (bookBtn) {
+      bookBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modal = document.getElementById('enquire-modal');
+        if (modal) {
+          modal.classList.add('active');
+          const tourSelect = document.getElementById('modal-tour-select');
+          if (tourSelect) {
+            tourSelect.value = tourKey;
+          }
+        }
+      });
     }
   }
 }
