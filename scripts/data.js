@@ -966,12 +966,13 @@ const toursData = {
     start: 'Cusco, 3:30-4:00am',
     acclimatization: 'STRONGLY recommended minimum 3 days in Cusco',
     rating: '4.8 (5,120 reviews)',
-    image: 'rainbow_trekkers.webp',
-    heroImage: 'rainbow_trekkers.webp',
+    image: 'rainbow_llamas_mejorada.png',
+    heroImage: 'rainbow_llamas_mejorada.png',
     brochure: 'assets/documents/CuscoPathways_RainbowMountain_ColorfulPath.pdf',
     map: 'assets/images/day-treks/rainbow_mountain_map.webp',
     description: `Hidden from the world until a glacier retreated around 2015, Vinicunca — Rainbow Mountain — has become one of the most photographed landscapes on Earth. Its layered mineral sediments paint the mountainside in vivid stripes of red, pink, turquoise, and yellow. At 5,200m, reaching the summit is a genuine physical achievement.<br><br><strong>Why choose us?</strong><br>Vinicunca is the most sought-after natural site in South America. The combination of otherworldly color, extreme altitude, and the vast Andean panorama creates an experience genuinely unlike any other on Earth. With Cusco Pathways Adventure, you arrive with an expert guide who places the mountain in its geological and cultural context.`,
     highlights: [
+      'rainbow_llamas_mejorada.png',
       'rainbow_trekkers.webp',
       'rainbow_llamas.webp',
       'rainbow_viajero.webp',
@@ -1029,7 +1030,7 @@ const toursData = {
         day: 'Stop 4',
         title: 'Wildlife and Landscapes',
         desc: 'During the hike, we are accompanied by grasslands inhabited by herds of alpacas and llamas grazing freely in their natural habitat.',
-        image: 'rainbow_llamas.webp'
+        image: 'rainbow_llamas_mejorada.png'
       },
       {
         day: 'Stop 5',
