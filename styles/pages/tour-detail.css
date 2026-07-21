@@ -3,10 +3,10 @@
    Tour Detail Specific Layouts · Tab Sections · Itineraries · Packing
    ══════════════════════════════════════════════════════════ */
 
-/* Hero: 75vh Override */
+/* Hero: 100vh Override */
 .tour-hero {
-  height: 75vh;
-  min-height: 550px;
+  height: 100vh;
+  min-height: 600px;
 }
 .tour-hero-content {
   padding-top: 80px;
@@ -952,8 +952,8 @@ svg.tab-icon {
   }
 
   .tour-hero {
-    height: 45vh !important;
-    min-height: 280px !important;
+    height: 70vh !important;
+    min-height: 450px !important;
   }
   .tour-hero-content {
     padding-top: 40px !important;
