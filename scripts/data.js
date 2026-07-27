@@ -15,6 +15,7 @@ function resolveImagePath(filename) {
     'tour_':      'assets/images/tours/',
     'accom_':     'assets/images/salkantay/',
     'salkantay_': 'assets/images/salkantay/',
+    'sk5d_':      'assets/images/salkantay/',
     'city_':      'assets/images/city/',
     'sv_':        'assets/images/sacred-valley/',
     'chinchero_': 'assets/images/sacred-valley/',
