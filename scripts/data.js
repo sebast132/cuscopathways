@@ -623,6 +623,23 @@ const toursData = {
         accommodation: 'Sun Gate: 2,720m | Machu Picchu: 2,430m'
       }
     ],
+    gallery: [
+      { url: 'it4d_hero_hikers.webp', day: 1, title: 'Trekkers en el Camino Inca' },
+      { url: 'it4d_female_porter.webp', day: 1, title: 'Equipo Kallpa Porters' },
+      { url: 'it4d_paved_trail.webp', day: 1, title: 'Camino Inca Pavimentado' },
+      { url: 'it4d_mountain_camp.webp', day: 2, title: 'Campamento en las Montañas' },
+      { url: 'it4d_moss_staircase.webp', day: 2, title: 'Escaleras Ancestrales de Musgo' },
+      { url: 'it4d_yellow_camp.webp', day: 2, title: 'Campamento Ayapata' },
+      { url: 'it4d_sayacmarca_ruins.webp', day: 3, title: 'Sitio Arqueológico Sayacmarca' },
+      { url: 'it4d_ruins_scenic.webp', day: 3, title: 'Vistas Escénicas del Valle' },
+      { url: 'it4d_golden_ruins.webp', day: 3, title: 'Phuyupatamarca Ruinas Doradas' },
+      { url: 'it4d_ruins_sunset.webp', day: 3, title: 'Atardecer en las Ruinas' },
+      { url: 'it4d_winaywayna_terraces.webp', day: 3, title: 'Terrazas de Wiñay Wayna' },
+      { url: 'it4d_incan_terraces.webp', day: 3, title: 'Terrazas Incas de la Selva Alta' },
+      { url: 'it4d_machupicchu_view.webp', day: 4, title: 'Vista Panorámica desde Inti Punku' },
+      { url: 'it4d_machupicchu_classic.webp', day: 4, title: 'Machu Picchu Citadel' },
+      { url: 'it4d_train_aguas_calientes.webp', day: 4, title: 'Tren de Retorno a Cusco' }
+    ],
     priceGroup: 'USD 870.00',
     privatePricing: [
       { size: '1 Person', price: 'USD 2,800.00' },
@@ -710,6 +727,14 @@ const toursData = {
         image: 'it2d_machupicchu_classic.webp',
         accommodation: 'Difficulty: Easy | Altitude Machu Picchu: 2,430m'
       }
+    ],
+    gallery: [
+      { url: 'it2d_winaywayna.webp', day: 1, title: 'Sitio Arqueológico Wiñay Wayna' },
+      { url: 'it2d_terraces.webp', day: 1, title: 'Terrazas del Camino Inca 2D' },
+      { url: 'it2d_train.webp', day: 1, title: 'Tren a KM 104 Chachabamba' },
+      { url: 'it2d_woman_machupicchu.webp', day: 1, title: 'Inti Punku Puerta del Sol' },
+      { url: 'it2d_machupicchu_view.webp', day: 2, title: 'Mirador Machu Picchu' },
+      { url: 'it2d_machupicchu_classic.webp', day: 2, title: 'Recorrido Guiado Machu Picchu' }
     ],
     priceGroup: 'USD 595.00',
     privatePricing: [

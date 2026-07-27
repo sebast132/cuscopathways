@@ -645,14 +645,17 @@ function hydrateTourDetailPage() {
         galleryBtn.addEventListener('click', (e) => {
           e.preventDefault();
           if (galleryModalTitle) galleryModalTitle.textContent = `${tour.title} — Photo Gallery`;
-          renderGalleryGrid('1');
 
-          // Reset tabs
-          if (filterTabsContainer) {
-            const tabs = filterTabsContainer.querySelectorAll('.gl-tab');
-            tabs.forEach(t => t.classList.remove('active'));
-            if (tabs[0]) tabs[0].classList.add('active');
+          // Dynamically generate tabs according to unique days in tour.gallery
+          if (filterTabsContainer && tour.gallery) {
+            const days = [...new Set(tour.gallery.map(item => item.day))].sort((a, b) => a - b);
+            filterTabsContainer.innerHTML = days.map((day, idx) => `
+              <button class="gl-tab ${idx === 0 ? 'active' : ''}" data-day="${day}">Day ${day}</button>
+            `).join('');
           }
+
+          const firstDay = (tour.gallery && tour.gallery[0]) ? tour.gallery[0].day : '1';
+          renderGalleryGrid(firstDay);
 
           galleryLightbox.classList.add('active');
         });
