@@ -399,7 +399,7 @@ const toursData = {
     groupSize: 'Max. 16 passengers',
     rating: '4.9 (1,243 reviews)',
     image: 'sk4dc_d1_domos_valle.webp',
-    heroImage: 'sk4dc_d1_domos_vialactea.webp',
+    heroImage: 'sk4dc_d1_humantay_lake.webp',
     brochure: 'assets/documents/CuscoPathways_ShortSalkantayTrek_4Days_ENG.pdf',
     map: 'assets/images/salkantay/short_salkantay_map.webp',
     description: `The Short Salkantay offers the most iconic experiences — Humantay Lake, Salkantay Pass, cloud forest, and Machu Picchu — in a tight 4-day itinerary. By removing the detour to Llactapata and incorporating a private transfer on Day 3, it maintains the full high-altitude challenge.<br><br><strong>Why choose us?</strong><br>Less time, zero compromises. Four days are enough to experience the complete emotional arc — the turquoise lake, the imposing pass, the descent into the jungle, and the wonder of Machu Picchu.`,
