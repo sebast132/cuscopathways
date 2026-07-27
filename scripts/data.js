@@ -29,6 +29,9 @@ function resolveImagePath(filename) {
     'logoweb':    'assets/images/brand/',
     'logo':       'assets/images/brand/',
     'machu_':     'assets/images/inca-trail/',
+    'it4d_':      'assets/images/inca-trail/',
+    'it2d_':      'assets/images/inca-trail/',
+    'incatrail_': 'assets/images/inca-trail/',
     'sacred_':    'assets/images/brand/',
     'modal_':     'assets/images/hero/',
   };
@@ -43,7 +46,7 @@ function resolveImagePath(filename) {
 const destinationsData = {
   'inca-trail': {
     title: 'Inca Trail',
-    image: 'dest_incatrail.webp',
+    image: 'it4d_machupicchu_view.webp',
     tours: ['incatrail-classic', 'incatrail-short']
   },
   'salkantay': {
@@ -398,20 +401,28 @@ const toursData = {
     start: 'KM 82 Piscacucho, 2,700m',
     acclimatization: 'Min. 2 days in Cusco',
     rating: '4.9 (8,193 reviews)',
-    image: 'tour_incatrail.webp',
-    heroImage: 'dest_incatrail.webp',
+    image: 'it4d_machupicchu_view.webp',
+    heroImage: 'it4d_hero_hikers.webp',
     brochure: 'assets/documents/CuscoPathways_ClassicIncaTrail_4Days_ENG.pdf',
-    brochureBgImage: 'tour_incatrail.webp',
+    brochureBgImage: 'it4d_machupicchu_view.webp',
     map: 'assets/images/inca-trail/classic_inca_trail_map.webp',
     description: `The Classic Inca Trail — an ancient 44km stone pathway built by Inca hands, crossing cloud forest, alpine tundra, and breath-taking passes to reach Machu Picchu through the Sun Gate at sunrise. With daily permits strictly limited, every step carries the weight of privilege. This is the trek that defines a lifetime.<br><br><strong>Why choose us?</strong><br>There are treks, and then there is the Inca Trail. Walking these stones is joining a five-century-old lineage of pilgrims. Arriving at Machu Picchu through the Sun Gate — not by bus, but on foot — sets this journey apart from any other in the world. Book in advance. Permits are highly prized.`,
     highlights: [
-      'Hike 44km of original Inca pathways',
-      'Cross Dead Woman\'s Pass at 4,215m',
-      'Visit 7 archaeological Inca sites',
-      'Wiñay Wayna — the most spectacular ruin complex on the trail',
-      'Arrive at the Sun Gate at sunrise',
-      'High-quality tents with inflatable mattresses',
-      'Satellite phone carried by your guide'
+      'it4d_hero_hikers.webp',
+      'it4d_machupicchu_view.webp',
+      'it4d_paved_trail.webp',
+      'it4d_moss_staircase.webp',
+      'it4d_yellow_camp.webp',
+      'it4d_mountain_camp.webp',
+      'it4d_sayacmarca_ruins.webp',
+      'it4d_golden_ruins.webp',
+      'it4d_winaywayna_terraces.webp',
+      'it4d_female_porter.webp',
+      'it4d_ruins_sunset.webp',
+      'it4d_ruins_scenic.webp',
+      'it4d_incan_terraces.webp',
+      'it4d_train_aguas_calientes.webp',
+      'it4d_machupicchu_classic.webp'
     ],
     inclusions: [
       'Transportation Cusco-Ollantaytambo-KM 82 on Day 1',
@@ -456,24 +467,28 @@ const toursData = {
         day: 'Day 1',
         title: 'Cusco > KM 82 Piscacucho > Llactapata > Ayapata Camp',
         desc: 'Pickup 4:30-5:00am. Drive to Ollantaytambo for breakfast, then KM 82 — present original passport. Cross suspension bridge. Visit Llactapata. Continue to Ayapata camp.',
+        image: 'it4d_paved_trail.webp',
         accommodation: 'Dist: 14km | Alt: 3,300m | Difficulty: Moderate | Campsite: Ayapata (3,300m)'
       },
       {
         day: 'Day 2',
         title: 'Ayapata > Dead Woman\'s Pass > Chaquicocha Camp',
         desc: 'Most challenging day. Ascent to Dead Woman\'s Pass (Warmiwañusca) at 4,215m. Runkurakay ruins. Descent through cloud forest to Sayaqmarka, then campsite.',
+        image: 'it4d_yellow_camp.webp',
         accommodation: 'Dist: 16km | Alt: 4,215m | Difficulty: Challenging | Campsite: Chaquicocha (3,600m)'
       },
       {
         day: 'Day 3',
         title: 'Chaquicocha > Phuyupatamarka > Intipata > Wiñay Wayna',
         desc: 'Scenic day. Visit Phuyupatamarka \'town above the clouds\' (3,650m) with ritual fountains. Intipata terraces. Reach Wiñay Wayna — the most spectacular ruins. Last night on the trail.',
+        image: 'it4d_winaywayna_terraces.webp',
         accommodation: 'Dist: 9km | Alt: 3,650m | Campsite: Wiñay Wayna (2,650m)'
       },
       {
         day: 'Day 4',
         title: 'Wiñay Wayna > Sun Gate > Machu Picchu > Cusco',
         desc: 'Wake up at 3:30am, hike with headlamp to the Sun Gate. See Machu Picchu appear through the morning mist. 2-hour guided tour. Optional mountain climbs. Afternoon train, private transfer to Cusco.',
+        image: 'it4d_machupicchu_classic.webp',
         accommodation: 'Sun Gate: 2,720m | Machu Picchu: 2,430m'
       }
     ],
@@ -502,18 +517,19 @@ const toursData = {
     start: 'KM 104, 2,100m',
     acclimatization: '1-2 days in Cusco recommended',
     rating: '4.8 (5,237 reviews)',
-    image: 'tour_shortinca.webp',
-    heroImage: 'dest_incatrail.webp',
+    image: 'it2d_woman_machupicchu.webp',
+    heroImage: 'it2d_woman_machupicchu.webp',
     brochure: 'assets/documents/CuscoPathways_ShortIncaTrail_2Days_ENG.pdf',
+    brochureBgImage: 'it2d_machupicchu_view.webp',
     map: 'assets/images/inca-trail/short_inca_trail_map.webp',
     description: `The Short Inca Trail distills the most dramatic section into a powerful 2-day experience — hiking from KM 104 through the cloud forest to Wiñay Wayna and the Sun Gate, then entering Machu Picchu at sunrise. One night in Aguas Calientes. Two circuits of Machu Picchu. In 48 hours.<br><br><strong>Why choose us?</strong><br>For those who have dreamed of walking the Inca Trail but cannot dedicate four days, the Short Inca Trail offers the essential experience: ancient stone under your feet, the silence of the cloud forest, Wiñay Wayna, and the Sun Gate. Reaching Machu Picchu on foot transforms the encounter completely.`,
     highlights: [
-      'Most spectacular section of the trail',
-      'Chachabamba and Wiñay Wayna ruins',
-      'First view from the Sun Gate',
-      'Night in Aguas Calientes hotel',
-      'Two Machu Picchu circuits',
-      'Smaller, more intimate group size'
+      'it2d_woman_machupicchu.webp',
+      'it2d_machupicchu_view.webp',
+      'it2d_winaywayna.webp',
+      'it2d_terraces.webp',
+      'it2d_machupicchu_classic.webp',
+      'it2d_train.webp'
     ],
     inclusions: [
       'Transportation Cusco-Ollantaytambo on Day 1',
@@ -553,12 +569,14 @@ const toursData = {
         day: 'Day 1',
         title: 'Cusco > KM 104 > Chachabamba > Wiñay Wayna > Sun Gate > Aguas Calientes',
         desc: 'Pickup at 4:00am. Train from Ollantaytambo to KM 104 — present original passport. 9km cloud forest hike passing Chachabamba. 3-hour ascent to Wiñay Wayna. Continue 45 min to the Sun Gate (Inti Punku, 2,720m) for a sunset view of Machu Picchu. Bus to Aguas Calientes, check-in, dinner.',
+        image: 'it2d_winaywayna.webp',
         accommodation: 'Hike: 9km | Altitude: 2,720m | Difficulty: Moderate | Accommodation: Aguas Calientes Hotel'
       },
       {
         day: 'Day 2',
         title: 'Machu Picchu > Ollantaytambo > Cusco',
         desc: 'Rise before dawn, bus to Machu Picchu — among the first visitors. 2-hour guided tour of Circuit 3: Temple of the Sun, Temple of the Condor, Twelve Niches, terraces. Optional Huayna Picchu or Huchuy Picchu climb. Train afternoon, private transfer to Cusco ~6pm.',
+        image: 'it2d_machupicchu_classic.webp',
         accommodation: 'Difficulty: Easy | Altitude Machu Picchu: 2,430m'
       }
     ],
