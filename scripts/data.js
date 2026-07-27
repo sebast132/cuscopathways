@@ -90,7 +90,7 @@ const toursData = {
     acclimatization: 'Min. 2 days in Cusco',
     rating: '4.9 (1,243 reviews)',
     image: 'sk5d_d1_domos_valle.webp',
-    heroImage: 'sk5d_d5_machupicchu_viewpoint.webp',
+    heroImage: 'sk5d_d1_domos_vialactea.webp',
     brochure: 'assets/documents/CuscoPathways_PremiumSalkantayTrek_5Days_ENG.pdf',
     map: 'assets/images/salkantay/premium_salkantay_map.webp',
     description: `All the grandeur of the Classic, elevated. Every comfort is enhanced: sleeping bag and walking poles included, emergency horse on Day 2, Cocalmayo hot springs on Day 3, private train on Day 4, Vistadome Observatory on the return, 3-star hotel in Aguas Calientes, 10kg duffle bag, airport transfers.<br><br><strong>Why choose us?</strong><br>Salkantay Premium is for those who want it all: the wild beauty of the Andes, the achievement of the Salkantay Pass, and the luxury of knowing that every comfort is arranged. From airport arrival to the return Vistadome Observatory train, every detail is cared for.`,
