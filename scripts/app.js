@@ -250,7 +250,7 @@ function hydrateTourDetailPage() {
 
   // ── Hero
   const banner = document.getElementById('tour-banner-img');
-  if (banner) banner.src = resolveImagePath(tour.image);
+  if (banner) banner.src = resolveImagePath(tour.heroImage || tour.image);
   const titleEl = document.getElementById('tour-title-display');
   if (titleEl) titleEl.textContent = tour.title;
   const catEl = document.getElementById('tour-category-tag');

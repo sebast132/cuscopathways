@@ -517,7 +517,7 @@ const toursData = {
     start: 'KM 104, 2,100m',
     acclimatization: '1-2 days in Cusco recommended',
     rating: '4.8 (5,237 reviews)',
-    image: 'it2d_woman_machupicchu.webp',
+    image: 'it2d_machupicchu_view.webp',
     heroImage: 'it2d_machupicchu_view.webp',
     brochure: 'assets/documents/CuscoPathways_ShortIncaTrail_2Days_ENG.pdf',
     brochureBgImage: 'it2d_machupicchu_view.webp',
