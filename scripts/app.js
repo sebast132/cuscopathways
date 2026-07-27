@@ -645,7 +645,7 @@ function hydrateTourDetailPage() {
         galleryBtn.addEventListener('click', (e) => {
           e.preventDefault();
           if (galleryModalTitle) galleryModalTitle.textContent = `${tour.title} — Photo Gallery`;
-          renderGalleryGrid('all');
+          renderGalleryGrid('1');
 
           // Reset tabs
           if (filterTabsContainer) {
