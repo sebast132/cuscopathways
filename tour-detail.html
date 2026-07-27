@@ -567,6 +567,41 @@
     </div>
   </div>
 
+  <!-- ═══ PHOTO GALLERY LIGHTBOX MODAL ═══ -->
+  <div class="map-lightbox gallery-modal-lightbox" id="gallery-lightbox" aria-hidden="true">
+    <div class="gallery-modal-content">
+      <button class="lightbox-close" id="close-gallery-btn">&times;</button>
+      <div class="gallery-modal-header">
+        <div class="gm-title-wrap">
+          <h3 id="gallery-modal-title">Photo Gallery</h3>
+          <span class="gm-badge" id="gallery-modal-count">43 Photos</span>
+        </div>
+        <div class="gallery-filter-tabs" id="gallery-filter-tabs">
+          <button class="gl-tab active" data-day="all">All Photos</button>
+          <button class="gl-tab" data-day="1">Day 1</button>
+          <button class="gl-tab" data-day="2">Day 2</button>
+          <button class="gl-tab" data-day="3">Day 3</button>
+          <button class="gl-tab" data-day="4">Day 4</button>
+          <button class="gl-tab" data-day="5">Day 5</button>
+        </div>
+      </div>
+      <div class="gallery-modal-body">
+        <div class="gallery-grid" id="gallery-modal-grid">
+          <!-- Dynamically populated from JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SINGLE PHOTO PREVIEW MODAL ═══ -->
+  <div class="photo-preview-modal" id="photo-preview-modal" aria-hidden="true">
+    <button class="lightbox-close preview-close" id="close-preview-btn">&times;</button>
+    <div class="preview-inner">
+      <img src="" alt="Photo Preview" id="preview-image">
+      <div class="preview-caption" id="preview-caption"></div>
+    </div>
+  </div>
+
   <!-- ═══ MOBILE STICKY BOTTOM BAR ═══ -->
   <div id="mobile-sticky-bar"></div>
 

@@ -501,11 +501,11 @@ function hydrateTourDetailPage() {
     }).join('');
   }
 
-  // ── Resources Section (Brochure and Map)
+  // ── Resources Section (Brochure, Map, Photo Gallery)
   const resourcesSection = document.getElementById('tour-resources-section');
   const resourcesGrid = document.getElementById('tour-resources-grid');
   if (resourcesSection && resourcesGrid) {
-    if (tour.brochure || tour.map) {
+    if (tour.brochure || tour.map || tour.gallery) {
       resourcesSection.style.display = 'block';
       let html = '';
 
@@ -534,10 +534,24 @@ function hydrateTourDetailPage() {
         `;
       }
 
+      if (tour.gallery && tour.gallery.length > 0) {
+        const coverImg = tour.gallery[0].url || tour.image;
+        html += `
+          <a href="#" class="resource-card" id="btn-view-gallery">
+            <div class="resource-card-bg" style="background-image: url(${resolveImagePath(coverImg)})"></div>
+            <div class="resource-card-overlay"></div>
+            <div class="resource-card-content">
+              <span class="resource-btn">Photo Gallery (${tour.gallery.length})</span>
+            </div>
+          </a>
+        `;
+      }
+
       resourcesGrid.innerHTML = html;
 
       // Handle single card centering
-      if (!tour.brochure || !tour.map) {
+      const totalCards = (tour.brochure ? 1 : 0) + (tour.map ? 1 : 0) + (tour.gallery ? 1 : 0);
+      if (totalCards === 1) {
         resourcesGrid.classList.add('single-card');
       } else {
         resourcesGrid.classList.remove('single-card');
@@ -573,6 +587,122 @@ function hydrateTourDetailPage() {
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && mapLightbox.classList.contains('active')) {
             closeLightbox();
+          }
+        });
+      }
+
+      // Add Photo Gallery Modal Handlers
+      const galleryBtn = document.getElementById('btn-view-gallery');
+      const galleryLightbox = document.getElementById('gallery-lightbox');
+      const closeGalleryBtn = document.getElementById('close-gallery-btn');
+      const galleryGrid = document.getElementById('gallery-modal-grid');
+      const galleryModalTitle = document.getElementById('gallery-modal-title');
+      const galleryModalCount = document.getElementById('gallery-modal-count');
+      const filterTabsContainer = document.getElementById('gallery-filter-tabs');
+
+      // Photo preview modal
+      const previewModal = document.getElementById('photo-preview-modal');
+      const previewImg = document.getElementById('preview-image');
+      const previewCaption = document.getElementById('preview-caption');
+      const closePreviewBtn = document.getElementById('close-preview-btn');
+
+      if (galleryBtn && galleryLightbox && galleryGrid && tour.gallery) {
+        const renderGalleryGrid = (filterDay = 'all') => {
+          let items = tour.gallery;
+          if (filterDay !== 'all') {
+            items = tour.gallery.filter(item => item.day == filterDay);
+          }
+
+          if (galleryModalCount) {
+            galleryModalCount.textContent = `${items.length} Photos`;
+          }
+
+          galleryGrid.innerHTML = items.map(item => `
+            <div class="gallery-card-item" data-url="${resolveImagePath(item.url)}" data-title="${item.title || ''}">
+              <img src="${resolveImagePath(item.url)}" alt="${item.title || 'Photo'}" loading="lazy">
+              <div class="gci-overlay">
+                <span class="gci-day-tag">Day ${item.day || '1'}</span>
+                <span class="gci-title">${item.title || ''}</span>
+              </div>
+            </div>
+          `).join('');
+
+          // Add click listener to gallery card items for full preview
+          const cardItems = galleryGrid.querySelectorAll('.gallery-card-item');
+          cardItems.forEach(card => {
+            card.addEventListener('click', () => {
+              const src = card.getAttribute('data-url');
+              const title = card.getAttribute('data-title');
+              if (previewModal && previewImg) {
+                previewImg.src = src;
+                if (previewCaption) previewCaption.textContent = title;
+                previewModal.classList.add('active');
+              }
+            });
+          });
+        };
+
+        galleryBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (galleryModalTitle) galleryModalTitle.textContent = `${tour.title} — Photo Gallery`;
+          renderGalleryGrid('all');
+
+          // Reset tabs
+          if (filterTabsContainer) {
+            const tabs = filterTabsContainer.querySelectorAll('.gl-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            if (tabs[0]) tabs[0].classList.add('active');
+          }
+
+          galleryLightbox.classList.add('active');
+        });
+
+        const closeGallery = () => {
+          galleryLightbox.classList.remove('active');
+        };
+
+        if (closeGalleryBtn) {
+          closeGalleryBtn.addEventListener('click', closeGallery);
+        }
+
+        galleryLightbox.addEventListener('click', (e) => {
+          if (e.target === galleryLightbox) {
+            closeGallery();
+          }
+        });
+
+        // Filter tabs logic
+        if (filterTabsContainer) {
+          filterTabsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('gl-tab')) {
+              const tabs = filterTabsContainer.querySelectorAll('.gl-tab');
+              tabs.forEach(t => t.classList.remove('active'));
+              e.target.classList.add('active');
+              const day = e.target.getAttribute('data-day');
+              renderGalleryGrid(day);
+            }
+          });
+        }
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            if (previewModal && previewModal.classList.contains('active')) {
+              previewModal.classList.remove('active');
+            } else if (galleryLightbox.classList.contains('active')) {
+              closeGallery();
+            }
+          }
+        });
+      }
+
+      // Close photo preview modal
+      if (closePreviewBtn && previewModal) {
+        closePreviewBtn.addEventListener('click', () => {
+          previewModal.classList.remove('active');
+        });
+        previewModal.addEventListener('click', (e) => {
+          if (e.target === previewModal) {
+            previewModal.classList.remove('active');
           }
         });
       }

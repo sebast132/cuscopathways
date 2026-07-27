@@ -87,22 +87,19 @@ const toursData = {
     level: 'Premium group tour',
     acclimatization: 'Min. 2 days in Cusco',
     rating: '4.9 (1,243 reviews)',
-    image: 'dest_salkantay.webp',
-    heroImage: 'dest_salkantay.webp',
+    image: 'sk5d_d1_domos_valle.webp',
+    heroImage: 'sk5d_d1_domos_vialactea.webp',
     brochure: 'assets/documents/CuscoPathways_PremiumSalkantayTrek_5Days_ENG.pdf',
     map: 'assets/images/salkantay/premium_salkantay_map.webp',
     description: `All the grandeur of the Classic, elevated. Every comfort is enhanced: sleeping bag and walking poles included, emergency horse on Day 2, Cocalmayo hot springs on Day 3, private train on Day 4, Vistadome Observatory on the return, 3-star hotel in Aguas Calientes, 10kg duffle bag, airport transfers.<br><br><strong>Why choose us?</strong><br>Salkantay Premium is for those who want it all: the wild beauty of the Andes, the achievement of the Salkantay Pass, and the luxury of knowing that every comfort is arranged. From airport arrival to the return Vistadome Observatory train, every detail is cared for.`,
     highlights: [
-      'All the attractions of the Classic trek',
-      'Emergency horse on Day 2',
-      'Cocalmayo Hot Springs on Day 3',
-      'Sacred Jungle Lodge Night 3',
-      'Private train on Day 4',
-      'Vistadome Observatory return train',
-      'Superior 3-star hotel',
-      'Sleeping bag + walking poles included',
-      '10kg duffle bag - twice the Classic limit',
-      'Airport transfers included'
+      'sk5d_d1_domos_vialactea.webp',
+      'sk5d_d1_humantay_lake.webp',
+      'sk5d_d2_abra_pass.webp',
+      'sk5d_d3_domos_aereos.webp',
+      'sk5d_d3_coffee_beans.webp',
+      'sk5d_d4_llactapata_view.webp',
+      'sk5d_d5_machupicchu_viewpoint.webp'
     ],
     inclusions: [
       'Arrival and departure airport transfers',
@@ -140,10 +137,10 @@ const toursData = {
       'Swimwear for hot springs'
     ],
     accommodation: [
-      { day: 'Day 1', name: 'Sky Camp', type: 'Luxury Domes', image: 'accom_sky_camp.webp', desc: 'Spectacular transparent geodesic domes located at 3,900m altitude with direct views of Salkantay peak and the starry sky. Each dome features premium double mattresses, hotel-quality bedding, warm lighting, and a private bathroom with hot water. At night, the celestial vault becomes your starry ceiling.' },
-      { day: 'Day 2', name: 'Mountain Sky View Camp', type: 'Panoramic Domes', image: 'accom_mountain_sky.webp', desc: 'Located at a privileged natural viewpoint at 3,800m, these panoramic domes offer 180° views of the Vilcabamba Range peaks. The interior includes heating, high-mountain duvets, and a dinner service prepared by our chef. A place where the silence of the Andes becomes the best melody to rest.' },
-      { day: 'Day 3', name: 'Super Jungle Domes', type: 'Ecological Domes', image: 'accom_jungle_domes.webp', desc: 'Immersed in the lush vegetation of the high jungle, these eco-domes merge sustainable design with jungle comfort. Each unit has a private terrace with hammocks, a hot shower, and natural ventilation. At night, the singing of tropical birds and the murmur of the rivers will accompany you into a deep, restful sleep.' },
-      { day: 'Day 4', name: 'Hotel 3★ Aguas Calientes', type: 'Boutique Hotel', image: 'accom_hotel_aguas.webp', desc: 'Modern boutique hotel in the heart of Aguas Calientes (Machu Picchu Pueblo), just a 5-minute walk from the bus stop to the citadel. Double room with private bathroom, TV, Wi-Fi, decorative Andean textiles, and buffet breakfast included. Ideal for resting and preparing for the grand visit on the final day.' },
+      { day: 'Day 1', name: 'Sky Camp', type: 'Luxury Domes', image: 'sk5d_d1_domos_valle.webp', desc: 'Spectacular transparent geodesic domes located at 3,900m altitude with direct views of Salkantay peak and the starry sky. Each dome features premium double mattresses, hotel-quality bedding, warm lighting, and a private bathroom with hot water. At night, the celestial vault becomes your starry ceiling.' },
+      { day: 'Day 2', name: 'Mountain Sky View Camp', type: 'Panoramic Domes', image: 'sk5d_d2_domos_day.webp', desc: 'Located at a privileged natural viewpoint at 3,800m, these panoramic domes offer 180° views of the Vilcabamba Range peaks. The interior includes heating, high-mountain duvets, and a dinner service prepared by our chef. A place where the silence of the Andes becomes the best melody to rest.' },
+      { day: 'Day 3', name: 'Super Jungle Domes', type: 'Ecological Domes', image: 'sk5d_d3_domos_aereos.webp', desc: 'Immersed in the lush vegetation of the high jungle, these eco-domes merge sustainable design with jungle comfort. Each unit has a private terrace with hammocks, a hot shower, and natural ventilation. At night, the singing of tropical birds and the murmur of the rivers will accompany you into a deep, restful sleep.' },
+      { day: 'Day 4', name: 'Hotel 3★ Aguas Calientes', type: 'Boutique Hotel', image: 'sk5d_d4_train_street.webp', desc: 'Modern boutique hotel in the heart of Aguas Calientes (Machu Picchu Pueblo), just a 5-minute walk from the bus stop to the citadel. Double room with private bathroom, TV, Wi-Fi, decorative Andean textiles, and buffet breakfast included. Ideal for resting and preparing for the grand visit on the final day.' },
     ],
     pricePrivate: 'USD 1,250.00',
     priceGroup: 'USD 1,059.00',
@@ -155,32 +152,82 @@ const toursData = {
         day: 'Day 1',
         title: 'Cusco > Challacancha > Humantay Lake > Sky Camp',
         desc: 'Same as Classic Day 1. Pickup at 4:30am, breakfast in Mollepata, lunch at Sky Camp, Humantay Lake (4,200m).',
+        image: 'sk5d_d1_humantay_lake.webp',
         accommodation: 'Dist: 10km | Alt: 4,200m | Accommodation: Sky Camp igloos (3,900m)'
       },
       {
         day: 'Day 2',
         title: 'Soraypampa > Salkantay Pass > Mountain Sky View (Emergency Horse)',
         desc: 'Ascent to Salkantay Pass (4,630m) with emergency horse from Soraypampa. Extraordinary panorama. Descent to Mountain Sky View.',
+        image: 'sk5d_d2_abra_pass.webp',
         accommodation: 'Dist: 23.5km | Alt: 4,630m | Accommodation: Mountain Sky View (2,950m)'
       },
       {
         day: 'Day 3',
         title: 'Coffee Farm > Hot Springs > Sacred Jungle Lodge',
         desc: 'Coffee farm experience and then Cocalmayo Hot Springs — natural thermal pools in the jungle. Night at Sacred Jungle Lodge.',
+        image: 'sk5d_d3_domos_aereos.webp',
         accommodation: 'Dist: 10.3km | Accommodation: Sacred Jungle Lodge (1,900m)'
       },
       {
         day: 'Day 4',
         title: 'Llactapata > Hydroelectric > Private Train > Aguas Calientes',
         desc: 'Llactapata ruins, descend to Hydroelectric. Private train to Aguas Calientes. 3-star hotel awaits you.',
+        image: 'sk5d_d4_llactapata_view.webp',
         accommodation: 'Dist: 14km | Accommodation: Superior 3-star hotel, Aguas Calientes'
       },
       {
         day: 'Day 5',
         title: 'Machu Picchu > Vistadome Observatory > Cusco',
         desc: 'Explore Machu Picchu at sunrise. Return on PeruRail Vistadome Observatory — panoramic glass roof. Airport transfer included.',
+        image: 'sk5d_d5_machupicchu_viewpoint.webp',
         accommodation: 'Difficulty: Easy | Machu Picchu: 2,430m'
       }
+    ],
+    gallery: [
+      { url: 'sk5d_d1_chica_humantay.webp', day: 1, title: 'Laguna Humantay View' },
+      { url: 'sk5d_d1_comedor_andino.webp', day: 1, title: 'Comedor Andino Sky Camp' },
+      { url: 'sk5d_d1_domo_interior.webp', day: 1, title: 'Interior Domes Sky Camp' },
+      { url: 'sk5d_d1_domos_valle.webp', day: 1, title: 'Domos en el Valle Soraypampa' },
+      { url: 'sk5d_d1_domos_vialactea.webp', day: 1, title: 'Domos y Vía Láctea' },
+      { url: 'sk5d_d1_humantay_lake.webp', day: 1, title: 'Laguna Humantay Panorama' },
+      { url: 'sk5d_d1_sendero_nevado.webp', day: 1, title: 'Sendero Salkantay Nevado' },
+      { url: 'sk5d_d1_valle_caballos.webp', day: 1, title: 'Valle Salkantay con Caballos' },
+      { url: 'sk5d_d2_abra_pass.webp', day: 2, title: 'Paso Abra Salkantay (4,630m)' },
+      { url: 'sk5d_d2_domo_mountain_view.webp', day: 2, title: 'Domo Vista a la Montaña' },
+      { url: 'sk5d_d2_domos_sunset.webp', day: 2, title: 'Domos al Atardecer' },
+      { url: 'sk5d_d2_domos_day.webp', day: 2, title: 'Mountain Sky View Camp' },
+      { url: 'sk5d_d2_hiker_rocky_trail.webp', day: 2, title: 'Sendero Rocoso Salkantay' },
+      { url: 'sk5d_d2_hikers_snowpeak.webp', day: 2, title: 'Trekkers hacia el Nevado' },
+      { url: 'sk5d_d2_trekker_trail.webp', day: 2, title: 'Caminata de Alta Montaña' },
+      { url: 'sk5d_d2_trekker_fog.webp', day: 2, title: 'Sendero entre Neblina' },
+      { url: 'sk5d_d3_dining_chandelier.webp', day: 3, title: 'Comedor con Candelabro' },
+      { url: 'sk5d_d3_coffee_beans.webp', day: 3, title: 'Granos de Café Orgánico' },
+      { url: 'sk5d_d3_domo_sunset.webp', day: 3, title: 'Super Jungle Domes' },
+      { url: 'sk5d_d3_wooden_dome.webp', day: 3, title: 'Domo de Madera' },
+      { url: 'sk5d_d3_domos_aereos.webp', day: 3, title: 'Domos Aéreos en la Selva' },
+      { url: 'sk5d_d3_hikers_camp.webp', day: 3, title: 'Llegada al Campamento' },
+      { url: 'sk5d_d3_grinding_cacao.webp', day: 3, title: 'Moliendo Cacao Artesanal' },
+      { url: 'sk5d_d3_smelling_cacao.webp', day: 3, title: 'Aroma de Cacao Tostado' },
+      { url: 'sk5d_d3_couple_pool.webp', day: 3, title: 'Termas de Cocalmayo' },
+      { url: 'sk5d_d3_andean_valley_trail.webp', day: 3, title: 'Sendero Valle Andino' },
+      { url: 'sk5d_d4_train_street.webp', day: 4, title: 'Aguas Calientes Calle Tren' },
+      { url: 'sk5d_d4_llactapata_view.webp', day: 4, title: 'Mirador Llactapata' },
+      { url: 'sk5d_d4_foggy_mountains.webp', day: 4, title: 'Montañas con Neblina' },
+      { url: 'sk5d_d4_aguas_calientes_plaza.webp', day: 4, title: 'Plaza Aguas Calientes' },
+      { url: 'sk5d_d4_railway_bridge.webp', day: 4, title: 'Puente Ferroviario' },
+      { url: 'sk5d_d4_jungle_ruins_aerial.webp', day: 4, title: 'Ruinas Aéreas Selva' },
+      { url: 'sk5d_d4_choquequirao_aerial.webp', day: 4, title: 'Vistas Aéreas de Ruinas' },
+      { url: 'sk5d_d4_inca_ruins_viewpoint.webp', day: 4, title: 'Mirador Ruinas Incas' },
+      { url: 'sk5d_d4_jungle_trail_hikers.webp', day: 4, title: 'Caminata Selva Alta' },
+      { url: 'sk5d_d4_railway_hikers.webp', day: 4, title: 'Sendero Tren Hidroeléctrica' },
+      { url: 'sk5d_d5_inca_house_fog.webp', day: 5, title: 'Casa Inca en la Neblina' },
+      { url: 'sk5d_d5_hikers_inca_ruins.webp', day: 5, title: 'Recorrido Machu Picchu' },
+      { url: 'sk5d_d5_machupicchu_woman.webp', day: 5, title: 'Machu Picchu Citadel' },
+      { url: 'sk5d_d5_machupicchu_viewpoint.webp', day: 5, title: 'Mirador Machu Picchu' },
+      { url: 'sk5d_d5_couple_train.webp', day: 5, title: 'Tren Vistadome' },
+      { url: 'sk5d_d5_panoramic_train_selfie.webp', day: 5, title: 'Vistadome Observatory' },
+      { url: 'sk5d_d5_machupicchu_terraces.webp', day: 5, title: 'Terrazas Machu Picchu' }
     ]
   },
   'salkantay-classic': {
@@ -193,20 +240,19 @@ const toursData = {
     altitude: '4,630 m',
     groupSize: 'Max. 16 passengers',
     rating: '4.9 (1,243 reviews)',
-    image: 'dest_salkantay.webp',
-    heroImage: 'dest_salkantay.webp',
+    image: 'sk5d_d1_domos_valle.webp',
+    heroImage: 'sk5d_d1_domos_vialactea.webp',
     brochure: 'assets/documents/CuscoPathways_ClassicSalkantayTrek_5Days.pdf',
     map: 'assets/images/salkantay/classic_salkantay_map.webp',
     description: `In 5 days, cross the Salkantay Pass at 4,630m, hike from glacial peaks through the cloud forest to the Peruvian jungle, sleep in exclusive campsites, and stand before Machu Picchu. Ranked among the world's top 25 trekking routes by National Geographic.<br><br><strong>Why choose us?</strong><br>The Classic Salkantay is the benchmark against which all other Andean treks are measured. It offers an open trail with extraordinary variety — from glacial landscapes to tropical rainforest. With Cusco Pathways Adventure, you experience this route with exclusive private campsites, gourmet mountain cuisine, and certified guides. This is not simply a trek to Machu Picchu. It is a full immersion into the soul of the Andes.`,
     highlights: [
-      'One of the top 25 trekking routes in the world',
-      'Turquoise Humantay Lake (4,200m) on Day 1',
-      'Salkantay Pass at 4,630m',
-      'Glacial Andean peaks to Amazonian cloud forest',
-      'Llactapata with panoramic views of Machu Picchu',
-      'Authentic coffee farm in the jungle zone',
-      '4 nights in exclusive campsites',
-      'Machu Picchu with an expert bilingual guide'
+      'sk5d_d1_domos_vialactea.webp',
+      'sk5d_d1_humantay_lake.webp',
+      'sk5d_d2_abra_pass.webp',
+      'sk5d_d3_domos_aereos.webp',
+      'sk5d_d3_coffee_beans.webp',
+      'sk5d_d4_llactapata_view.webp',
+      'sk5d_d5_machupicchu_viewpoint.webp'
     ],
     inclusions: [
       'Transportation included',
@@ -252,24 +298,28 @@ const toursData = {
         day: 'Day 1',
         title: 'Cusco > Challacancha > Humantay Lake > Sky Camp',
         desc: 'Pickup at 4:30am. Optional breakfast in Mollepata. 10km hike to Soraypampa (3,900m), lunch at Sky Camp, roundtrip to Humantay Lake (4,200m). Dinner and stargazing.',
+        image: 'sk5d_d1_humantay_lake.webp',
         accommodation: 'Distance: 10km | Altitude: 4,200m | Difficulty: Moderate-Challenging | Accommodation: Sky Camp igloos (3,900m)'
       },
       {
         day: 'Day 2',
         title: 'Soraypampa > Salkantay Pass (4,630m) > Mountain Sky View',
         desc: '7km ascent to Salkantay Pass (4,630m) — views of Salkantay peak (6,271m). 9.5km descent through cloud forest to Collpapampa. Private cabins, hot shower.',
+        image: 'sk5d_d2_abra_pass.webp',
         accommodation: 'Distance: 23.5km | Altitude: 4,630m | Difficulty: Challenging | Accommodation: Mountain Sky View (2,950m)'
       },
       {
         day: 'Day 3',
         title: 'Collpapampa > Coffee Farm > Super Jungle Domes',
         desc: 'Peaceful day through the Santa Teresa Valley. Private vehicle to La Playa for a coffee farm experience — tour the plantation, harvest, roast, grind, and brew your cup.',
+        image: 'sk5d_d3_domos_aereos.webp',
         accommodation: 'Distance: 10.3km | Altitude: 2,950m | Difficulty: Moderate | Accommodation: Super Jungle Domes (2,000m)'
       },
       {
         day: 'Day 4',
         title: 'Lucmabamba > Llactapata > Hydroelectric > Aguas Calientes',
         desc: 'Llactapata ruins with a direct view of Machu Picchu. Hike to Hydroelectric, riverside trail, afternoon train to Aguas Calientes.',
+        image: 'sk5d_d4_llactapata_view.webp',
         accommodation: 'Distance: 25km | Altitude: 2,800m | Difficulty: Challenging | Accommodation: Aguas Calientes Hotel (2,040m)'
       },
       {
