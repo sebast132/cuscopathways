@@ -524,7 +524,7 @@ function hydrateTourDetailPage() {
 
       if (tour.map) {
         html += `
-          <a href="#" class="resource-card" id="btn-view-map">
+          <a href="javascript:void(0)" class="resource-card" id="btn-view-map">
             <div class="resource-card-bg" style="background-image: url(${resolveImagePath(tour.map)})"></div>
             <div class="resource-card-overlay"></div>
             <div class="resource-card-content">
@@ -537,7 +537,7 @@ function hydrateTourDetailPage() {
       if (tour.gallery && tour.gallery.length > 0) {
         const coverImg = tour.gallery[0].url || tour.image;
         html += `
-          <a href="#" class="resource-card" id="btn-view-gallery">
+          <a href="javascript:void(0)" class="resource-card" id="btn-view-gallery">
             <div class="resource-card-bg" style="background-image: url(${resolveImagePath(coverImg)})"></div>
             <div class="resource-card-overlay"></div>
             <div class="resource-card-content">
@@ -644,6 +644,7 @@ function hydrateTourDetailPage() {
 
         galleryBtn.addEventListener('click', (e) => {
           e.preventDefault();
+          e.stopPropagation();
           if (galleryModalTitle) galleryModalTitle.textContent = `${tour.title} — Photo Gallery`;
 
           // Dynamically generate tabs according to unique days in tour.gallery
