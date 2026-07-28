@@ -1485,6 +1485,16 @@ const toursData = {
       { size: '9 People or More', price: 'USD 100.00' }
     ],
     offer: null,
+    gallery: [
+      { url: 'humantay_main.webp', location: 'Laguna Humantay', title: 'Laguna Humantay Turquesa Panorama' },
+      { url: 'humantay_lake_pro.webp', location: 'Laguna Humantay', title: 'Laguna Humantay Full HD' },
+      { url: 'humantay_chica_pro.webp', location: 'Laguna Humantay', title: 'Mirador Principal Humantay Pro' },
+      { url: 'humantay_excursionista.webp', location: 'Laguna Humantay', title: 'Excursionista en Laguna Humantay' },
+      { url: 'humantay_aerea.webp', location: 'Laguna Humantay', title: 'Vista Aérea de Laguna Humantay' },
+      { url: 'humantay_pareja.webp', location: 'Laguna Humantay', title: 'Pareja en Laguna Humantay' },
+      { url: 'humantay_sendero.webp', location: 'Soraypampa & Trail', title: 'Sendero de Caminata Soraypampa' },
+      { url: 'humantay_trekkers.webp', location: 'Soraypampa & Trail', title: 'Trekkers en Ascenso hacia la Laguna' }
+    ],
     importantNote: 'Important Note: Pickup 4:00am. Return approximately 6:30pm. Minimum 1-2 days of acclimatization in Cusco recommended. This tour is also the perfect Day 0 preparation before the Classic or Premium Salkantay Trek — you will visit the same Sky Camp facilities used on Day 1 of the trek.'
   },
   'salkantay-celestial-2d': {
