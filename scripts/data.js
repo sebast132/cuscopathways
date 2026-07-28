@@ -1298,6 +1298,15 @@ const toursData = {
       { size: '9 People or More', price: 'USD 100.00' }
     ],
     offer: null,
+    gallery: [
+      { url: 'rainbow_llamas_mejorada.webp', location: 'Cumbre Vinicunca', title: 'Montaña de Colores Vinicunca y Llamas (5,200m)' },
+      { url: 'rainbow_vinicunca_llama.webp', location: 'Cumbre Vinicunca', title: 'Cresta Multicromática de Vinicunca' },
+      { url: 'rainbow_viajero.webp', location: 'Cumbre Vinicunca', title: 'Viajero en el Mirador de Vinicunca' },
+      { url: 'rainbow_mujer_poncho.webp', location: 'Cumbre Vinicunca', title: 'Tradición Andina en la Montaña de 7 Colores' },
+      { url: 'rainbow_caminata.webp', location: 'Sendero Fulawasipata', title: 'Caminata de Alta Montaña por el Puna' },
+      { url: 'rainbow_trekkers.webp', location: 'Sendero Fulawasipata', title: 'Trekkers Ascendiendo hacia Vinicunca' },
+      { url: 'rainbow_llamas.webp', location: 'Fauna & Alpacas', title: 'Llamas y Alpacas Grazing en el Altiplano' }
+    ],
     importantNote: 'Important Note: Briefing at 6:00pm the night before. Pickup 3:30-4:00am. This tour reaches 5,200m — the HIGHEST altitude in all of Cusco Pathways Adventure\'s portfolio. Minimum 3 full days of acclimatization in Cusco is STRONGLY recommended. Rainy season (Nov-Mar) offers more vibrant colors. Dry season (Apr-Oct) yields clearer skies.'
   },
   'ausangate-7lakes': {
