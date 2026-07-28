@@ -607,10 +607,16 @@ function hydrateTourDetailPage() {
       const closePreviewBtn = document.getElementById('close-preview-btn');
 
       if (galleryBtn && galleryLightbox && galleryGrid && tour.gallery) {
-        const renderGalleryGrid = (filterDay = 'all') => {
+        const hasLocationFilter = tour.gallery.some(item => item.location);
+
+        const renderGalleryGrid = (filterVal = 'all') => {
           let items = tour.gallery;
-          if (filterDay !== 'all') {
-            items = tour.gallery.filter(item => item.day == filterDay);
+          if (filterVal !== 'all') {
+            if (hasLocationFilter) {
+              items = tour.gallery.filter(item => (item.location || item.day) == filterVal);
+            } else {
+              items = tour.gallery.filter(item => item.day == filterVal);
+            }
           }
 
           if (galleryModalCount) {
@@ -621,7 +627,7 @@ function hydrateTourDetailPage() {
             <div class="gallery-card-item" data-url="${resolveImagePath(item.url)}" data-title="${item.title || ''}">
               <img src="${resolveImagePath(item.url)}" alt="${item.title || 'Photo'}" loading="lazy">
               <div class="gci-overlay">
-                <span class="gci-day-tag">Day ${item.day || '1'}</span>
+                <span class="gci-day-tag">${item.location ? item.location : ('Day ' + (item.day || '1'))}</span>
                 <span class="gci-title">${item.title || ''}</span>
               </div>
             </div>
@@ -647,16 +653,26 @@ function hydrateTourDetailPage() {
           e.stopPropagation();
           if (galleryModalTitle) galleryModalTitle.textContent = `${tour.title} — Photo Gallery`;
 
-          // Dynamically generate tabs according to unique days in tour.gallery
+          // Dynamically generate tabs according to unique locations or days
           if (filterTabsContainer && tour.gallery) {
-            const days = [...new Set(tour.gallery.map(item => item.day))].sort((a, b) => a - b);
-            filterTabsContainer.innerHTML = days.map((day, idx) => `
-              <button class="gl-tab ${idx === 0 ? 'active' : ''}" data-day="${day}">Day ${day}</button>
-            `).join('');
+            if (hasLocationFilter) {
+              const locations = [...new Set(tour.gallery.map(item => item.location || item.day))].filter(Boolean);
+              filterTabsContainer.innerHTML = locations.map((loc, idx) => `
+                <button class="gl-tab ${idx === 0 ? 'active' : ''}" data-filter="${loc}">${loc}</button>
+              `).join('');
+            } else {
+              const days = [...new Set(tour.gallery.map(item => item.day))].sort((a, b) => a - b);
+              filterTabsContainer.innerHTML = days.map((day, idx) => `
+                <button class="gl-tab ${idx === 0 ? 'active' : ''}" data-filter="${day}">Day ${day}</button>
+              `).join('');
+            }
           }
 
-          const firstDay = (tour.gallery && tour.gallery[0]) ? tour.gallery[0].day : '1';
-          renderGalleryGrid(firstDay);
+          const firstVal = hasLocationFilter 
+            ? (tour.gallery[0].location || tour.gallery[0].day)
+            : (tour.gallery[0] ? tour.gallery[0].day : '1');
+
+          renderGalleryGrid(firstVal);
 
           galleryLightbox.classList.add('active');
         });
@@ -682,8 +698,8 @@ function hydrateTourDetailPage() {
               const tabs = filterTabsContainer.querySelectorAll('.gl-tab');
               tabs.forEach(t => t.classList.remove('active'));
               e.target.classList.add('active');
-              const day = e.target.getAttribute('data-day');
-              renderGalleryGrid(day);
+              const filterVal = e.target.getAttribute('data-filter') || e.target.getAttribute('data-day');
+              renderGalleryGrid(filterVal);
             }
           });
         }

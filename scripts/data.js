@@ -832,6 +832,20 @@ const toursData = {
         image: 'city_qoricancha.webp'
       }
     ],
+    gallery: [
+      { url: 'city_sacsayhuaman.webp', location: 'Sacsayhuamán', title: 'Fortaleza Megalítica de Sacsayhuamán' },
+      { url: 'city_sacsayhuaman_muros.webp', location: 'Sacsayhuamán', title: 'Muros de Piedra Gigantes en Sacsayhuamán' },
+      { url: 'city_qenqo.webp', location: 'Qenqo', title: 'Laberinto Ceremonial de Qenqo' },
+      { url: 'city_puca_pucara.webp', location: 'Puca Pucara', title: 'Fortaleza Roja de Puca Pucara' },
+      { url: 'city_puka_pukara_vista.webp', location: 'Puca Pucara', title: 'Vista Panorámica de Puca Pucara' },
+      { url: 'city_tambomachay.webp', location: 'Tambomachay', title: 'Baños del Inca en Tambomachay' },
+      { url: 'city_tambomachay_fuentes.webp', location: 'Tambomachay', title: 'Fuentes de Agua Sagrada en Tambomachay' },
+      { url: 'city_plaza_cusco.webp', location: 'Plaza de Armas', title: 'Catedral y Plaza de Armas de Cusco' },
+      { url: 'city_plaza_fuente.webp', location: 'Plaza de Armas', title: 'Fuente Central de la Plaza de Armas' },
+      { url: 'city_plaza_aerea.webp', location: 'Plaza de Armas', title: 'Vista Aérea Imperial de Cusco' },
+      { url: 'city_qoricancha.webp', location: 'Qorikancha', title: 'Templo del Sol Qorikancha' },
+      { url: 'city_qorikancha_interior.webp', location: 'Qorikancha', title: 'Arquitectura Inca de Granito en Qorikancha' }
+    ],
     priceGroup: 'USD 55.00',
     privatePricing: [
       { size: '2 People', price: 'USD 250.00' },
