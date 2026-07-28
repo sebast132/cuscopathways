@@ -91,10 +91,10 @@ function initMobileMenu(mobileMenu, hamburger) {
   listHTML += `
     <div class="mobile-menu-contact">
       <span class="mobile-menu-contact-title">Talk to Us</span>
-      <a href="tel:+51984000000" class="mobile-menu-phone">
-        <i class="fas fa-phone-alt"></i> +51 984 000 000
+      <a href="tel:+51967573231" class="mobile-menu-phone">
+        <i class="fas fa-phone-alt"></i> +51 967 573 231
       </a>
-      <span class="mobile-menu-hours">Mon–Sat: 8:00am–7:00pm | <a href="https://wa.me/51984000000?text=Hello%20Cusco%20Pathways,%20I%20would%20like%20more%20information" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">WhatsApp: 24/7</a></span>
+      <span class="mobile-menu-hours">Mon–Sat: 8:00am–7:00pm | <a href="https://wa.me/51967573231?text=Hello%20Cusco%20Pathways,%20I%20would%20like%20more%20information" target="_blank" style="color: var(--gold); text-decoration: underline; font-weight: 600;">WhatsApp: 24/7</a></span>
     </div>
   `;
 
@@ -363,7 +363,7 @@ function hydrateTourDetailPage() {
 
   // ── WhatsApp Buttons
   const waText = encodeURIComponent(`Hello Cusco Pathways, I would like information and to book the tour: ${tour.title}`);
-  const waUrl = `https://wa.me/51984000000?text=${waText}`;
+  const waUrl = `https://wa.me/51967573231?text=${waText}`;
   ['book-tour-button', 'book-group-btn', 'book-private-btn'].forEach(id => {
     const btn = document.getElementById(id);
     if (btn) { btn.href = waUrl; btn.target = '_blank'; }
@@ -694,10 +694,10 @@ function hydrateTourDetailPage() {
         <span class="msb-price-val">${tour.priceGroup || 'USD 00.00'}</span>
       </div>
       <div class="msb-actions">
-        <a href="mailto:info@cuscopathwaysadventures.com?subject=Enquiry:%20${encodeURIComponent(tour.title)}" class="msb-btn-mail">
+        <a href="mailto:info@cuscopathways.com?subject=Enquiry:%20${encodeURIComponent(tour.title)}" class="msb-btn-mail">
           <i class="fas fa-envelope"></i>
         </a>
-        <a href="https://wa.me/51984000000?text=Hello%20Cusco%20Pathways,%20I%20am%20interested%20in%20the%20${encodeURIComponent(tour.title)}" target="_blank" class="msb-btn-whatsapp">
+        <a href="https://wa.me/51967573231?text=Hello%20Cusco%20Pathways,%20I%20am%20interested%20in%20the%20${encodeURIComponent(tour.title)}" target="_blank" class="msb-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
         <button class="btn btn-gold-solid msb-btn-book">BOOK ONLINE</button>
@@ -812,7 +812,7 @@ function initContactModal() {
                 </div>
                 <div class="contact-details">
                   <span class="contact-label">WhatsApp</span>
-                  <a href="https://wa.me/51984000000?text=Hello%20Cusco%20Pathways,%20I%20would%20like%20more%20information" target="_blank" class="contact-value">+51 984 000 000</a>
+                  <a href="https://wa.me/51967573231?text=Hello%20Cusco%20Pathways,%20I%20would%20like%20more%20information" target="_blank" class="contact-value">+51 967 573 231</a>
                 </div>
               </div>
               
@@ -822,7 +822,7 @@ function initContactModal() {
                 </div>
                 <div class="contact-details">
                   <span class="contact-label">Email</span>
-                  <a href="mailto:info@cuscopathwaysadventures.com" class="contact-value">info@cuscopathwaysadventures.com</a>
+                  <a href="mailto:info@cuscopathways.com" class="contact-value">info@cuscopathways.com</a>
                 </div>
               </div>
               
@@ -861,25 +861,25 @@ function initContactModal() {
 
         <div class="modal-right">
           <h3><i class="fas fa-compass" style="color: var(--gold); margin-right: 8px;"></i>Tell Us About Your Trip</h3>
-          <form class="modal-form" onsubmit="event.preventDefault(); alert('Form submitted (front-end only).'); this.closest('.modal-overlay').classList.remove('active');">
+          <form class="modal-form" id="enquire-form">
             
             <div class="form-group">
               <label class="form-label">FIRST NAME *</label>
-              <input type="text" class="form-input" required placeholder="John">
+              <input type="text" id="modal-first-name" class="form-input" required placeholder="John">
             </div>
             <div class="form-group">
               <label class="form-label">LAST NAME *</label>
-              <input type="text" class="form-input" required placeholder="Smith">
+              <input type="text" id="modal-last-name" class="form-input" required placeholder="Smith">
             </div>
 
             <div class="form-group form-group-full">
               <label class="form-label">EMAIL ADDRESS *</label>
-              <input type="email" class="form-input" required placeholder="john@example.com">
+              <input type="email" id="modal-email" class="form-input" required placeholder="john@example.com">
             </div>
 
             <div class="form-group form-group-full">
               <label class="form-label">WHATSAPP / PHONE</label>
-              <input type="tel" class="form-input" placeholder="+1 555 000 0000 (include country code)">
+              <input type="tel" id="modal-phone" class="form-input" placeholder="+1 555 000 0000 (include country code)">
             </div>
 
             <div class="form-group form-group-full">
@@ -891,28 +891,28 @@ function initContactModal() {
 
             <div class="form-group">
               <label class="form-label">APPROXIMATE TRAVEL DATE</label>
-              <input type="date" class="form-input" placeholder="dd/mm/aaaa">
+              <input type="date" id="modal-travel-date" class="form-input" placeholder="dd/mm/aaaa">
             </div>
             <div class="form-group">
               <label class="form-label">NUMBER OF PEOPLE *</label>
-              <select class="form-select" required>
+              <select class="form-select" id="modal-people" required>
                 <option value="">— Select —</option>
-                <option value="1">1 person</option>
-                <option value="2">2 people</option>
-                <option value="3">3 people</option>
-                <option value="4">4 people</option>
-                <option value="5">5 people</option>
-                <option value="6">6 people</option>
-                <option value="7">7 people</option>
-                <option value="8">8 people</option>
-                <option value="9">9 people</option>
-                <option value="10+">10+ people</option>
+                <option value="1 person">1 person</option>
+                <option value="2 people">2 people</option>
+                <option value="3 people">3 people</option>
+                <option value="4 people">4 people</option>
+                <option value="5 people">5 people</option>
+                <option value="6 people">6 people</option>
+                <option value="7 people">7 people</option>
+                <option value="8 people">8 people</option>
+                <option value="9 people">9 people</option>
+                <option value="10+ people">10+ people</option>
               </select>
             </div>
 
             <div class="form-group form-group-full">
               <label class="form-label">MESSAGE / QUESTIONS</label>
-              <textarea class="form-textarea" placeholder="Tell us about your fitness level, dietary needs, special requests, or any questions..."></textarea>
+              <textarea class="form-textarea" id="modal-message" placeholder="Tell us about your fitness level, dietary needs, special requests, or any questions..."></textarea>
             </div>
 
             <div class="form-privacy-note">
@@ -935,6 +935,7 @@ function initContactModal() {
   const closeBtn = document.getElementById('close-modal-btn');
   const openBtns = document.querySelectorAll('.open-modal-btn');
   const tourSelect = document.getElementById('modal-tour-select');
+  const form = document.getElementById('enquire-form');
 
   // Populate tours select options dynamically
   if (tourSelect && typeof toursData !== 'undefined') {
@@ -945,6 +946,53 @@ function initContactModal() {
       opt.value = key;
       opt.textContent = tour.title;
       tourSelect.appendChild(opt);
+    });
+  }
+
+  // Handle Form Submit -> Formats Enquiry Email & Opens mailto:info@cuscopathways.com
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const firstName = document.getElementById('modal-first-name')?.value.trim() || '';
+      const lastName = document.getElementById('modal-last-name')?.value.trim() || '';
+      const email = document.getElementById('modal-email')?.value.trim() || '';
+      const phone = document.getElementById('modal-phone')?.value.trim() || 'Not provided';
+      const tourTitle = (tourSelect && tourSelect.selectedIndex >= 0 && tourSelect.options[tourSelect.selectedIndex].value) 
+        ? tourSelect.options[tourSelect.selectedIndex].text 
+        : 'General Enquiry';
+      const travelDate = document.getElementById('modal-travel-date')?.value || 'Not specified';
+      const people = document.getElementById('modal-people')?.value || 'Not specified';
+      const message = document.getElementById('modal-message')?.value.trim() || 'None';
+
+      const subject = `New Enquiry: ${tourTitle} - ${firstName} ${lastName}`;
+      const body = `Hello Cusco Pathways Adventure Team,
+
+I would like to request information and check availability for a tour booking:
+
+CUSTOMER DETAILS:
+• Full Name: ${firstName} ${lastName}
+• Email: ${email}
+• WhatsApp / Phone: ${phone}
+
+TRIP DETAILS:
+• Tour of Interest: ${tourTitle}
+• Travel Date: ${travelDate}
+• Group Size: ${people}
+
+ADDITIONAL MESSAGE / QUESTIONS:
+${message}
+
+Thank you!`;
+
+      const mailtoUrl = `mailto:info@cuscopathways.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Open email client with pre-filled enquiry details
+      window.location.href = mailtoUrl;
+
+      // Close modal and reset form
+      modal.classList.remove('active');
+      form.reset();
     });
   }
 
