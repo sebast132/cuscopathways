@@ -501,11 +501,11 @@ function hydrateTourDetailPage() {
     }).join('');
   }
 
-  // ── Resources Section (Brochure, Map, Photo Gallery)
+  // ── Resources Section (Brochure, Photo Gallery)
   const resourcesSection = document.getElementById('tour-resources-section');
   const resourcesGrid = document.getElementById('tour-resources-grid');
   if (resourcesSection && resourcesGrid) {
-    if (tour.brochure || tour.map || tour.gallery) {
+    if (tour.brochure || (tour.gallery && tour.gallery.length > 0)) {
       resourcesSection.style.display = 'block';
       let html = '';
 
@@ -517,18 +517,6 @@ function hydrateTourDetailPage() {
             <div class="resource-card-overlay"></div>
             <div class="resource-card-content">
               <span class="resource-btn">Download Brochure</span>
-            </div>
-          </a>
-        `;
-      }
-
-      if (tour.map) {
-        html += `
-          <a href="javascript:void(0)" class="resource-card" id="btn-view-map">
-            <div class="resource-card-bg" style="background-image: url(${resolveImagePath(tour.map)})"></div>
-            <div class="resource-card-overlay"></div>
-            <div class="resource-card-content">
-              <span class="resource-btn">View Map</span>
             </div>
           </a>
         `;
@@ -550,45 +538,11 @@ function hydrateTourDetailPage() {
       resourcesGrid.innerHTML = html;
 
       // Handle single card centering
-      const totalCards = (tour.brochure ? 1 : 0) + (tour.map ? 1 : 0) + (tour.gallery ? 1 : 0);
+      const totalCards = (tour.brochure ? 1 : 0) + (tour.gallery && tour.gallery.length > 0 ? 1 : 0);
       if (totalCards === 1) {
         resourcesGrid.classList.add('single-card');
       } else {
         resourcesGrid.classList.remove('single-card');
-      }
-
-      // Add lightbox triggers for map if map exists
-      const mapBtn = document.getElementById('btn-view-map');
-      const mapLightbox = document.getElementById('map-lightbox');
-      const lightboxImg = document.getElementById('lightbox-map-img');
-      const closeLightboxBtn = document.getElementById('close-lightbox-btn');
-
-      if (mapBtn && mapLightbox && lightboxImg) {
-        mapBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          lightboxImg.src = resolveImagePath(tour.map);
-          mapLightbox.classList.add('active');
-        });
-
-        const closeLightbox = () => {
-          mapLightbox.classList.remove('active');
-        };
-
-        if (closeLightboxBtn) {
-          closeLightboxBtn.addEventListener('click', closeLightbox);
-        }
-
-        mapLightbox.addEventListener('click', (e) => {
-          if (e.target === mapLightbox) {
-            closeLightbox();
-          }
-        });
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && mapLightbox.classList.contains('active')) {
-            closeLightbox();
-          }
-        });
       }
 
       // Add Photo Gallery Modal Handlers
