@@ -854,6 +854,19 @@ const toursData = {
       { size: '9 People or More', price: 'USD 100.00' }
     ],
     offer: null,
+    gallery: [
+      { url: 'sv_chinchero_plaza.webp', location: 'Chinchero', title: 'Plaza Principal de Chinchero' },
+      { url: 'chinchero_tejedora.webp', location: 'Chinchero', title: 'Tejedora Tradicional en Chinchero' },
+      { url: 'chinchero_tintes.webp', location: 'Chinchero', title: 'Demostración de Tintes Naturales' },
+      { url: 'moray_panoramico.webp', location: 'Moray', title: 'Vista Panorámica de Moray' },
+      { url: 'moray_1.webp', location: 'Moray', title: 'Anillos Agrícolas de Moray' },
+      { url: 'moray_vista.webp', location: 'Moray', title: 'Mirador de Moray' },
+      { url: 'maras_mirador.webp', location: 'Maras', title: 'Mirador de Salineras de Maras' },
+      { url: 'maras_1.webp', location: 'Maras', title: 'Pozos Salineros de Maras' },
+      { url: 'maras_2.webp', location: 'Maras', title: 'Cosecha de Sal en Maras' },
+      { url: 'maras_viajera.webp', location: 'Maras', title: 'Recorrido por las Salineras' },
+      { url: 'sv_ollantaytambo_panoramica.webp', location: 'Ollantaytambo', title: 'Valle de Ollantaytambo' }
+    ],
     importantNote: 'Important Information: Tourist Ticket (Boleto Turístico) NOT included — required to enter most sites. There are different circuits at different prices — your guide will advise you. Cusco is at 3,400m; Sacsayhuamán is at ~3,700m. We recommend 1-2 days of acclimatization. Pickup times will be confirmed the day before.'
   },
   'valley-traditional': {
@@ -951,6 +964,17 @@ const toursData = {
       { size: '9 People or More', price: 'USD 100.00' }
     ],
     offer: null,
+    gallery: [
+      { url: 'sv_chinchero_plaza.webp', location: 'Chinchero', title: 'Plaza de Chinchero y Templo Colonial' },
+      { url: 'sv_chinchero_campanario.webp', location: 'Chinchero', title: 'Campanario Histórico de Chinchero' },
+      { url: 'chinchero_tejedora.webp', location: 'Chinchero', title: 'Demostración Textil Ancestral' },
+      { url: 'moray_panoramico.webp', location: 'Moray', title: 'Terrazas Circulares de Moray' },
+      { url: 'maras_mirador.webp', location: 'Maras', title: 'Salineras de Maras' },
+      { url: 'sv_ollantaytambo_principal.webp', location: 'Ollantaytambo', title: 'Fortaleza de Ollantaytambo' },
+      { url: 'sv_ollantaytambo_panoramica.webp', location: 'Ollantaytambo', title: 'Vista Panorámica de Ollantaytambo' },
+      { url: 'sv_pisac_ruinas.webp', location: 'Pisac', title: 'Complejo Arqueológico de Pisac' },
+      { url: 'sv_mercado_pisac.webp', location: 'Pisac', title: 'Mercado Artesanal de Pisac' }
+    ],
     importantNote: 'Important Information: Tourist Ticket (Boleto Turístico) NOT included. Departure at 7:00am. Return approximately 6:00-7:00pm. Maras Salt Pans entrance fee is separate. Dress in layers — temperatures vary between cold Chinchero and warm Urubamba.'
   },
   'valley-super': {
@@ -1048,6 +1072,18 @@ const toursData = {
       { size: '9 People or More', price: 'USD 100.00' }
     ],
     offer: null,
+    gallery: [
+      { url: 'sv_chinchero_plaza.webp', location: 'Chinchero', title: 'Plaza de Chinchero' },
+      { url: 'sv_chinchero_campanario.webp', location: 'Chinchero', title: 'Campanario Histórico' },
+      { url: 'chinchero_tintes.webp', location: 'Chinchero', title: 'Tintes Naturales en Chinchero' },
+      { url: 'moray_1.webp', location: 'Moray', title: 'Laboratorio Agrícola de Moray' },
+      { url: 'moray_vista.webp', location: 'Moray', title: 'Vista Detallada de Moray' },
+      { url: 'maras_1.webp', location: 'Maras', title: 'Pozas de Sal en Maras' },
+      { url: 'sv_ollantaytambo_principal.webp', location: 'Ollantaytambo', title: 'Templo del Sol en Ollantaytambo' },
+      { url: 'sv_ollantaytambo_hombre.webp', location: 'Ollantaytambo', title: 'Calles Incas Vivientes de Ollantaytambo' },
+      { url: 'sv_pisac_ruinas.webp', location: 'Pisac', title: 'Terrazas e Intihuatana de Pisac' },
+      { url: 'sv_mercado_pisac.webp', location: 'Pisac', title: 'Mercado de Artesanías de Pisac' }
+    ],
     importantNote: 'Important Information: Tourist Ticket (Boleto Turístico) NOT included. Departure at 7:00am. Return ~7:00pm. Key difference from the Traditional tour: extended time at each site. Recommended for clients with a genuine interest in Inca culture and history.'
   },
   'valley-maras': {
@@ -1138,6 +1174,19 @@ const toursData = {
       { size: '9 People or More', price: 'USD 100.00' }
     ],
     offer: null,
+    gallery: [
+      { url: 'sv_chinchero_plaza.webp', location: 'Chinchero', title: 'Plaza Principal de Chinchero' },
+      { url: 'chinchero_tejedora.webp', location: 'Chinchero', title: 'Tejedora Tradicional en Chinchero' },
+      { url: 'chinchero_tintes.webp', location: 'Chinchero', title: 'Demostración de Tintes Naturales' },
+      { url: 'moray_panoramico.webp', location: 'Moray', title: 'Vista Panorámica de Moray' },
+      { url: 'moray_1.webp', location: 'Moray', title: 'Anillos Agrícolas de Moray' },
+      { url: 'moray_vista.webp', location: 'Moray', title: 'Mirador de Moray' },
+      { url: 'maras_mirador.webp', location: 'Maras', title: 'Mirador de Salineras de Maras' },
+      { url: 'maras_1.webp', location: 'Maras', title: 'Pozos Salineros de Maras' },
+      { url: 'maras_2.webp', location: 'Maras', title: 'Cosecha de Sal en Maras' },
+      { url: 'maras_viajera.webp', location: 'Maras', title: 'Recorrido por las Salineras' },
+      { url: 'sv_ollantaytambo_panoramica.webp', location: 'Ollantaytambo', title: 'Valle de Ollantaytambo' }
+    ],
     importantNote: 'Important Information: Tourist Ticket (Boleto Turístico) NOT included. Maras Salt Pans entrance fee is paid separately. Morning pickup (schedule confirmed the day before). Excellent standalone option or addition to any trekking itinerary.'
   },
   'rainbow-classic': {
@@ -1617,6 +1666,14 @@ const toursData = {
       { size: '9 People or More', price: 'USD 495.00' }
     ],
     offer: 'Includes private Sacred Valley tour & train tickets.',
+    gallery: [
+      { url: 'sv_pisac_ruinas.webp', location: 'Pisac', title: 'Complejo Arqueológico de Pisac' },
+      { url: 'sv_mercado_pisac.webp', location: 'Pisac', title: 'Mercado Tradicional de Pisac' },
+      { url: 'sv_ollantaytambo_principal.webp', location: 'Ollantaytambo', title: 'Fortaleza e Inka City Ollantaytambo' },
+      { url: 'sv_ollantaytambo_panoramica.webp', location: 'Ollantaytambo', title: 'Vista Panorámica de Ollantaytambo' },
+      { url: 'it2d_machupicchu_view.webp', location: 'Machu Picchu', title: 'Citadel Vista Machu Picchu' },
+      { url: 'it2d_machupicchu_classic.webp', location: 'Machu Picchu', title: 'Recorrido Guiado Machu Picchu' }
+    ],
     importantNote: 'Important Info: Pre-departure briefing: 5:00 pm the evening before (phone call and WhatsApp). Full payment required 2 days before tour. Original passport mandatory at Machu Picchu entrance — student card required if claiming student discount. Book Machu Picchu Circuit 2 at least 3 months in advance due to limited daily capacity. If Circuit 2 is unavailable, Circuit 3-B (lower urban sector) or Circuit 1-B (panoramic views) will be arranged. Machu Picchu Mountain and Huayna Picchu Mountain require additional entrance tickets (USD $60 each, book 1-2 months ahead). The Cusco Tourist Ticket (Boleto Turístico) is NOT included and required for Pisac and Ollantaytambo. Tour does not operate in February. Pickup time confirmed the day before by your guide.'
   },
   'machupicchu-fullday': {
