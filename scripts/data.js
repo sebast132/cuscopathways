@@ -35,6 +35,8 @@ function resolveImagePath(filename) {
     'it4d_':      'assets/images/inca-trail/',
     'it2d_':      'assets/images/inca-trail/',
     'incatrail_': 'assets/images/inca-trail/',
+    'mapi2d_':    'assets/images/tours/',
+    'mapi1d_':    'assets/images/tours/',
     'sacred_':    'assets/images/brand/',
     'modal_':     'assets/images/hero/',
   };
@@ -1618,21 +1620,20 @@ const toursData = {
     start: 'Cusco, 7:00am pickup',
     acclimatization: '1-2 days in Cusco recommended',
     rating: '4.9 (512 reviews)',
-    image: 'dest_machupicchu.png',
-    heroImage: 'dest_machupicchu.png',
+    image: 'mapi2d_d2_machupicchu_panoramica.webp',
+    heroImage: 'mapi2d_d2_machupicchu_panoramica.webp',
     brochure: 'assets/documents/CuscoPathways_SacredValley_MachuPicchu_UltimatePath.pdf',
     map: 'assets/images/sacred-valley/super_sacred_valley_map.webp',
     description: `The Ultimate Inca Tour combines the best of two worlds in just two days: the Sacred Valley of the Incas in all its glory, followed by the legendary citadel of Machu Picchu. Day 1 takes you through Pisac's archaeological complex and artisan market, a buffet lunch in Urubamba, and Ollantaytambo's living Inca city — then aboard the train to Aguas Calientes for a night of rest. Day 2 begins before dawn with a bus to Machu Picchu for a guided 2-hour tour of one of the New Seven Wonders of the World. No trekking required. Purely iconic experiences, back to back.<br><br><strong>Why choose us?</strong><br>The Sacred Valley & Machu Picchu 2-Day Tour is the most complete and efficient way to experience the two crowning jewels of Inca civilization without committing to a multi-day trek. Day 1 reveals the valley that sustained the empire — Pisac's engineering marvels, the salt-of-the-earth market, and Ollantaytambo's living city. Day 2 delivers the destination that defines a lifetime. Traveling by scenic Andean railway through cloud forest, staying overnight in Aguas Calientes, and entering Machu Picchu among the first visitors of the morning — this is how the Wonder of the World should first be encountered. With Cusco Pathways Adventure and the operational excellence of Salkantay Trekking, every detail is handled so you simply arrive, witness, and remember.`,
     highlights: [
-      'Full day in the Sacred Valley — Pisac archaeological complex and colorful artisan market',
-      'Buffet lunch of traditional Peruvian cuisine in Urubamba',
-      'Ollantaytambo — the \'last living Inca city\' with original streets still inhabited today',
-      'Scenic train journey to Aguas Calientes through stunning Andean cloud forest',
-      'Night in a comfortable hotel in Aguas Calientes with dinner at a local restaurant',
-      'Early morning access to Machu Picchu — among the first visitors of the day',
-      'Expert 2-hour guided tour of Machu Picchu — temples, terraces, Intihuatana stone',
-      'Optional: Huayna Picchu Mountain or Machu Picchu Mountain (pre-book, extra cost)',
-      'Return by train to Ollantaytambo and private transport to Cusco'
+      'mapi2d_d1_ollantaytambo_terrazas.webp',
+      'mapi2d_d1_ollantaytambo_panoramica.webp',
+      'mapi2d_d1_aguas_calientes_calle.webp',
+      'mapi2d_d2_machupicchu_panoramica.webp',
+      'mapi2d_d2_llamas_machupicchu.webp',
+      'mapi2d_d2_machupicchu_mujer.webp',
+      'mapi2d_d2_ruinas_niebla.webp',
+      'mapi2d_d2_ventana_huaynapicchu.webp'
     ],
     inclusions: [
       'Private transport hotel pickup Day 1 & Ollantaytambo station-Cusco hotel Day 2',
@@ -1680,12 +1681,14 @@ const toursData = {
         day: 'Day 1',
         title: 'Cusco › Pisac (Sacred Valley) › Urubamba › Ollantaytambo › Aguas Calientes',
         desc: 'Pickup from your hotel at 7:00 am. Drive to Pisac in the Sacred Valley to visit the first archaeological site of the route. The Inca architecture and engineering here is truly astounding — appreciate the quality of its hydraulic engineering and impressive cultivation platforms. Enjoy a guided tour of the Pisac complex (~2 hours). Then head down to visit one of the most colorful traditional markets in the entire region — buy directly from local producers. Continue to Urubamba for a magnificent buffet lunch of traditional Peruvian cuisine. In the afternoon, visit Ollantaytambo — the only urban center in the Americas where people still live in original Inca-planned city blocks with functioning water channels running through the streets. Explore the massive archaeological complex with the second-largest Inca stone preserved to date (90 tons), used as part of the Temple of the Sun. Drive to Ollantaytambo train station and board the Expedition Train to Aguas Calientes. During the journey, witness stunning glaciers, snowy peaks, fertile green valleys, and Inca agricultural platforms on both sides of the valley. Check into your hotel in Aguas Calientes and enjoy a delicious dinner at the best restaurant in town.',
+        image: 'mapi2d_d1_ollantaytambo_terrazas.webp',
         accommodation: 'Difficulty: Easy | Max altitude: 3,440m/11,286ft (Pisac) | Accommodation: Hotel Aguas Calientes (2,040m)'
       },
       {
         day: 'Day 2',
         title: 'Aguas Calientes › Machu Picchu › Ollantaytambo › Cusco',
         desc: 'Wake very early for breakfast at 5:00 am. Board one of the first buses to Machu Picchu (2,430m) — arrive as the sun begins to cast its stunning orange glow over the huge Inca stones. Present your entry ticket and passport at the entrance. Enjoy a 2-hour expert guided tour through the most significant areas of the citadel — temples, terraces, ritual baths, agricultural platforms, and the famous Intihuatana stone. Learn all the secrets and mysteries of this extraordinary place. After the guided tour, optional activities include climbing Huayna Picchu Mountain (2,720m, 2 hrs, extra cost USD $60) or Machu Picchu Mountain (3,000m, 3-4 hrs, extra cost USD $60), if booked in advance. Return to Aguas Calientes by bus. Find a restaurant for lunch before making your way to the train station. Board the train to Ollantaytambo, then private transport back to your hotel in Cusco. Arrival time depends on scheduled train ticket.',
+        image: 'mapi2d_d2_machupicchu_panoramica.webp',
         accommodation: 'Difficulty: Easy | Machu Picchu altitude: 2,430m/7,972ft'
       }
     ],
@@ -1703,12 +1706,16 @@ const toursData = {
     ],
     offer: 'Includes private Sacred Valley tour & train tickets.',
     gallery: [
-      { url: 'sv_pisac_ruinas.webp', location: 'Pisac', title: 'Complejo Arqueológico de Pisac' },
-      { url: 'sv_mercado_pisac.webp', location: 'Pisac', title: 'Mercado Tradicional de Pisac' },
-      { url: 'sv_ollantaytambo_principal.webp', location: 'Ollantaytambo', title: 'Fortaleza e Inka City Ollantaytambo' },
-      { url: 'sv_ollantaytambo_panoramica.webp', location: 'Ollantaytambo', title: 'Vista Panorámica de Ollantaytambo' },
-      { url: 'it2d_machupicchu_view.webp', location: 'Machu Picchu', title: 'Citadel Vista Machu Picchu' },
-      { url: 'it2d_machupicchu_classic.webp', location: 'Machu Picchu', title: 'Recorrido Guiado Machu Picchu' }
+      { url: 'mapi2d_d1_ollantaytambo_terrazas.webp', location: 'Day 1: Ollantaytambo', title: 'Terrazas de Ollantaytambo' },
+      { url: 'mapi2d_d1_ollantaytambo_panoramica.webp', location: 'Day 1: Ollantaytambo', title: 'Vista Panorámica de Ollantaytambo' },
+      { url: 'mapi2d_d1_ollantaytambo_hombre.webp', location: 'Day 1: Ollantaytambo', title: 'Recorrido Histórico en Ollantaytambo' },
+      { url: 'mapi2d_d1_aguas_calientes_calle.webp', location: 'Day 1: Aguas Calientes', title: 'Atardecer en las Calles de Aguas Calientes' },
+      { url: 'mapi2d_d2_machupicchu_panoramica.webp', location: 'Day 2: Machu Picchu', title: 'Vista Panorámica de la Ciudadela' },
+      { url: 'mapi2d_d2_llamas_machupicchu.webp', location: 'Day 2: Machu Picchu', title: 'Llamas en las Terrazas de Machu Picchu' },
+      { url: 'mapi2d_d2_machupicchu_mujer.webp', location: 'Day 2: Machu Picchu', title: 'Experiencia Guiada en Machu Picchu' },
+      { url: 'mapi2d_d2_ruinas_niebla.webp', location: 'Day 2: Machu Picchu', title: 'Ruinas entre la Niebla Mística' },
+      { url: 'mapi2d_d2_ruinas_niebla_singente.webp', location: 'Day 2: Machu Picchu', title: 'Templo Inca entre las Nubes' },
+      { url: 'mapi2d_d2_ventana_huaynapicchu.webp', location: 'Day 2: Machu Picchu', title: 'Ventana Inca hacia Huayna Picchu' }
     ],
     importantNote: 'Important Info: Pre-departure briefing: 5:00 pm the evening before (phone call and WhatsApp). Full payment required 2 days before tour. Original passport mandatory at Machu Picchu entrance — student card required if claiming student discount. Book Machu Picchu Circuit 2 at least 3 months in advance due to limited daily capacity. If Circuit 2 is unavailable, Circuit 3-B (lower urban sector) or Circuit 1-B (panoramic views) will be arranged. Machu Picchu Mountain and Huayna Picchu Mountain require additional entrance tickets (USD $60 each, book 1-2 months ahead). The Cusco Tourist Ticket (Boleto Turístico) is NOT included and required for Pisac and Ollantaytambo. Tour does not operate in February. Pickup time confirmed the day before by your guide.'
   },
@@ -1726,19 +1733,20 @@ const toursData = {
     start: 'Cusco, early morning pickup',
     acclimatization: '1-2 days in Cusco recommended',
     rating: '4.9 (480 reviews)',
-    image: 'dest_machupicchu.png',
-    heroImage: 'dest_machupicchu.png',
+    image: 'mapi1d_mirador_machupicchu.webp',
+    heroImage: 'mapi1d_mirador_machupicchu.webp',
     brochure: 'assets/documents/CuscoPathways_MachuPicchu_LostPath.pdf',
     map: 'assets/images/sacred-valley/super_sacred_valley_map.webp',
     description: `Machu Picchu is one of the New 7 Wonders of the World, a UNESCO World Heritage Site, and one of the most important energy centers on the planet. Are you short on time but refuse to miss it? The Lost Path is the most direct and expertly curated way to experience the legendary citadel in a single day — traveling by scenic railway from Ollantaytambo through spectacular cloud forest to Aguas Calientes, then by bus to the Sacred City itself. A 2-hour expert guided tour, free time to explore, and an optional mountain hike before returning to Cusco. One day. One wonder. Unforgettable.<br><br><strong>Why choose us?</strong><br>Machu Picchu is consistently the #1 travel destination in the world — and for good reason. The experience is mesmerizing and unique. You are not merely driving up to a lookout and snapping a photo; you are traveling into the heart of the Andes, into the living legacy of one of the most sophisticated civilizations in human history. The Machu Picchu Full Day tour with Cusco Pathways Adventure ensures you experience this properly: aboard a scenic Andean railway, with an expert guide who brings the stones to life, in a small group that allows for genuine connection with this extraordinary place. One day, done right, is all it takes to change how you see the world.`,
     highlights: [
-      'Travel aboard one of the most beautiful railways in the world — Andean cloud forest, glaciers, and Inca terraces',
-      'Early morning entry to Machu Picchu — beat the crowds and witness the sunrise over the citadel',
-      'Expert 2-hour guided tour: temples, terraces, ceremonial baths, Intihuatana stone',
-      'Feel the powerful energy of this sacred site — one of the most spiritually charged places on Earth',
-      'Optional: Huayna Picchu Mountain (2,720m, 2 hrs), Machu Picchu Mountain (3,000m, 3-4 hrs), or Huchuy Picchu (2,497m, 1.5 hrs)',
-      'Return by scenic Andean railway to Ollantaytambo and private transport to Cusco',
-      'Small group maximum 12 people — intimate, personalized experience'
+      'mapi1d_mirador_machupicchu.webp',
+      'mapi1d_machupicchu_panoramica.webp',
+      'mapi1d_mujer_machupicchu.webp',
+      'mapi1d_llamas_machupicchu.webp',
+      'mapi1d_terrazas_machupicchu.webp',
+      'mapi1d_ruinas_niebla.webp',
+      'mapi1d_ruinas_niebla_singente.webp',
+      'mapi1d_ventana_huaynapicchu.webp'
     ],
     inclusions: [
       'Private transport hotel-Ollantaytambo station (Day 1) & Ollantaytambo station-hotel Cusco (Day 1)',
@@ -1781,6 +1789,7 @@ const toursData = {
         day: 'Day 1',
         title: 'Cusco › Ollantaytambo › Aguas Calientes › Machu Picchu › Cusco',
         desc: 'Very early pickup from your hotel and drive to Ollantaytambo (1:30 hrs). Board the train to Aguas Calientes, which takes you through the stunning Andean mountainous landscape and mysterious cloud forest. During the journey, witness several glaciers and snowy peaks, fertile green fields, and Inca agricultural platforms on both sides of the valley. Upon arrival in Aguas Calientes, board a bus to the entrance of the Historic Sanctuary of Machu Picchu (2,430m). Enter as one of the first visitors of the day. Your expert bilingual guide leads a 2-hour tour through the most important areas: the Temple of the Sun, Temple of the Condor, Royal Tomb, Intihuatana (\'hitching post of the sun\'), residential and ceremonial sectors. Learn about the extraordinary history, culture, flora, and fauna of this extraordinary place. Feel the powerful energy that has drawn pilgrims and visitors for centuries. After the guided tour, you have free time. Optional mountain hikes (if booked in advance): Huayna Picchu Mountain (2,720m, 45 min ascent — the dramatic summit seen in all the famous photos, USD $75), Machu Picchu Mountain (3,000m, 1.5 hrs ascent — even more panoramic views, USD $75), or Huchuy Picchu (2,497m, 1 hr — shorter, accessible option). Return to Aguas Calientes by bus. Find a restaurant for lunch. Board the train to Ollantaytambo. Private transport back to Cusco.',
+        image: 'mapi1d_mirador_machupicchu.webp',
         accommodation: 'Difficulty: Easy | Machu Picchu altitude: 2,430m/7,972ft | Duration: Full day from Cusco'
       }
     ],
@@ -1795,6 +1804,16 @@ const toursData = {
       { size: '9 People or More', price: 'USD 380.00' }
     ],
     offer: 'Includes round-trip train & bus tickets and guided tour.',
+    gallery: [
+      { url: 'mapi1d_mirador_machupicchu.webp', location: 'Mirador Principal', title: 'Mirador Principal de Machu Picchu' },
+      { url: 'mapi1d_machupicchu_panoramica.webp', location: 'Mirador Principal', title: 'Vista Panorámica de la Ciudadela Sacred' },
+      { url: 'mapi1d_mujer_machupicchu.webp', location: 'Mirador Principal', title: 'Experiencia Turística en Machu Picchu' },
+      { url: 'mapi1d_llamas_machupicchu.webp', location: 'Ciudadela Inca', title: 'Llamas Pastando en las Terrazas Incas' },
+      { url: 'mapi1d_terrazas_machupicchu.webp', location: 'Ciudadela Inca', title: 'Terrazas Agrícolas de la Ciudadela' },
+      { url: 'mapi1d_ruinas_niebla.webp', location: 'Mística & Ruinas', title: 'Misterio y Niebla en las Ruinas Incas' },
+      { url: 'mapi1d_ruinas_niebla_singente.webp', location: 'Mística & Ruinas', title: 'Amanecer Místico sin Multitudes' },
+      { url: 'mapi1d_ventana_huaynapicchu.webp', location: 'Huayna Picchu', title: 'Ventana del Templo hacia Huayna Picchu' }
+    ],
     importantNote: 'Important Info: Pre-departure briefing: 6:00-8:00 pm the evening before (phone call and WhatsApp). Full payment required 2 days before the tour. Original passport mandatory at Machu Picchu entrance — student card required for student discount. Book Machu Picchu Circuit 2 at least 3 months in advance due to limited daily capacity. If Circuit 2 is unavailable, Circuit 3-B (lower urban sector) or Circuit 1-B (panoramic area) will be arranged. Optional mountains (Huayna Picchu, Machu Picchu Mountain, Huchuy Picchu) require separate tickets — book at least 1-2 months in advance. Vistadome Train upgrade available for USD $70 extra (panoramic glass roof, entertainment on board). Tour does not operate in February due to rainy season and route maintenance. Pickup time confirmed the day before by your guide. Luggage can be stored at Salkantay Trekking office or your hotel free of charge.'
   }
 };
