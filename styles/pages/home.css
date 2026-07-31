@@ -582,22 +582,42 @@
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Testimonials Header (from inline styles) */
+/* Testimonials Header */
 .testimonials-section .section-header {
   margin-bottom: 40px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .testimonials-section .section-eyebrow {
-  color: var(--gold);
+  color: #F3C649;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
+  letter-spacing: 3px;
+  font-size: 13px;
   font-weight: 700;
+  margin-bottom: 10px;
+}
+.testimonials-tripadvisor-badge {
+  margin: 6px 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tripadvisor-official-logo {
+  height: 38px;
+  max-width: 260px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 .testimonials-section .section-title {
-  color: var(--text-main);
+  color: #FFFFFF !important;
   font-family: var(--font-headings);
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Testimonials Carousel Wrapper */
@@ -813,11 +833,11 @@
   color: #FFFFFF;
 }
 .difference-section .section-eyebrow {
-  color: var(--gold);
+  color: #F3C649;
 }
 .difference-section .section-subtitle {
   text-align: center;
-  color: #A2B5AB;
+  color: #CBD5E1;
   font-family: var(--font-body);
   font-size: 16px;
   max-width: 600px;
@@ -839,7 +859,7 @@
 }
 .difference-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(200, 134, 26, 0.4);
+  border-color: rgba(243, 198, 73, 0.5);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 .diff-icon-wrapper {
@@ -858,7 +878,7 @@
   transform: scale(1.1) rotate(5deg);
 }
 .diff-icon-wrapper i {
-  color: var(--gold);
+  color: #F3C649;
   font-size: 26px;
 }
 .diff-card-title {
@@ -871,7 +891,7 @@
 }
 .diff-card-desc {
   font-family: var(--font-body);
-  color: #A2B5AB;
+  color: #CBD5E1;
   font-size: 14px;
   line-height: 1.6;
 }
