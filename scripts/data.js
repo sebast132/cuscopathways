@@ -56,7 +56,7 @@ const destinationsData = {
   },
   'salkantay': {
     title: 'Salkantay',
-    image: 'dest_salkantay.webp',
+    image: 'sk5d_d1_domos_valle.webp',
     tours: ['salkantay-premium', 'salkantay-classic', 'salkantay-short', 'salkantay-celestial-2d']
   },
   'cusco-sacred-valley': {
