@@ -594,6 +594,11 @@ svg.tab-icon {
   opacity: 0.9;
 }
 
+/* ── Hide Pricing Tab & Section Globally ── */
+[data-tab="pricing"], #tab-pricing, #section-pricing {
+  display: none !important;
+}
+
 /* ── Pricing Comparison Table ── */
 .pricing-rule {
   width: 100%;
