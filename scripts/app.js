@@ -1049,8 +1049,7 @@ function initTabs() {
     'inclusions': document.getElementById('section-inclusions'),
     'before': document.getElementById('section-before'),
     'packing': document.getElementById('section-packing'),
-    'accommodation': document.getElementById('section-accommodation'),
-    'pricing': document.getElementById('section-pricing'),
+    'accommodation': document.getElementById('section-accommodation')
   };
 
   tabs.forEach(tab => {
