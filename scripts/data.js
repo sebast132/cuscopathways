@@ -367,12 +367,11 @@ const toursData = {
       { url: 'sk5dc_d4_railway_hikers.webp', day: 4, title: 'Sendero Tren Hidroeléctrica' },
       { url: 'sk5dc_d4_train_street.webp', day: 4, title: 'Aguas Calientes Calle Tren' },
       { url: 'sk5dc_d5_inca_house_fog.webp', day: 5, title: 'Casa Inca en la Neblina' },
-      { url: 'sk5dc_d5_machupicchu_woman.webp', day: 5, title: 'Machu Picchu Citadel' },
       { url: 'sk5dc_d5_machupicchu_viewpoint.webp', day: 5, title: 'Mirador Machu Picchu' },
       { url: 'sk5dc_d5_machupicchu_terraces.webp', day: 5, title: 'Terrazas Machu Picchu' },
       { url: 'sk5dc_d5_hikers_inca_ruins.webp', day: 5, title: 'Recorrido Machu Picchu' },
-      { url: 'sk5dc_d5_couple_train.webp', day: 5, title: 'Tren Vistadome' },
-      { url: 'sk5dc_d5_panoramic_train_selfie.webp', day: 5, title: 'Vistadome Observatory' }
+      { url: 'sk5dc_d5_machupicchu_woman.webp', day: 5, title: 'Machu Picchu Citadel' },
+      { url: 'sk5dc_d5_couple_train.webp', day: 5, title: 'Tren Vistadome' }
     ],
     pricePrivate: 'USD 1,650.00',
     priceGroup: 'USD 669.00',
@@ -494,12 +493,11 @@ const toursData = {
       { url: 'sk4dc_d3_aguas_calientes_plaza.webp', day: 3, title: 'Plaza Aguas Calientes' },
       { url: 'sk4dc_d3_train_street.webp', day: 3, title: 'Aguas Calientes Calle Tren' },
       { url: 'sk4dc_d4_inca_house_fog.webp', day: 4, title: 'Casa Inca en la Neblina' },
-      { url: 'sk4dc_d4_machupicchu_woman.webp', day: 4, title: 'Machu Picchu Citadel' },
       { url: 'sk4dc_d4_machupicchu_viewpoint.webp', day: 4, title: 'Mirador Machu Picchu' },
       { url: 'sk4dc_d4_machupicchu_terraces.webp', day: 4, title: 'Terrazas Machu Picchu' },
       { url: 'sk4dc_d4_hikers_inca_ruins.webp', day: 4, title: 'Recorrido Machu Picchu' },
-      { url: 'sk4dc_d4_couple_train.webp', day: 4, title: 'Tren Vistadome' },
-      { url: 'sk4dc_d4_panoramic_train_selfie.webp', day: 4, title: 'Vistadome Observatory' }
+      { url: 'sk4dc_d4_machupicchu_woman.webp', day: 4, title: 'Machu Picchu Citadel' },
+      { url: 'sk4dc_d4_couple_train.webp', day: 4, title: 'Tren Vistadome' }
     ],
     pricePrivate: 'USD 1,520.00',
     priceGroup: 'USD 600.00',
