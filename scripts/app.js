@@ -515,8 +515,10 @@ function hydrateTourDetailPage() {
 
       if (tour.brochure) {
         const bgImg = tour.brochureBgImage || tour.image;
+        const brochureUrl = resolveImagePath(tour.brochure);
+        const cacheBuster = brochureUrl.includes('?') ? '&v=' + Date.now() : '?v=' + Date.now();
         html += `
-          <a href="${resolveImagePath(tour.brochure)}" target="_blank" class="resource-card" id="btn-download-brochure">
+          <a href="${brochureUrl}${cacheBuster}" target="_blank" class="resource-card" id="btn-download-brochure">
             <div class="resource-card-bg" style="background-image: url(${resolveImagePath(bgImg)})"></div>
             <div class="resource-card-overlay"></div>
             <div class="resource-card-content">
