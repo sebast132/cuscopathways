@@ -349,16 +349,20 @@ function hydrateTourDetailPage() {
 
   // ── Offers
   const offersBox = document.getElementById('offers-module-container');
-  if (offersBox && tour.offer) {
-    offersBox.innerHTML = `
-      <div class="offers-box">
-        <div class="offers-icon">🎁</div>
-        <div class="offers-content">
-          <h4>Special Benefit</h4>
-          <p>${tour.offer}</p>
+  if (offersBox) {
+    if (tour.offer) {
+      offersBox.innerHTML = `
+        <div class="offers-box">
+          <div class="offers-icon">🎁</div>
+          <div class="offers-content">
+            <h4>Special Benefit</h4>
+            <p>${tour.offer}</p>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    } else {
+      offersBox.innerHTML = '';
+    }
   }
 
   // ── WhatsApp Buttons
