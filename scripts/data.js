@@ -242,7 +242,7 @@ const toursData = {
     rating: '4.9 (1,243 reviews)',
     image: 'sk5dc_d1_domos_valle.webp',
     heroImage: 'sk5dc_d1_domos_valle.webp',
-    brochure: 'assets/documents/CuscoPathways_ClassicSalkantayTrek_5Days.pdf',
+    brochure: 'assets/documents/CuscoPathways_ClassicSalkantayTrek_5Days_1.pdf',
     map: 'assets/images/salkantay/classic_salkantay_map.webp',
     description: `In 5 days, cross the Salkantay Pass at 4,630m, hike from glacial peaks through the cloud forest to the Peruvian jungle, sleep in exclusive campsites, and stand before Machu Picchu. Ranked among the world's top 25 trekking routes by National Geographic.<br><br><strong>Why choose us?</strong><br>The Classic Salkantay is the benchmark against which all other Andean treks are measured. It offers an open trail with extraordinary variety — from glacial landscapes to tropical rainforest. With Cusco Pathways Adventure, you experience this route with exclusive private campsites, gourmet mountain cuisine, and certified guides. This is not simply a trek to Machu Picchu. It is a full immersion into the soul of the Andes.`,
     highlights: [
@@ -1094,7 +1094,7 @@ const toursData = {
     rating: '4.8 (1,842 reviews)',
     image: 'moray_panoramico.webp',
     heroImage: 'moray_panoramico.webp',
-    brochure: 'assets/documents/CuscoPathways_MarasMoray_SaltSacredPath.pdf',
+    brochure: 'assets/documents/ENG_MAR1MO.pdf',
     description: `Two of the most unusual and photogenic sites in the entire Sacred Valley combined in a full-day tour. The Maras Salt Pans — over 3,000 glittering white salt pools harvested since pre-Inca times — and Moray — the mysterious circular terraces considered the world's first agricultural research laboratory. Includes Chinchero, buffet lunch, Huaypo Lagoon, and Ollantaytambo.<br><br><strong>Why choose us?</strong><br>Moray and Maras are two of the most visually striking sites in South America — yet they remain off the main tourist track. The concentric circles of Moray look out-of-this-world. The white salt pans of Maras, photographed at sunrise, are unmatched on Earth.`,
     highlights: [
       'moray_panoramico.webp',
@@ -1519,7 +1519,7 @@ const toursData = {
     rating: '4.9 (310 reviews)',
     image: 'sk5dc_d1_humantay_lake.webp',
     heroImage: 'sk5dc_d1_humantay_lake.webp',
-    brochure: 'assets/documents/CuscoPathways_Salkantay_CelestialPath.pdf',
+    brochure: 'assets/documents/ENG_SKT2HL.pdf',
     map: 'assets/images/salkantay/short_salkantay_map.webp',
     description: `Two days. Two summits. One of the most memorable overnight adventures in the Cusco region. On Day 1, trek to the sacred Humantay Lake — a turquoise jewel at 4,200m nestled beneath the Salkantay and Humantay glaciers, considered one of the most sacred Apus offering sites in the Andes. Spend the night at the exclusive Sky Camp in Soraypampa (3,900m), where your guide leads a stargazing session beneath the Andean constellations that gave the Incas their calendar. On Day 2, conquer the legendary Salkantay Pass (4,630m) via the Trail of the Seven Snakes, with 360° views of Salkantay Mountain (6,271m) — the most revered Apu of the Inca world.<br><br><strong>Why choose us?</strong><br>Most high-altitude overnight treks in the Andes demand either a week-long commitment or a sacrifice in scenery. The Celestial Path is the exception. In two days you will visit not one but two of the most extraordinary natural landmarks in Peru — Humantay Lake and Salkantay Pass — spend a night under one of the clearest night skies on earth at exclusive Sky Camp, and stand at 4,630m beside the most sacred mountain in the Inca world. For travelers with limited time who refuse to compromise on experience, this is the answer. It is also the perfect gateway — and preparation — for those who will continue on the Classic or Premium Salkantay Trek.`,
     highlights: [
@@ -1613,7 +1613,7 @@ const toursData = {
     rating: '4.9 (512 reviews)',
     image: 'mapi2d_d2_machupicchu_panoramica.webp',
     heroImage: 'mapi2d_d2_machupicchu_panoramica.webp',
-    brochure: 'assets/documents/CuscoPathways_SacredValley_MachuPicchu_UltimatePath.pdf',
+    brochure: 'assets/documents/ENG_MAP2SV.pdf',
     map: 'assets/images/sacred-valley/super_sacred_valley_map.webp',
     description: `The Ultimate Inca Tour combines the best of two worlds in just two days: the Sacred Valley of the Incas in all its glory, followed by the legendary citadel of Machu Picchu. Day 1 takes you through Pisac's archaeological complex and artisan market, a buffet lunch in Urubamba, and Ollantaytambo's living Inca city — then aboard the train to Aguas Calientes for a night of rest. Day 2 begins before dawn with a bus to Machu Picchu for a guided 2-hour tour of one of the New Seven Wonders of the World. No trekking required. Purely iconic experiences, back to back.<br><br><strong>Why choose us?</strong><br>The Sacred Valley & Machu Picchu 2-Day Tour is the most complete and efficient way to experience the two crowning jewels of Inca civilization without committing to a multi-day trek. Day 1 reveals the valley that sustained the empire — Pisac's engineering marvels, the salt-of-the-earth market, and Ollantaytambo's living city. Day 2 delivers the destination that defines a lifetime. Traveling by scenic Andean railway through cloud forest, staying overnight in Aguas Calientes, and entering Machu Picchu among the first visitors of the morning — this is how the Wonder of the World should first be encountered. With Cusco Pathways Adventure and the operational excellence of Salkantay Trekking, every detail is handled so you simply arrive, witness, and remember.`,
     highlights: [
@@ -1726,7 +1726,7 @@ const toursData = {
     rating: '4.9 (480 reviews)',
     image: 'mapi1d_mirador_machupicchu.webp',
     heroImage: 'mapi1d_mirador_machupicchu.webp',
-    brochure: 'assets/documents/CuscoPathways_MachuPicchu_LostPath.pdf',
+    brochure: 'assets/documents/ENG_MAP1DT.pdf',
     map: 'assets/images/sacred-valley/super_sacred_valley_map.webp',
     description: `Machu Picchu is one of the New 7 Wonders of the World, a UNESCO World Heritage Site, and one of the most important energy centers on the planet. Are you short on time but refuse to miss it? The Lost Path is the most direct and expertly curated way to experience the legendary citadel in a single day — traveling by scenic railway from Ollantaytambo through spectacular cloud forest to Aguas Calientes, then by bus to the Sacred City itself. A 2-hour expert guided tour, free time to explore, and an optional mountain hike before returning to Cusco. One day. One wonder. Unforgettable.<br><br><strong>Why choose us?</strong><br>Machu Picchu is consistently the #1 travel destination in the world — and for good reason. The experience is mesmerizing and unique. You are not merely driving up to a lookout and snapping a photo; you are traveling into the heart of the Andes, into the living legacy of one of the most sophisticated civilizations in human history. The Machu Picchu Full Day tour with Cusco Pathways Adventure ensures you experience this properly: aboard a scenic Andean railway, with an expert guide who brings the stones to life, in a small group that allows for genuine connection with this extraordinary place. One day, done right, is all it takes to change how you see the world.`,
     highlights: [
