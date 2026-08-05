@@ -149,7 +149,7 @@ const toursData = {
     ],
     pricePrivate: 'USD 1,250.00',
     priceGroup: 'USD 1,059.00',
-    offer: 'Includes a 30-minute massage at Soraypampa camp and priority access to Humantay Lake.',
+    offer: null,
     importantNote: 'Important Information: Pre-departure briefing at 5:00pm the night before. Full payment due 2 days prior. Original passport mandatory. Book Machu Picchu tickets 3 months in advance. Vistadome Observatory train available for 2026 bookings.',
     relatedTours: ['salkantay-classic', 'salkantay-short', 'humantay-classic'],
     itinerary: [
@@ -377,7 +377,7 @@ const toursData = {
       { size: '6 – 9 People', price: 'USD 850.00' },
       { size: '10 People or More', price: 'USD 750.00' }
     ],
-    offer: '<b>Super Combo (group service only) – USD 820.00 per person:</b><br>• Airport transfer to your hotel upon arrival in Cusco<br>• Salkantay Trek Classic 5 Days<br>• Sleeping bag + trekking poles<br>• Rainbow Mountain Full Day tour',
+    offer: null,
     importantNote: 'Important Information: Pre-departure briefing at 5:00pm at the office (mandatory). Full payment due 2 days prior. Original passport mandatory. Book Machu Picchu 3 months in advance. Llactapata Day 4 might not be guaranteed in the rainy season. Free luggage storage.'
   },
   'salkantay-short': {
@@ -503,7 +503,7 @@ const toursData = {
       { size: '6 – 9 People', price: 'USD 800.00' },
       { size: '10 People or More', price: 'USD 700.00' }
     ],
-    offer: '<b>Super Combo (only for group service) – USD 730.00 per person:</b><br>• Transportation from the Airport to your Hotel once you arrive in Cusco<br>• Salkantay Trek Short 4 Days<br>• Sleeping Bag + Walking Poles<br>• Rainbow Mountain Full Day<br><i>NOTE: The hotels in Cusco are NOT included.</i>',
+    offer: null,
     importantNote: 'Important Information: Pre-departure briefing at 5:00pm the night before. Full payment due 2 days prior. Original passport mandatory. Book Machu Picchu 3 months in advance. This route does NOT include the Llactapata ruins.'
   },
   'incatrail-classic': {
@@ -636,7 +636,7 @@ const toursData = {
       { size: '6 – 9 People', price: 'USD 1,300.00' },
       { size: '10 People or More', price: 'USD 1,000.00' }
     ],
-    offer: '<b>Super Combo (only for group service) – USD 970.00 per person:</b><br>• Transportation from the Airport to your Hotel once you arrive in Cusco<br>• Inca Trail Classic 4 Days<br>• Sleeping Bag + Walking Poles<br>• Rainbow Mountain Full Day<br><i>NOTE: The hotels in Cusco are NOT included.</i>',
+    offer: null,
     importantNote: 'Important Information: Inca Trail permits are strictly limited — book 4-6 months in advance. Permits are non-transferable and non-changeable. Name must match passport exactly. Original passport required at KM 82. Full payment due 2 days prior. Best season: May-September. Trail closed every February.'
   },
   'incatrail-short': {
@@ -732,7 +732,7 @@ const toursData = {
       { size: '6 – 9 People', price: 'USD 800.00' },
       { size: '10 People or More', price: 'USD 700.00' }
     ],
-    offer: '<b>Super Combo (only for group service) – USD 670.00 per person:</b><br>• Transportation from the Airport to your Hotel once you arrive in Cusco<br>• Short Inca Trail 2 Days<br>• Walking Poles<br>• Rainbow Mountain Full Day<br><i>NOTE: The hotels in Cusco are NOT included.</i>',
+    offer: null,
     importantNote: 'Important Information: Short Inca Trail permits are also strictly limited — book as early as possible. Original passport required at KM 104. Name must match exactly. Briefing at 5pm the night before. No camping — 100% hotel experience.'
   },
   'cusco-cultural': {
@@ -1688,7 +1688,7 @@ const toursData = {
       { size: '6 – 8 People', price: 'USD 545.00' },
       { size: '9 People or More', price: 'USD 495.00' }
     ],
-    offer: 'Includes private Sacred Valley tour & train tickets.',
+    offer: null,
     gallery: [
       { url: 'mapi2d_d1_ollantaytambo_terrazas.webp', location: 'Day 1: Ollantaytambo', title: 'Terrazas de Ollantaytambo' },
       { url: 'mapi2d_d1_ollantaytambo_panoramica.webp', location: 'Day 1: Ollantaytambo', title: 'Vista Panorámica de Ollantaytambo' },
@@ -1787,7 +1787,7 @@ const toursData = {
       { size: '6 – 8 People', price: 'USD 395.00' },
       { size: '9 People or More', price: 'USD 380.00' }
     ],
-    offer: 'Includes round-trip train & bus tickets and guided tour.',
+    offer: null,
     gallery: [
       { url: 'mapi1d_mirador_machupicchu.webp', location: 'Mirador Principal', title: 'Mirador Principal de Machu Picchu' },
       { url: 'mapi1d_machupicchu_panoramica.webp', location: 'Mirador Principal', title: 'Vista Panorámica de la Ciudadela Sacred' },
