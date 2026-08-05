@@ -1123,6 +1123,40 @@ function initHeroSlideshow() {
   setInterval(nextSlide, slideInterval);
 }
 
+// ─── Featured Experiences Price Hydration ────────────────────
+function hydrateFeaturedPrices() {
+  const cards = document.querySelectorAll('.featured-card');
+  if (!cards.length || typeof toursData === 'undefined') return;
+
+  cards.forEach(card => {
+    const link = card.querySelector('a.btn-itinerary');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    const queryString = href.includes('?') ? href.split('?')[1] : '';
+    const urlParams = new URLSearchParams(queryString);
+    const tourKey = urlParams.get('tour');
+
+    if (tourKey && toursData[tourKey]) {
+      const tour = toursData[tourKey];
+      const price = tour.priceGroup || tour.pricePrivate || '';
+      if (price) {
+        let priceSpan = card.querySelector('.fc-price');
+        if (!priceSpan) {
+          const footerRight = card.querySelector('.fc-footer-right');
+          if (footerRight) {
+            priceSpan = document.createElement('span');
+            priceSpan.className = 'fc-price';
+            footerRight.insertBefore(priceSpan, link);
+          }
+        }
+        if (priceSpan) {
+          priceSpan.innerHTML = `From <strong>${price}</strong> pp`;
+        }
+      }
+    }
+  });
+}
+
 // ─── DOM Initializer ─────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   fillTourData();
@@ -1130,6 +1164,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initContactModal();
   initHeroSlideshow();
+  hydrateFeaturedPrices();
   hydrateDestinationPage();
   hydrateTourDetailPage();
   initTabs();
