@@ -1517,8 +1517,8 @@ const toursData = {
     start: 'Cusco, 4:30–5:00am',
     acclimatization: '2+ days in Cusco recommended',
     rating: '4.9 (310 reviews)',
-    image: 'salkantay_celestial.png',
-    heroImage: 'salkantay_celestial.png',
+    image: 'sk5dc_d1_humantay_lake.webp',
+    heroImage: 'sk5dc_d1_humantay_lake.webp',
     brochure: 'assets/documents/CuscoPathways_Salkantay_CelestialPath.pdf',
     map: 'assets/images/salkantay/short_salkantay_map.webp',
     description: `Two days. Two summits. One of the most memorable overnight adventures in the Cusco region. On Day 1, trek to the sacred Humantay Lake — a turquoise jewel at 4,200m nestled beneath the Salkantay and Humantay glaciers, considered one of the most sacred Apus offering sites in the Andes. Spend the night at the exclusive Sky Camp in Soraypampa (3,900m), where your guide leads a stargazing session beneath the Andean constellations that gave the Incas their calendar. On Day 2, conquer the legendary Salkantay Pass (4,630m) via the Trail of the Seven Snakes, with 360° views of Salkantay Mountain (6,271m) — the most revered Apu of the Inca world.<br><br><strong>Why choose us?</strong><br>Most high-altitude overnight treks in the Andes demand either a week-long commitment or a sacrifice in scenery. The Celestial Path is the exception. In two days you will visit not one but two of the most extraordinary natural landmarks in Peru — Humantay Lake and Salkantay Pass — spend a night under one of the clearest night skies on earth at exclusive Sky Camp, and stand at 4,630m beside the most sacred mountain in the Inca world. For travelers with limited time who refuse to compromise on experience, this is the answer. It is also the perfect gateway — and preparation — for those who will continue on the Classic or Premium Salkantay Trek.`,
@@ -1577,6 +1577,13 @@ const toursData = {
     ],
     accommodation: [
       { day: 'Day 1', name: 'Sky Camp', type: 'Luxury Domes', image: 'accom_sky_camp.webp', desc: 'Spectacular transparent geodesic domes located at 3,900m altitude with direct views of Salkantay peak and the starry sky. Each dome features premium double mattresses, hotel-quality bedding, warm lighting, and a private bathroom with hot water. At night, the celestial vault becomes your starry ceiling.' }
+    ],
+    gallery: [
+      { url: 'sk5dc_d1_chica_humantay.webp', day: 1, title: 'Laguna Humantay Mirador' },
+      { url: 'sk5dc_d1_comedor_andino.webp', day: 1, title: 'Comedor Andino Sky Camp' },
+      { url: 'sk5dc_d1_humantay_lake.webp', day: 1, title: 'Laguna Humantay Panorama' },
+      { url: 'sk5dc_d1_sendero_nevado.webp', day: 1, title: 'HUMANTAY Trekkers en el Sendero' },
+      { url: 'sk5dc_d2_trekker_fog.webp', day: 2, title: 'Excursionista en el Nevado Salkantay' }
     ],
     priceGroup: 'USD 260.00',
     pricePrivate: 'USD 495.00',
