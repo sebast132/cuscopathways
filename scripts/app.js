@@ -326,7 +326,6 @@ function hydrateTourDetailPage() {
   if (tableBody) {
     tableBody.innerHTML = `
       <tr><td>Group Service</td><td>${tour.priceGroup}</td></tr>
-      <tr><td>Private Service</td><td>${tour.pricePrivate}</td></tr>
     `;
   }
 

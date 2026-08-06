@@ -144,7 +144,7 @@ const toursData = {
     accommodation: [
       { day: 'Day 1', name: 'Sky Camp', type: 'Luxury Domes', image: 'sk5d_d1_domos_valle.webp', desc: 'Spectacular transparent geodesic domes located at 3,900m altitude with direct views of Salkantay peak and the starry sky. Each dome features premium double mattresses, hotel-quality bedding, warm lighting, and a private bathroom with hot water. At night, the celestial vault becomes your starry ceiling.' },
       { day: 'Day 2', name: 'Mountain Sky View Camp', type: 'Panoramic Domes', image: 'sk5d_d2_domos_day.webp', desc: 'Located at a privileged natural viewpoint at 3,800m, these panoramic domes offer 180° views of the Vilcabamba Range peaks. The interior includes heating, high-mountain duvets, and a dinner service prepared by our chef. A place where the silence of the Andes becomes the best melody to rest.' },
-      { day: 'Day 3', name: 'Super Jungle Domes', type: 'Ecological Domes', image: 'sk5d_d3_domos_aereos.webp', desc: 'Immersed in the lush vegetation of the high jungle, these eco-domes merge sustainable design with jungle comfort. Each unit has a private terrace with hammocks, a hot shower, and natural ventilation. At night, the singing of tropical birds and the murmur of the rivers will accompany you into a deep, restful sleep.' },
+      { day: 'Day 3', name: 'Sacred Jungle Lodge', type: 'Ecological Domes', image: 'sk5d_d3_domos_aereos.webp', desc: 'Immersed in the lush vegetation of the high jungle, these eco-domes merge sustainable design with jungle comfort. Each unit has a private terrace with hammocks, a hot shower, and natural ventilation. At night, the singing of tropical birds and the murmur of the rivers will accompany you into a deep, restful sleep.' },
       { day: 'Day 4', name: 'Hotel 3★ Aguas Calientes', type: 'Boutique Hotel', image: 'sk5d_d4_train_street.webp', desc: 'Modern boutique hotel in the heart of Aguas Calientes (Machu Picchu Pueblo), just a 5-minute walk from the bus stop to the citadel. Double room with private bathroom, TV, Wi-Fi, decorative Andean textiles, and buffet breakfast included. Ideal for resting and preparing for the grand visit on the final day.' },
     ],
     pricePrivate: 'USD 1,250.00',
@@ -164,7 +164,7 @@ const toursData = {
         day: 'Day 2',
         title: 'Soraypampa > Salkantay Pass > Mountain Sky View (Emergency Horse)',
         desc: 'Ascent to Salkantay Pass (4,630m) with emergency horse from Soraypampa. Extraordinary panorama. Descent to Mountain Sky View.',
-        image: 'sk5d_d2_abra_pass.webp',
+        image: 'sk5d_d2_hikers_snowpeak.webp',
         accommodation: 'Dist: 23.5km | Alt: 4,630m | Accommodation: Mountain Sky View (2,950m)'
       },
       {
@@ -305,7 +305,7 @@ const toursData = {
         day: 'Day 2',
         title: 'Soraypampa > Salkantay Pass (4,630m) > Mountain Sky View',
         desc: '7km ascent to Salkantay Pass (4,630m) — views of Salkantay peak (6,271m). 9.5km descent through cloud forest to Collpapampa. Private cabins, hot shower.',
-        image: 'sk5dc_d2_abra_pass.webp',
+        image: 'sk5dc_d2_hikers_snowpeak.webp',
         accommodation: 'Distance: 23.5km | Altitude: 4,630m | Difficulty: Challenging | Accommodation: Mountain Sky View (2,950m)'
       },
       {
@@ -739,7 +739,7 @@ const toursData = {
     title: 'CUSCO CITY TOUR: THE CULTURAL PATHWAY',
     tagline: 'Imperial History',
     subtitle: 'The essential first chapter',
-    route: 'Cusco → Sacsayhuamán → Qenqo → Puca Pucara → Tambomachay',
+    route: 'Sacsayhuamán → Qenqo → Puca Pucara → Tambomachay → Plaza de Armas / Catedral → Qoricancha',
     duration: '~5 hours (half day)',
     difficulty: 'Easy',
     altitude: '~3,700m / 12,140ft — Sacsayhuamán',
@@ -1170,17 +1170,13 @@ const toursData = {
       { url: 'sv_chinchero_plaza.webp', location: 'Chinchero', title: 'Plaza Principal de Chinchero' },
       { url: 'chinchero_tejedora.webp', location: 'Chinchero', title: 'Tejedora Tradicional en Chinchero' },
       { url: 'chinchero_tintes.webp', location: 'Chinchero', title: 'Demostración de Tintes Naturales' },
-      { url: 'sv_tejedora_chinchero_hd.webp', location: 'Chinchero', title: 'Tejedora Tradicional Chinchero HD' },
       { url: 'moray_panoramico.webp', location: 'Moray', title: 'Vista Panorámica de Moray' },
       { url: 'moray_1.webp', location: 'Moray', title: 'Anillos Agrícolas de Moray' },
       { url: 'moray_vista.webp', location: 'Moray', title: 'Mirador de Moray' },
-      { url: 'sv_moray_vista_hd.webp', location: 'Moray', title: 'Moray Vista Panorámica HD' },
       { url: 'maras_mirador.webp', location: 'Maras', title: 'Mirador de Salineras de Maras' },
       { url: 'maras_1.webp', location: 'Maras', title: 'Pozos Salineros de Maras' },
       { url: 'maras_2.webp', location: 'Maras', title: 'Cosecha de Sal en Maras' },
       { url: 'maras_viajera.webp', location: 'Maras', title: 'Recorrido por las Salineras' },
-      { url: 'sv_maras_mirador_hd.webp', location: 'Maras', title: 'Mirador Salineras de Maras HD' },
-      { url: 'sv_salineras_viajera_hd.webp', location: 'Maras', title: 'Salineras de Maras Full HD' },
       { url: 'sv_ollantaytambo_panoramica.webp', location: 'Ollantaytambo', title: 'Valle de Ollantaytambo' }
     ],
     importantNote: 'Important Information: Tourist Ticket (Boleto Turístico) NOT included. Maras Salt Pans entrance fee is paid separately. Morning pickup (schedule confirmed the day before). Excellent standalone option or addition to any trekking itinerary.'
