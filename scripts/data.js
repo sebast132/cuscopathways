@@ -1382,13 +1382,13 @@ const toursData = {
     ],
     offer: null,
     gallery: [
-      { url: 'ausangate_hatun.webp', location: '7 Lagunas', title: 'Laguna Hatun Puka Qocha y Nevado Ausangate' },
-      { url: 'ausangate_otorongo.webp', location: '7 Lagunas', title: 'Laguna Otorongo Cocha (Turquesa y Cobalto)' },
-      { url: 'ausangate_panel.webp', location: '7 Lagunas', title: 'Circuito de las 7 Lagunas de Ausangate' },
-      { url: 'ausangate_luna.webp', location: '7 Lagunas', title: 'Espejo de Agua y Reflejo Lunar Ausangate' },
-      { url: 'ausangate_apachetas.webp', location: 'Sendero & Apachetas', title: 'Paso y Apachetas Ceremoniales en el Sendero' },
-      { url: 'ausangate_alpacas.webp', location: 'Fauna & Alpacas', title: 'Rebaño de Alpacas en el Altiplano a 4,800m' },
-      { url: 'ausangate_andina.webp', location: 'Comunidad Pacchanta', title: 'Cultura Quechua en la Comunidad de Pacchanta' }
+      { url: 'ausangate_hatun.webp', location: 'Ausangate 7 Lakes', title: 'Laguna Hatun Puka Qocha y Nevado Ausangate' },
+      { url: 'ausangate_otorongo.webp', location: 'Ausangate 7 Lakes', title: 'Laguna Otorongo Cocha (Turquesa y Cobalto)' },
+      { url: 'ausangate_panel.webp', location: 'Ausangate 7 Lakes', title: 'Circuito de las 7 Lagunas de Ausangate' },
+      { url: 'ausangate_luna.webp', location: 'Ausangate 7 Lakes', title: 'Espejo de Agua y Reflejo Lunar Ausangate' },
+      { url: 'ausangate_apachetas.webp', location: 'Ausangate 7 Lakes', title: 'Paso y Apachetas Ceremoniales en el Sendero' },
+      { url: 'ausangate_alpacas.webp', location: 'Ausangate 7 Lakes', title: 'Rebaño de Alpacas en el Altiplano a 4,800m' },
+      { url: 'ausangate_andina.webp', location: 'Ausangate 7 Lakes', title: 'Cultura Quechua en la Comunidad de Pacchanta' }
     ],
     importantNote: 'Important Note: Minimum 2-3 days of acclimatization in Cusco is recommended. This hike reaches 4,800m. Early pickup — confirm exact time at the 5pm briefing. Pacchanta Hot Springs entrance fee NOT included — bring PEN 15 / USD $5. Meals with local families are not a show — they are a genuine cultural exchange.'
   },
