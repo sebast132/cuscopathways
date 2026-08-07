@@ -1058,7 +1058,6 @@ const toursData = {
       { url: 'chinchero_tintes.webp', location: 'Chinchero', title: 'Tintes Naturales en Chinchero' },
       { url: 'sv_tejedora_chinchero_hd.webp', location: 'Chinchero', title: 'Tejedora Tradicional Chinchero HD' },
       { url: 'moray_1.webp', location: 'Moray', title: 'Laboratorio Agrícola de Moray' },
-      { url: 'moray_vista.webp', location: 'Moray', title: 'Vista Detallada de Moray' },
       { url: 'sv_moray_vista_hd.webp', location: 'Moray', title: 'Moray Vista Panorámica HD' },
       { url: 'maras_1.webp', location: 'Maras', title: 'Pozas de Sal en Maras' },
       { url: 'sv_maras_mirador_hd.webp', location: 'Maras', title: 'Mirador Salineras de Maras HD' },
