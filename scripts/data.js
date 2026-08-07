@@ -847,19 +847,6 @@ const toursData = {
       { size: '9 People or More', price: 'USD 100.00' }
     ],
     offer: null,
-    gallery: [
-      { url: 'sv_chinchero_plaza.webp', location: 'Chinchero', title: 'Plaza Principal de Chinchero' },
-      { url: 'chinchero_tejedora.webp', location: 'Chinchero', title: 'Tejedora Tradicional en Chinchero' },
-      { url: 'chinchero_tintes.webp', location: 'Chinchero', title: 'Demostración de Tintes Naturales' },
-      { url: 'moray_panoramico.webp', location: 'Moray', title: 'Vista Panorámica de Moray' },
-      { url: 'moray_1.webp', location: 'Moray', title: 'Anillos Agrícolas de Moray' },
-      { url: 'moray_vista.webp', location: 'Moray', title: 'Mirador de Moray' },
-      { url: 'maras_mirador.webp', location: 'Maras', title: 'Mirador de Salineras de Maras' },
-      { url: 'maras_1.webp', location: 'Maras', title: 'Pozos Salineros de Maras' },
-      { url: 'maras_2.webp', location: 'Maras', title: 'Cosecha de Sal en Maras' },
-      { url: 'maras_viajera.webp', location: 'Maras', title: 'Recorrido por las Salineras' },
-      { url: 'sv_ollantaytambo_panoramica.webp', location: 'Ollantaytambo', title: 'Valle de Ollantaytambo' }
-    ],
     importantNote: 'Important Information: Tourist Ticket (Boleto Turístico) NOT included — required to enter most sites. There are different circuits at different prices — your guide will advise you. Cusco is at 3,400m; Sacsayhuamán is at ~3,700m. We recommend 1-2 days of acclimatization. Pickup times will be confirmed the day before.'
   },
   'valley-traditional': {
