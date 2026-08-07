@@ -7,8 +7,13 @@
 // ─── Image Path Resolver ─────────────────────────────────────
 function resolveImagePath(filename) {
   if (!filename) return '';
+  
+  const cacheBuster = '?v=20260807';
+
   // Already resolved (starts with assets/)
-  if (filename.startsWith('assets/')) return filename;
+  if (filename.startsWith('assets/')) {
+    return filename.includes('?') ? filename : filename + cacheBuster;
+  }
 
   const prefixMap = {
     'dest_':      'assets/images/destinations/',
@@ -42,9 +47,9 @@ function resolveImagePath(filename) {
   };
 
   for (const [prefix, path] of Object.entries(prefixMap)) {
-    if (filename.startsWith(prefix)) return path + filename;
+    if (filename.startsWith(prefix)) return path + filename + cacheBuster;
   }
-  return 'assets/images/' + filename;
+  return 'assets/images/' + filename + cacheBuster;
 }
 
 // ─── Destinations Dataset ────────────────────────────────────
