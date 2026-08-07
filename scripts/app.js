@@ -605,7 +605,7 @@ function hydrateTourDetailPage() {
           });
         };
 
-        galleryBtn.addEventListener('click', (e) => {
+        galleryBtn.onclick = (e) => {
           e.preventDefault();
           e.stopPropagation();
           if (galleryModalTitle) galleryModalTitle.textContent = `${tour.title} — Photo Gallery`;
@@ -632,25 +632,25 @@ function hydrateTourDetailPage() {
           renderGalleryGrid(firstVal);
 
           galleryLightbox.classList.add('active');
-        });
+        };
 
         const closeGallery = () => {
           galleryLightbox.classList.remove('active');
         };
 
         if (closeGalleryBtn) {
-          closeGalleryBtn.addEventListener('click', closeGallery);
+          closeGalleryBtn.onclick = closeGallery;
         }
 
-        galleryLightbox.addEventListener('click', (e) => {
+        galleryLightbox.onclick = (e) => {
           if (e.target === galleryLightbox) {
             closeGallery();
           }
-        });
+        };
 
-        // Filter tabs logic
+        // Filter tabs logic — reset onclick handler for current tour
         if (filterTabsContainer) {
-          filterTabsContainer.addEventListener('click', (e) => {
+          filterTabsContainer.onclick = (e) => {
             if (e.target.classList.contains('gl-tab')) {
               const tabs = filterTabsContainer.querySelectorAll('.gl-tab');
               tabs.forEach(t => t.classList.remove('active'));
@@ -658,7 +658,7 @@ function hydrateTourDetailPage() {
               const filterVal = e.target.getAttribute('data-filter') || e.target.getAttribute('data-day');
               renderGalleryGrid(filterVal);
             }
-          });
+          };
         }
 
         document.addEventListener('keydown', (e) => {
