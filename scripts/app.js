@@ -579,18 +579,39 @@ function hydrateTourDetailPage() {
           }
 
           if (galleryModalCount) {
-            galleryModalCount.textContent = `${items.length} Photos`;
+            galleryModalCount.textContent = filterVal === 'all' ? `${tour.gallery.length} Photos` : `${items.length} Photos`;
           }
 
-          galleryGrid.innerHTML = items.map(item => `
-            <div class="gallery-card-item" data-url="${resolveImagePath(item.url)}" data-title="${item.title || ''}">
-              <img src="${resolveImagePath(item.url)}" alt="${item.title || 'Photo'}" loading="lazy">
-              <div class="gci-overlay">
-                <span class="gci-day-tag">${item.location ? item.location : ('Day ' + (item.day || '1'))}</span>
-                <span class="gci-title">${item.title || ''}</span>
+          if (filterVal === 'all' && hasLocationFilter) {
+            const locations = [...new Set(tour.gallery.map(item => item.location))].filter(Boolean);
+            galleryGrid.innerHTML = locations.map(loc => {
+              const locItems = tour.gallery.filter(item => item.location === loc);
+              return `
+                <div class="gallery-location-section" style="grid-column: 1 / -1; margin-top: 16px; margin-bottom: 8px;">
+                  <h3 class="gallery-location-title" style="font-size: 1.1rem; color: var(--gold); border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 6px; font-family: var(--font-heading); font-weight: 600;">📍 ${loc}</h3>
+                </div>
+                ${locItems.map(item => `
+                  <div class="gallery-card-item" data-url="${resolveImagePath(item.url)}" data-title="${item.title || ''}">
+                    <img src="${resolveImagePath(item.url)}" alt="${item.title || 'Photo'}" loading="lazy">
+                    <div class="gci-overlay">
+                      <span class="gci-day-tag">${item.location ? item.location : ('Day ' + (item.day || '1'))}</span>
+                      <span class="gci-title">${item.title || ''}</span>
+                    </div>
+                  </div>
+                `).join('')}
+              `;
+            }).join('');
+          } else {
+            galleryGrid.innerHTML = items.map(item => `
+              <div class="gallery-card-item" data-url="${resolveImagePath(item.url)}" data-title="${item.title || ''}">
+                <img src="${resolveImagePath(item.url)}" alt="${item.title || 'Photo'}" loading="lazy">
+                <div class="gci-overlay">
+                  <span class="gci-day-tag">${item.location ? item.location : ('Day ' + (item.day || '1'))}</span>
+                  <span class="gci-title">${item.title || ''}</span>
+                </div>
               </div>
-            </div>
-          `).join('');
+            `).join('');
+          }
 
           // Add click listener to gallery card items for full preview
           const cardItems = galleryGrid.querySelectorAll('.gallery-card-item');
@@ -616,22 +637,18 @@ function hydrateTourDetailPage() {
           if (filterTabsContainer && tour.gallery) {
             if (hasLocationFilter) {
               const locations = [...new Set(tour.gallery.map(item => item.location || item.day))].filter(Boolean);
-              filterTabsContainer.innerHTML = locations.map((loc, idx) => `
-                <button class="gl-tab ${idx === 0 ? 'active' : ''}" data-filter="${loc}">${loc}</button>
+              filterTabsContainer.innerHTML = `<button class="gl-tab active" data-filter="all">All Photos</button>` + locations.map((loc) => `
+                <button class="gl-tab" data-filter="${loc}">${loc}</button>
               `).join('');
             } else {
               const days = [...new Set(tour.gallery.map(item => item.day))].sort((a, b) => a - b);
-              filterTabsContainer.innerHTML = days.map((day, idx) => `
-                <button class="gl-tab ${idx === 0 ? 'active' : ''}" data-filter="${day}">Day ${day}</button>
+              filterTabsContainer.innerHTML = `<button class="gl-tab active" data-filter="all">All Photos</button>` + days.map((day) => `
+                <button class="gl-tab" data-filter="${day}">Day ${day}</button>
               `).join('');
             }
           }
 
-          const firstVal = hasLocationFilter 
-            ? (tour.gallery[0].location || tour.gallery[0].day)
-            : (tour.gallery[0] ? tour.gallery[0].day : '1');
-
-          renderGalleryGrid(firstVal);
+          renderGalleryGrid('all');
 
           galleryLightbox.classList.add('active');
         });
